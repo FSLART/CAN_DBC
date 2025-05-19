@@ -57,6 +57,7 @@ BO_ 1282 DV_SYSTEM_STATUS: 8 ACU
  SG_ CONES_TOTAL : 23|17@1+ (1,0) [0|0] ""  FSG_Datalogger
 
 BO_ 401 RES: 8 RES
+ SG_ RES : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 81 ACU_SIGNALS: 2 ACU
  SG_ MS : 0|8@1+ (1,0) [0|0] ""  Jetson
@@ -76,6 +77,7 @@ VAL_ 1282 AS_STATUS 1 "OFF" 2 "READY" 3 "DRIVING" 4 "EMERGENCY" 5 "FINISHED" ;
 VAL_ 1282 EBS_STATE 1 "DEACTIVATED" 2 "INITIAL_CHECKUP_PASSED" 3 "ACTIVATED" ;
 VAL_ 1282 AMI 1 "ACCELERATION" 2 "SKIDPAD" 3 "TRACKDRIVE" 4 "BRAKETEST" 5 "INSPECTION" 6 "AUTOCROSS" ;
 VAL_ 1282 ASB 1 "Deactivated" 2 "Engaged" 3 "Initial_checkup" ;
+VAL_ 401 RES 5 "GO_SIGNAL_1" 7 "GO_SIGNAL_2" 0 "EMERGENCY" ;
 VAL_ 81 MS 1 "Manual" 2 "Acceleration" 3 "Skidpad" 4 "Trackdrive" 5 "BrakeTest" 6 "Autocross" ;
 VAL_ 81 IGN 0 "OFF" 1 "ON" ;
 VAL_ 129 ACU_STATE 1 "Mission_Select" 2 "Initial_sequence" 3 "Manual_mode" 4 "Autonomous_mode" 5 "Emergency" 6 "Reset" ;
