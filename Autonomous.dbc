@@ -58,9 +58,17 @@ BO_ 1282 DV_SYSTEM_STATUS: 8 ACU
 
 BO_ 401 RES: 8 RES
 
-BO_ 81 Mission_Select: 2 ACU
- SG_ MS : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ IGN : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 81 ACU_SIGNALS: 2 ACU
+ SG_ MS : 0|8@1+ (1,0) [0|0] ""  Jetson
+ SG_ IGN : 8|8@1+ (1,0) [0|0] ""  VCU
+
+BO_ 129 ACU_Debug: 8 ACU
+ SG_ Hydraulic_brake_pressure_1 : 0|7@1+ (0.1,0) [0|10.5] "BAR" Vector__XXX
+ SG_ Hydraulic_brake_pressure_2 : 7|7@1+ (0.1,0) [0|10] "BAR" Vector__XXX
+ SG_ ACU_STATE : 14|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ASMS : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ASSI_BLUE : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ASSI_YELLOW : 19|1@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -70,4 +78,8 @@ VAL_ 1282 AMI 1 "ACCELERATION" 2 "SKIDPAD" 3 "TRACKDRIVE" 4 "BRAKETEST" 5 "INSPE
 VAL_ 1282 ASB 1 "Deactivated" 2 "Engaged" 3 "Initial_checkup" ;
 VAL_ 81 MS 1 "Manual" 2 "Acceleration" 3 "Skidpad" 4 "Trackdrive" 5 "BrakeTest" 6 "Autocross" ;
 VAL_ 81 IGN 0 "OFF" 1 "ON" ;
+VAL_ 129 ACU_STATE 1 "Mission_Select" 2 "Initial_sequence" 3 "Manual_mode" 4 "Autonomous_mode" 5 "Emergency" 6 "Reset" ;
+VAL_ 129 ASMS 0 "OFF" 1 "ON" ;
+VAL_ 129 ASSI_BLUE 0 "OFF" 1 "ON" ;
+VAL_ 129 ASSI_YELLOW 0 "OFF" 1 "ON" ;
 
