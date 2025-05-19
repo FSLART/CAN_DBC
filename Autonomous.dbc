@@ -1,0 +1,73 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU ACU Jetson Maxon Dynamics FSG_Datalogger RES
+
+
+BO_ 1280 DV_driving_dynamics_1: 8 Dynamics
+ SG_ Speed_Actual : 0|8@1+ (1,0) [0|0] "Km/h"  FSG_Datalogger
+ SG_ Speed_target : 8|8@1+ (1,0) [0|0] "Km/h"  FSG_Datalogger
+ SG_ Steering_angle_actual : 16|8@1- (1,0) [0|0] "°"  FSG_Datalogger
+ SG_ Steering_angle_target : 24|8@1- (1,0) [0|0] "°"  FSG_Datalogger
+ SG_ Brake_hydraulic_actual : 32|8@1+ (1,0) [0|0] "%"  FSG_Datalogger,ACU
+ SG_ Brake_hydraulic_target : 40|8@1+ (1,0) [0|0] "%"  FSG_Datalogger
+ SG_ Motor_momnet_actual : 48|8@1- (1,0) [0|0] "%"  FSG_Datalogger
+ SG_ Motor_moment_traget : 56|8@1- (1,0) [0|0] "%"  FSG_Datalogger
+
+BO_ 1282 DV_SYSTEM_STATUS: 8 ACU
+ SG_ AS_STATUS : 0|3@1+ (1,0) [0|0] ""  FSG_Datalogger
+ SG_ EBS_STATE : 3|2@1+ (1,0) [0|0] ""  FSG_Datalogger
+ SG_ AMI : 5|3@1+ (1,0) [0|0] ""  FSG_Datalogger
+ SG_ Steering_state : 8|1@1+ (1,0) [0|0] ""  FSG_Datalogger
+ SG_ ASB : 9|2@1+ (1,0) [0|0] ""  FSG_Datalogger
+ SG_ LAP_COUNTER : 11|4@1+ (1,0) [0|0] ""  FSG_Datalogger
+ SG_ CONES_COUNT_ACTUAL : 15|8@1+ (1,0) [0|0] ""  FSG_Datalogger
+ SG_ CONES_TOTAL : 23|17@1+ (1,0) [0|0] ""  FSG_Datalogger
+
+BO_ 401 RES: 8 RES
+
+BO_ 81 Mission_Select: 2 ACU
+ SG_ MS : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IGN : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+VAL_ 1282 AS_STATUS 1 "OFF" 2 "READY" 3 "DRIVING" 4 "EMERGENCY" 5 "FINISHED" ;
+VAL_ 1282 EBS_STATE 1 "DEACTIVATED" 2 "INITIAL_CHECKUP_PASSED" 3 "ACTIVATED" ;
+VAL_ 1282 AMI 1 "ACCELERATION" 2 "SKIDPAD" 3 "TRACKDRIVE" 4 "BRAKETEST" 5 "INSPECTION" 6 "AUTOCROSS" ;
+VAL_ 1282 ASB 1 "Deactivated" 2 "Engaged" 3 "Initial_checkup" ;
+VAL_ 81 MS 1 "Manual" 2 "Acceleration" 3 "Skidpad" 4 "Trackdrive" 5 "BrakeTest" 6 "Autocross" ;
+VAL_ 81 IGN 0 "OFF" 1 "ON" ;
+
