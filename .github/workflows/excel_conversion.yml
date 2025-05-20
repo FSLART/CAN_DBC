@@ -3,7 +3,7 @@ name: Export DBC to Excel and Commit
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   export_excel:
