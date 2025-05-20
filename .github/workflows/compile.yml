@@ -31,7 +31,7 @@ jobs:
             outdir="generated/$base"
             mkdir -p "$outdir"
             echo "Generating C code for $dbcfile into $outdir"
-            cantools generate_c_source "$dbcfile" "$outdir"
+            cantools generate_c_source "$dbcfile" --output "$outdir"
           done
 
       - name: Commit generated files
