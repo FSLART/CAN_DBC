@@ -1,5 +1,14 @@
-
 # 📦 CAN DBC e Kvaser Database Editor
+
+## Índice
+
+- [📘 O que é um ficheiro DBC?](#-o-que-é-um-ficheiro-dbc)
+- [✅ Vantagens de utilizar DBC](#-vantagens-de-utilizar-dbc)
+- [🛠️ Como usar o Kvaser Database Editor](#-como-usar-o-kvaser-database-editor)
+- [⚙️ Compilação Automática para Código C](#-compilação-automática-para-código-c)
+- [📟 Exemplo de uso no Teensy 4.1 (C/C++)](#-exemplo-de-uso-no-teensy-41-cc)
+
+---
 
 ## 📘 O que é um ficheiro DBC?
 
@@ -54,18 +63,80 @@ O [**Kvaser Database Editor**](https://www.kvaser.com/database-editor/) é uma f
 
 ---
 
-## 🧪 Dica de Utilização com Python
+## ⚙️ Compilação Automática para Código C
 
-Podes utilizar bibliotecas como [`cantools`](https://pypi.org/project/cantools/) para carregar e usar o DBC em scripts Python:
+Este repositório inclui um workflow do GitHub Actions que gera automaticamente código C a partir dos ficheiros DBC encontrados, usando o `cantools` com o comando `generate_c_source`.
 
-```python
-import cantools
+- Sempre que um ficheiro DBC for alterado e enviado para o repositório, o código C correspondente é regenerado automaticamente.
+- Os ficheiros gerados são colocados na pasta `generated/`.
+- Este código C pode ser usado diretamente em projetos de firmware, permitindo integrar as definições CAN de forma segura e eficiente.
 
-db = cantools.database.load_file('can_database.dbc')
-msg = db.get_message_by_name('Velocidade_Viatura')
+---
 
-data = msg.encode({'velocidade': 50.0})  # Codificar sinal para bytes CAN
-decoded = msg.decode(data)              # Decodificar bytes para dicionário
-print(decoded)
+## 📟 Exemplo de uso no Teensy 4.1 (C/C++)
 
+Aqui está um exemplo básico para Teensy 4.1 usando a biblioteca [FlexCAN_T4](https://github.com/collin80/FlexCAN_T4) para receber, decodificar e enviar mensagens CAN com o código C gerado a partir do DBC:
 
+```c
+#include <Arduino.h>
+#include <FlexCAN_T4.h>  // Biblioteca CAN para Teensy 4.x
+
+// Inclui o ficheiro gerado automaticamente pelo cantools
+#include "generated/autonomous_dv_driving_dynamics_1.h"
+
+FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> CAN;
+
+void setup() {
+  Serial.begin(115200);
+  CAN.begin();
+  CAN.setBaudRate(500000);
+
+  // Ativa filtro para aceitar todas as mensagens (exemplo)
+  CAN.setMBFilterAll();
+
+  Serial.println("CAN Teensy 4.1 exemplo iniciado");
+}
+
+void loop() {
+  CAN_message_t rx_msg;
+
+  // Verifica se chegou alguma mensagem CAN
+  if (CAN.read(rx_msg)) {
+    Serial.print("Mensagem CAN recebida com ID: 0x");
+    Serial.println(rx_msg.id, HEX);
+
+    // Suponhamos que esta mensagem corresponde ao tipo autonomous_dv_driving_dynamics_1
+    struct autonomous_dv_driving_dynamics_1_t decoded_data;
+
+    // Decodifica os dados recebidos
+    int ret = autonomous_dv_driving_dynamics_1_unpack(&decoded_data, rx_msg.buf, rx_msg.len);
+    if (ret == 0) {
+      Serial.print("Speed actual: ");
+      Serial.println(decoded_data.speed_actual);
+      Serial.print("Speed target: ");
+      Serial.println(decoded_data.speed_target);
+      Serial.print("Steering angle actual: ");
+      Serial.println(decoded_data.steering_angle_actual);
+      // Outros sinais podem ser lidos da mesma forma
+    } else {
+      Serial.println("Erro ao decodificar mensagem");
+    }
+
+    // Exemplo: prepara uma mensagem para enviar (alterando speed_target)
+    struct autonomous_dv_driving_dynamics_1_t tx_data = decoded_data;
+    tx_data.speed_target = 150;  // Alterar valor para envio
+
+    uint8_t tx_buf[8];
+    autonomous_dv_driving_dynamics_1_pack(tx_buf, &tx_data, sizeof(tx_buf));
+
+    // Prepara mensagem CAN para envio
+    CAN_message_t tx_msg;
+    tx_msg.id = rx_msg.id;  // Usar mesmo ID ou outro conforme protocolo
+    tx_msg.len = 8;
+    memcpy(tx_msg.buf, tx_buf, 8);
+
+    // Envia a mensagem CAN
+    CAN.write(tx_msg);
+    Serial.println("Mensagem CAN enviada com speed_target modificado.");
+  }
+}
