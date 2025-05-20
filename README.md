@@ -75,6 +75,9 @@ Exemplo de comando para compilação:
    python3 -m cantools generate_c_source Autonomous.dbc --output autonomous_c_output
 
 
+## Exportação para EXCEL
+o workflow do GitHub Actions exporta também para xls, com uma página por ficheiro dbc, e uma tabela por id como se pode ver na figura abaixo
+![image](https://github.com/user-attachments/assets/90f69d98-68a3-44f2-98c8-4df361548ea3)
 
 
 ---
