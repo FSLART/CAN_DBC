@@ -25,11 +25,11 @@ Um ficheiro **DBC** (DataBase CAN) é um formato padronizado utilizado para desc
 
 ## 🛠️ Como usar o **Kvaser Database Editor**
 
-O [**Kvaser Database Editor**](https://www.kvaser.com/database-editor/) é uma ferramenta gratuita da Kvaser para criar e editar ficheiros DBC.
+O [**Kvaser Database Editor**]([https://www.kvaser.com/database-editor/](https://kvaser.com/single-download/?download_id=47183)) é uma ferramenta gratuita da Kvaser para criar e editar ficheiros DBC.
 
 ### 📥 Instalação
 
-1. Visita o site oficial: [https://www.kvaser.com/database-editor/](https://www.kvaser.com/database-editor/)
+1. Visita o site oficial: [https://www.kvaser.com/database-editor/]([https://www.kvaser.com/database-editor/](https://kvaser.com/single-download/?download_id=47183))
 2. Faz o download e instala o programa (Windows).
 
 ### 📄 Criar um novo DBC
@@ -70,6 +70,12 @@ Este repositório inclui um workflow do GitHub Actions que gera automaticamente 
 - Sempre que um ficheiro DBC for alterado e enviado para o repositório, o código C correspondente é regenerado automaticamente.
 - Os ficheiros gerados são colocados na pasta `generated/`.
 - Este código C pode ser usado diretamente em projetos de firmware, permitindo integrar as definições CAN de forma segura e eficiente.
+
+Exemplo de comando para compilação:
+   python3 -m cantools generate_c_source Autonomous.dbc --output autonomous_c_output
+
+
+
 
 ---
 
