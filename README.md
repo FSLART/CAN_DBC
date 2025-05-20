@@ -67,3 +67,5 @@ msg = db.get_message_by_name('Velocidade_Viatura')
 data = msg.encode({'velocidade': 50.0})  # Codificar sinal para bytes CAN
 decoded = msg.decode(data)              # Decodificar bytes para dicionário
 print(decoded)
+
+
