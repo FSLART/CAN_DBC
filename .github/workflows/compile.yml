@@ -1,4 +1,4 @@
-name: Generate C code from all DBC files
+name: Generate C code and Export DBC to Excel
 
 on:
   push:
@@ -6,27 +6,27 @@ on:
       - master
 
 jobs:
-  generate_c_from_dbc:
+  generate_and_export:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Setup Python 3.x
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install cantools
+      - name: Install dependencies
         run: |
-          pip install cantools
+          python -m pip install --upgrade pip
+          pip install cantools openpyxl
 
       - name: Generate C code for all DBC files
         run: |
           mkdir -p generated
-          # find all .dbc files, loop over them
           find . -type f -name "*.dbc" | while read -r dbcfile; do
-            # get basename without extension
             base=$(basename "$dbcfile" .dbc)
             outdir="generated/$base"
             mkdir -p "$outdir"
@@ -34,12 +34,19 @@ jobs:
             cantools generate_c_source "$dbcfile" --output "$outdir"
           done
 
-      - name: Commit generated files
+      - name: Run export script to Excel
+        run: python export_dbc_to_excel.py
+
+      - name: Commit and push generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add generated/
-          git diff --cached --quiet || git commit -m "Auto-generated C code from DBC files"
-          git push
+
+          # Pull latest changes and rebase to avoid push conflicts
+          git pull --rebase origin master
+
+          git add generated/ dbc_signals.xlsx
+          git diff --cached --quiet || git commit -m "Auto-generated C code and Excel from DBC files"
+          git push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
