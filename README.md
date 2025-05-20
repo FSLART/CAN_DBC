@@ -71,6 +71,12 @@ Este repositório inclui um workflow do GitHub Actions que gera automaticamente 
 - Os ficheiros gerados são colocados na pasta `generated/`.
 - Este código C pode ser usado diretamente em projetos de firmware, permitindo integrar as definições CAN de forma segura e eficiente.
 
+Exemplo de comando para compilação:
+   python3 -m cantools generate_c_source Autonomous.dbc --output autonomous_c_output
+
+
+
+
 ---
 
 ## 📟 Exemplo de uso no Teensy 4.1 (C/C++)
