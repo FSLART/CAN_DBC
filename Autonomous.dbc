@@ -39,12 +39,12 @@ BU_: VCU ACU Jetson Maxon Dynamics FSG_Datalogger RES
 BO_ 1280 DV_driving_dynamics_1: 8 Dynamics
  SG_ Speed_Actual : 0|8@1+ (1,0) [0|0] "Km/h"  FSG_Datalogger
  SG_ Speed_target : 8|8@1+ (1,0) [0|0] "Km/h"  FSG_Datalogger
- SG_ Steering_angle_actual : 16|8@1- (1,0) [0|0] "°"  FSG_Datalogger
- SG_ Steering_angle_target : 24|8@1- (1,0) [0|0] "°"  FSG_Datalogger
+ SG_ Steering_angle_actual : 16|8@1- (1,0) [0|0] "Â°"  FSG_Datalogger
+ SG_ Steering_angle_target : 24|8@1- (1,0) [0|0] "Â°"  FSG_Datalogger
  SG_ Brake_hydraulic_actual : 32|8@1+ (1,0) [0|0] "%"  FSG_Datalogger,ACU
  SG_ Brake_hydraulic_target : 40|8@1+ (1,0) [0|0] "%"  FSG_Datalogger
- SG_ Motor_momnet_actual : 48|8@1- (1,0) [0|0] "%"  FSG_Datalogger
- SG_ Motor_moment_traget : 56|8@1- (1,0) [0|0] "%"  FSG_Datalogger
+ SG_ Motor_moment_actual : 48|8@1- (1,0) [0|0] "%"  FSG_Datalogger
+ SG_ Motor_moment_target : 56|8@1- (1,0) [0|0] "%"  FSG_Datalogger
 
 BO_ 1282 DV_SYSTEM_STATUS: 8 ACU
  SG_ AS_STATUS : 0|3@1+ (1,0) [0|0] ""  FSG_Datalogger
