@@ -8,12 +8,11 @@ on:
 jobs:
   generate_and_export:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Python 3.x
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
@@ -34,19 +33,28 @@ jobs:
             cantools generate_c_source "$dbcfile" --output "$outdir"
           done
 
-      - name: Run export script to Excel
+      - name: Export DBC to Excel
         run: python export_dbc_to_excel.py
 
-      - name: Commit and push generated files
+      - name: Commit and push generated files if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Pull latest changes and rebase to avoid push conflicts
-          git pull --rebase origin master
-
           git add generated/ dbc_signals.xlsx
-          git diff --cached --quiet || git commit -m "Auto-generated C code and Excel from DBC files"
-          git push origin master
+
+          # Commit only if changes exist
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-generated C code and Excel export from DBC files"
+          fi
+
+          # Clean workspace to avoid unstaged changes blocking pull
+          git reset --hard
+          git clean -fd
+
+          # Pull remote changes with rebase to keep history clean
+          git pull --rebase
+
+          # Push changes
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
