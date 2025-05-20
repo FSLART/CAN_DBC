@@ -74,8 +74,7 @@ BO_ 129 ACU_Debug: 8 ACU
 BO_ 1281 DV_DRIVING_DYNAMICS_2: 8 Jetson
  SG_ ACCELERATION_LONGITUDINAL : 0|16@1- (1,0) [0|0] "m/s^2"  FSG_Datalogger
  SG_ ACCELERATION_LATERAL : 16|16@1- (1,0) [0|0] "m/s^2"  FSG_Datalogger
- SG_ YAW_RATE : 32|16@1- (1,0) [0|0] "m/s
-2"  FSG_Datalogger
+ SG_ YAW_RATE : 32|16@1- (1,0) [0|0] "m/s^2"  FSG_Datalogger
 
 
 
