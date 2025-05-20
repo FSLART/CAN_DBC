@@ -25,11 +25,11 @@ Um ficheiro **DBC** (DataBase CAN) é um formato padronizado utilizado para desc
 
 ## 🛠️ Como usar o **Kvaser Database Editor**
 
-O [**Kvaser Database Editor**](https://www.kvaser.com/database-editor/) é uma ferramenta gratuita da Kvaser para criar e editar ficheiros DBC.
+O [**Kvaser Database Editor**]([https://www.kvaser.com/database-editor/](https://kvaser.com/single-download/?download_id=47183)) é uma ferramenta gratuita da Kvaser para criar e editar ficheiros DBC.
 
 ### 📥 Instalação
 
-1. Visita o site oficial: [https://www.kvaser.com/database-editor/](https://www.kvaser.com/database-editor/)
+1. Visita o site oficial: [https://www.kvaser.com/database-editor/]([https://www.kvaser.com/database-editor/](https://kvaser.com/single-download/?download_id=47183))
 2. Faz o download e instala o programa (Windows).
 
 ### 📄 Criar um novo DBC
