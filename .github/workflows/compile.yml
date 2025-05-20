@@ -3,7 +3,7 @@ name: Generate C code from all DBC files
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   generate_c_from_dbc:
