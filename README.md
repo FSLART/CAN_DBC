@@ -32,6 +32,8 @@ O [**Kvaser Database Editor**]([https://kvaser.com/single-download/?download_id=
 1. Visita o site oficial: https://kvaser.com/single-download/?download_id=47183
 2. Faz o download e instala o programa (Windows).
 
+Tuturial : https://resources.kvaser.com/PreProductionAssets/Product_Resources/UG_98033_kvaser_database_editor_userguide_2_0_0.pdf
+
 ### 📄 Criar um novo DBC
 
 1. **Abrir o Kvaser Database Editor**.
