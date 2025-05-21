@@ -66,6 +66,7 @@ BO_ 401 RES: 8 RES
 
 
 
+VAL_ 81 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpad" 3 "trackdrive" 4 "braketest" 5 "Inspection" 6 "Autocross" ;
 VAL_ 129 HV 0 "hv off" 9 "hv on" 10 "contactor error" ;
 VAL_ 401 SIGNAL 5 "GO_SIGNAL" 7 "GO_SIGNAL_2" 0 "EMERGENCY" ;
 
