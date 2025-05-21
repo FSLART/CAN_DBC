@@ -37,10 +37,10 @@ BU_: JETSON VCU ACU RES
 
 
 BO_ 81 ACU_MS: 8 ACU
- SG_ Mission_Select : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mission_Select : 0|8@1+ (1,0) [0|0] ""  JETSON
 
 BO_ 97 JETSON_MS: 8 JETSON
- SG_ Mission_Select : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mission_Select : 0|8@1+ (1,0) [0|0] ""  ACU
 
 BO_ 1296 VCU_RPM: 8 VCU
  SG_ RPM : 0|16@1+ (1,0) [0|100] "RPM"  JETSON
@@ -50,23 +50,24 @@ BO_ 1280 Target_RPM: 8 JETSON
 
 BO_ 113 ACU_IGN: 8 ACU
  SG_ IGN : 0|8@1+ (1,0) [0|1] ""  VCU
- SG_ IGN_SWITCH : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IGN_SWITCH : 8|8@1+ (1,0) [0|1] ""  VCU
 
 BO_ 1298 RD_JETSON: 8 ACU
- SG_ RD : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RD : 0|8@1+ (1,0) [0|0] ""  JETSON
 
 BO_ 1282 AS_STATE: 8 JETSON
- SG_ STATE : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ STATE : 0|8@1+ (1,0) [0|0] ""  VCU,ACU
 
 BO_ 129 VCU_HV: 8 VCU
  SG_ HV : 0|8@1+ (1,0) [0|0] ""  ACU
 
 BO_ 401 RES: 8 RES
- SG_ SIGNAL : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SIGNAL : 0|8@1+ (1,0) [0|0] ""  JETSON,ACU
 
 
 
 VAL_ 81 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpad" 3 "trackdrive" 4 "braketest" 5 "Inspection" 6 "Autocross" ;
+VAL_ 113 IGN_SWITCH 0 "OFF" 1 "ON" ;
 VAL_ 129 HV 0 "hv off" 9 "hv on" 10 "contactor error" ;
 VAL_ 401 SIGNAL 5 "GO_SIGNAL" 7 "GO_SIGNAL_2" 0 "EMERGENCY" ;
 
