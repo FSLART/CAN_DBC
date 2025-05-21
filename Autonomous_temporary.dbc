@@ -66,8 +66,11 @@ BO_ 401 RES: 8 RES
 
 
 
+CM_ SG_ 1282 STATE "Regulations";
 VAL_ 81 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpad" 3 "trackdrive" 4 "braketest" 5 "Inspection" 6 "Autocross" ;
 VAL_ 113 IGN_SWITCH 0 "OFF" 1 "ON" ;
+VAL_ 1298 RD 0 "OFF" 1 "ON" ;
+VAL_ 1282 STATE 1 "OFF" 2 "Ready" 3 "Driving" 4 "Emergency" 5 "Finish" ;
 VAL_ 129 HV 0 "hv off" 9 "hv on" 10 "contactor error" ;
 VAL_ 401 SIGNAL 5 "GO_SIGNAL" 7 "GO_SIGNAL_2" 0 "EMERGENCY" ;
 
