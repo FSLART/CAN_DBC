@@ -58,7 +58,6 @@ def write_message_table(ws, message, start_row):
 
     return row_index + 2  # leave a blank row between tables
 
-
 def export_dbc_to_excel(dbc_files, output_filename="dbc_signals.xlsx"):
     wb = Workbook()
     wb.remove(wb.active)  # remove default sheet
@@ -75,9 +74,11 @@ def export_dbc_to_excel(dbc_files, output_filename="dbc_signals.xlsx"):
 
         current_row = 1
         for msg in db.messages:
+            senders = ", ".join(msg.senders) if msg.senders else "Unknown"
             label_cell_1 = ws.cell(row=current_row, column=1, value=f"Message: {msg.name}")
             label_cell_2 = ws.cell(row=current_row, column=2, value=f"ID: {hex(msg.frame_id)}")
-            for cell in [label_cell_1, label_cell_2]:
+            label_cell_3 = ws.cell(row=current_row, column=3, value=f"Sender(s): {senders}")
+            for cell in [label_cell_1, label_cell_2, label_cell_3]:
                 cell.font = header_font
                 cell.fill = message_fill
                 cell.border = thin_border
@@ -88,7 +89,6 @@ def export_dbc_to_excel(dbc_files, output_filename="dbc_signals.xlsx"):
 
     wb.save(output_filename)
     print(f"✅ Exported to {output_filename}")
-
 
 if __name__ == "__main__":
     dbc_files = [f for f in os.listdir('.') if f.endswith('.dbc')]
