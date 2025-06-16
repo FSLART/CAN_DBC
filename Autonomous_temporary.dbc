@@ -51,6 +51,7 @@ BO_ 1280 Target_RPM: 8 JETSON
 BO_ 113 ACU_IGN: 8 ACU
  SG_ IGN : 0|8@1+ (1,0) [0|1] ""  VCU
  SG_ ASMS : 8|8@1+ (1,0) [0|1] ""  VCU
+ SG_ Emergency : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1298 RD_JETSON: 8 ACU
  SG_ RD : 0|8@1+ (1,0) [0|0] ""  JETSON
@@ -67,10 +68,11 @@ BO_ 401 RES: 8 RES
 
 
 CM_ SG_ 1282 STATE "Regulations";
-VAL_ 81 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpad" 3 "trackdrive" 4 "braketest" 5 "Inspection" 6 "Autocross" ;
-VAL_ 97 Mission_Select 0 "Manual" 1 "Acceleation" 2 "Skidpadd" 3 "tackdive" 4 "baketest" 5 "Inspection" 6 "Autocoss" ;
+VAL_ 81 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpad" 3 "Trackdrive" 4 "Braketest" 5 "Inspection" 6 "Autocross" ;
+VAL_ 97 Mission_Select 0 "Manual" 1 "Acceleation" 2 "Skidpadd" 3 "Trackdive" 4 "Braketest" 5 "Inspection" 6 "Autocross" ;
 VAL_ 113 IGN 0 "OFF" 1 "ON" ;
 VAL_ 113 ASMS 0 "OFF" 1 "ON" ;
+VAL_ 113 Emergency 1 "Emergency_ON" 0 "Emergency_OFF" ;
 VAL_ 1298 RD 0 "OFF" 1 "ON" ;
 VAL_ 1282 STATE 1 "OFF" 2 "Ready" 3 "Driving" 4 "Emergency" 5 "Finish" ;
 VAL_ 129 HV 0 "hv off" 9 "hv on" 10 "contactor error" ;
