@@ -43,15 +43,15 @@ BO_ 97 JETSON_MS: 8 JETSON
  SG_ Mission_Select : 0|8@1+ (1,0) [0|0] ""  ACU
 
 BO_ 1296 VCU_RPM: 8 VCU
- SG_ RPM : 0|16@1+ (1,0) [0|100] "RPM"  JETSON
+ SG_ RPM : 0|16@1- (1,0) [0|6000] "RPM"  JETSON
 
 BO_ 1280 Target_RPM: 8 JETSON
- SG_ RPM : 0|16@1+ (1,0) [0|100] "RPM"  VCU
+ SG_ RPM : 0|16@1- (1,0) [0|6000] "RPM"  VCU
 
 BO_ 113 ACU_IGN: 8 ACU
  SG_ IGN : 0|8@1+ (1,0) [0|1] ""  VCU
  SG_ ASMS : 8|8@1+ (1,0) [0|1] ""  VCU
- SG_ Emergency : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Emergency : 16|8@1+ (1,0) [0|0] ""  VCU
 
 BO_ 1298 RD_JETSON: 8 ACU
  SG_ RD : 0|8@1+ (1,0) [0|0] ""  JETSON
