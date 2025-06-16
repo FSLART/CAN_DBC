@@ -52,6 +52,8 @@ BO_ 113 ACU_IGN: 8 ACU
  SG_ IGN : 0|8@1+ (1,0) [0|1] ""  VCU
  SG_ ASMS : 8|8@1+ (1,0) [0|1] ""  VCU
  SG_ Emergency : 16|8@1+ (1,0) [0|0] ""  VCU
+ SG_ EBS_Pressure_Front : 24|8@1+ (10,0) [0|150] "bar" Vector__XXX
+ SG_ EBS_Pressure_Rear : 32|8@1+ (10,0) [0|150] "bar" Vector__XXX
 
 BO_ 1298 RD_JETSON: 8 ACU
  SG_ RD : 0|8@1+ (1,0) [0|0] ""  JETSON
@@ -61,15 +63,19 @@ BO_ 1282 AS_STATE: 8 JETSON
 
 BO_ 129 VCU_HV: 8 VCU
  SG_ HV : 0|8@1+ (1,0) [0|0] ""  ACU
+ SG_ Brake_pressure_Front : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Brake_pressure_Rear : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 401 RES: 8 RES
  SG_ SIGNAL : 0|8@1+ (1,0) [0|0] ""  JETSON,ACU
 
 
 
+CM_ SG_ 113 EBS_Pressure_Front "Perdu gay";
+CM_ SG_ 113 EBS_Pressure_Rear "(null)";
 CM_ SG_ 1282 STATE "Regulations";
 VAL_ 81 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpad" 3 "Trackdrive" 4 "Braketest" 5 "Inspection" 6 "Autocross" ;
-VAL_ 97 Mission_Select 0 "Manual" 1 "Acceleation" 2 "Skidpadd" 3 "Trackdive" 4 "Braketest" 5 "Inspection" 6 "Autocross" ;
+VAL_ 97 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpadd" 3 "Trackdrive" 4 "Braketest" 5 "Inspection" 6 "Autocross" ;
 VAL_ 113 IGN 0 "OFF" 1 "ON" ;
 VAL_ 113 ASMS 0 "OFF" 1 "ON" ;
 VAL_ 113 Emergency 1 "Emergency_ON" 0 "Emergency_OFF" ;
