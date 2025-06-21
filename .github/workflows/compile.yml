@@ -17,10 +17,15 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+- name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install cantools openpyxl
+          # Install latest version of cantools
+          pip install --upgrade cantools openpyxl
+          
+          # Check version and available commands
+          cantools --help
+          cantools --version
 
       - name: Generate C code for all DBC files
         run: |
