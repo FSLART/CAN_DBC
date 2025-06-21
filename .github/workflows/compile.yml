@@ -30,7 +30,12 @@ jobs:
             outdir="generated/$base"
             mkdir -p "$outdir"
             echo "Generating C code for $dbcfile into $outdir"
-            cantools generate_c_source "$dbcfile" --output "$outdir"
+            # FIXED: Use generate_c_code instead of generate_c_source
+            cantools generate_c_code "$dbcfile" --output-directory "$outdir"
+            
+            # Also generate with verbose output to see what's created
+            echo "Generated files in $outdir:"
+            ls -la "$outdir"
           done
 
       - name: Export DBC to Excel
@@ -42,19 +47,13 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add generated/ dbc_signals.xlsx
 
-          # Commit only if changes exist
           if ! git diff --cached --quiet; then
             git commit -m "Auto-generated C code and Excel export from DBC files"
           fi
 
-          # Clean workspace to avoid unstaged changes blocking pull
           git reset --hard
           git clean -fd
-
-          # Pull remote changes with rebase to keep history clean
           git pull --rebase
-
-          # Push changes
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
