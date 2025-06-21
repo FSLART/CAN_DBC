@@ -20,7 +20,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install cantools openpyxl
+          # Install latest version of cantools
+          pip install --upgrade cantools openpyxl
 
       - name: Generate C code for all DBC files
         run: |
