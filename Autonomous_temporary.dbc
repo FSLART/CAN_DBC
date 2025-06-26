@@ -36,32 +36,32 @@ BS_:
 BU_: JETSON VCU ACU RES
 
 
-BO_ 81 ACU_MS: 8 ACU
+BO_ 81 ACU_MS: 1 ACU
  SG_ Mission_Select : 0|8@1+ (1,0) [0|0] ""  JETSON
 
-BO_ 97 JETSON_MS: 8 JETSON
+BO_ 97 JETSON_MS: 1 JETSON
  SG_ Mission_Select : 0|8@1+ (1,0) [0|0] ""  ACU
 
-BO_ 1296 VCU_RPM: 8 VCU
+BO_ 1296 VCU_RPM: 2 VCU
  SG_ RPM : 0|16@1- (1,0) [0|6000] "RPM"  JETSON
 
-BO_ 1280 Target_RPM: 8 JETSON
+BO_ 1280 Target_RPM: 2 JETSON
  SG_ RPM : 0|16@1- (1,0) [0|6000] "RPM"  VCU
 
-BO_ 113 ACU_IGN: 8 ACU
+BO_ 113 ACU_IGN: 5 ACU
  SG_ IGN : 0|8@1+ (1,0) [0|1] ""  VCU
  SG_ ASMS : 8|8@1+ (1,0) [0|1] ""  VCU
  SG_ Emergency : 16|8@1+ (1,0) [0|0] ""  VCU
  SG_ EBS_Pressure_Front : 24|8@1+ (10,0) [0|150] "bar" Vector__XXX
  SG_ EBS_Pressure_Rear : 32|8@1+ (10,0) [0|150] "bar" Vector__XXX
 
-BO_ 1298 RD_JETSON: 8 ACU
+BO_ 1298 RD_JETSON: 1 ACU
  SG_ RD : 0|8@1+ (1,0) [0|0] ""  JETSON
 
-BO_ 1282 AS_STATE: 8 JETSON
+BO_ 1282 AS_STATE: 1 JETSON
  SG_ STATE : 0|8@1+ (1,0) [0|0] ""  VCU,ACU
 
-BO_ 129 VCU_HV: 8 VCU
+BO_ 129 VCU_HV: 3 VCU
  SG_ HV : 0|8@1+ (1,0) [0|0] ""  ACU
  SG_ Brake_pressure_Front : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Brake_pressure_Rear : 16|8@1+ (1,0) [0|0] "" Vector__XXX
