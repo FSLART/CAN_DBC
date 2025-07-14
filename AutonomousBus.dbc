@@ -154,6 +154,7 @@ BO_ 401 RES_PDO: 8 Vector__XXX
  SG_ Button_State : 0|3@1+ (1,0) [0|7] ""  RES
 
 BO_ 2147491840 VCU_Heartbeats: 8 Vector__XXX
+ SG_ HB : 0|8@1+ (1,0) [0|0] ""  VCU
 
 BO_ 2147488865 VCU_TCU_Contactors: 8 Vector__XXX
  SG_ TCU_State : 32|8@1+ (1,0) [0|255] ""  VCU
