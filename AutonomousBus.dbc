@@ -1,6 +1,36 @@
 VERSION ""
 
 
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
 BS_:
 
 BU_:
@@ -9,22 +39,22 @@ BU_:
 BO_ 1280 AS_DynamicsDL_1: 8 Vector__XXX
  SG_ Motor_Moment_Target : 56|8@1- (1,0) [-128|127] "%" Vector__XXX
  SG_ Motor_Moment_Actual : 48|8@1- (1,0) [-128|127] "%" Vector__XXX
- SG_ Brake_Hydraulic_Target : 40|8@1+ (1,0) [0|255] "�" Vector__XXX
- SG_ Brake_Hydraulic_Actual : 32|8@1+ (1,0) [0|255] "�" Vector__XXX
- SG_ Steering_Angle_Target : 24|8@1- (0.5,0) [-64|63.5] "�" Vector__XXX
- SG_ Steering_Angle_Actual : 16|8@1- (0.5,0) [-64|63.5] "�" Vector__XXX
+ SG_ Brake_Hydraulic_Target : 40|8@1+ (1,0) [0|255] " " Vector__XXX
+ SG_ Brake_Hydraulic_Actual : 32|8@1+ (1,0) [0|255] " " Vector__XXX
+ SG_ Steering_Angle_Target : 24|8@1- (0.5,0) [-64|63.5] " " Vector__XXX
+ SG_ Steering_Angle_Actual : 16|8@1- (0.5,0) [-64|63.5] " " Vector__XXX
  SG_ Speed_Target : 8|8@1+ (1,0) [0|255] "km/h" Vector__XXX
  SG_ Speed_Actual : 0|8@1+ (1,0) [0|255] "km/h" Vector__XXX
 
 BO_ 1281 AS_DynamicsDL_2: 6 Vector__XXX
- SG_ Yaw_Rate : 32|16@1- (0.007813,0) [-256.016|256.009] "�/s" Vector__XXX
+ SG_ Yaw_Rate : 32|16@1- (0.007813,0) [-256.016|256.009] " /s" Vector__XXX
  SG_ Accelaration_Lateral : 16|16@1- (0.001953,0) [-63.9959|63.994] "m/s^2" Vector__XXX
  SG_ Accelaration_Longitudinal : 0|16@1- (0.001953,0) [-63.9959|63.994] "m/s^2" Vector__XXX
 
 BO_ 2147488788 VCU_HV500_ERPM_DUTY_VOLTAGE: 8 Vector__XXX
  SG_ Actual_InputVoltage : 55|16@0- (1,0) [-32768|32767] "V" Vector__XXX
  SG_ Actual_Duty : 39|16@0- (0.1,0) [-3276|3276] "%" Vector__XXX
- SG_ Actual_ERPM : 7|32@0- (1,0) [-2.14748e+008|2.14748e+008] "ERPM" Vector__XXX
+ SG_ Actual_ERPM : 7|32@0- (1,0) [-214748000|214748000] "ERPM" Vector__XXX
 
 BO_ 2147488820 VCU_HV500_AC_DC_current: 8 Vector__XXX
  SG_ Actual_DCCurrent : 23|16@0- (0.1,0) [-3276|3276] "A" Vector__XXX
@@ -36,8 +66,8 @@ BO_ 2147488852 VCU_HV500_Temperatures: 8 Vector__XXX
  SG_ Actual_TempController : 7|16@0- (0.1,0) [-3276|3276] "C" Vector__XXX
 
 BO_ 2147488884 VCU_HV500_FOC: 8 Vector__XXX
- SG_ Actual_FOC_iq : 39|32@0- (0.01,0) [3600|-3600] "Apk" Vector__XXX
- SG_ Actual_FOC_id : 7|32@0- (0.01,0) [3600|-3600] "Apk" Vector__XXX
+ SG_ Actual_FOC_iq : 39|32@0- (0.01,0) [-3600|3600] "Apk" Vector__XXX
+ SG_ Actual_FOC_id : 7|32@0- (0.01,0) [-3600|3600] "Apk" Vector__XXX
 
 BO_ 2147488916 VCU_HV500_MISC: 8 Vector__XXX
  SG_ CAN_map_version : 63|8@0+ (0.1,0) [0|25.5] "Version" Vector__XXX
@@ -74,7 +104,7 @@ BO_ 2147489652 VCU_HV500_SetBrakeCurrent: 8 Vector__XXX
  SG_ CMD_TargetBrakeCurrent : 7|16@0- (0.1,0) [0|1000] "A" Vector__XXX
 
 BO_ 2147489684 VCU_HV500_SetERPM: 4 Vector__XXX
- SG_ CMD_TargetSpeed : 7|32@0- (1,0) [-2.14748e+009|2.14748e+009] "ERPM" Vector__XXX
+ SG_ CMD_TargetSpeed : 7|32@0- (1,0) [-2147480000|2147480000] "ERPM" Vector__XXX
 
 BO_ 2147489716 VCU_HV500_SetPosition: 2 Vector__XXX
  SG_ CMD_TargetPosition : 7|16@0- (0.1,0) [0|360] "degree" Vector__XXX
@@ -163,50 +193,50 @@ BO_ 1079 BrakeLight: 8 Vector__XXX
  SG_ Rear_Brake_Pressure : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 BO_ 389 MAXON_PDO_0: 8 Vector__XXX
- SG_ Current_Actual : 32|32@1+ (1,0) [0|4.29497e+009] "" Vector__XXX
+ SG_ Current_Actual : 32|32@1+ (1,0) [0|4294970000] "" Vector__XXX
  SG_ Control_Word : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ Status_Word : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 BO_ 901 MAXON_PDO_3: 8 Vector__XXX
  SG_ Torque_Actual_Value : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ Position_Actual_Value : 16|32@1+ (1,0) [0|4.29497e+009] "" Vector__XXX
+ SG_ Position_Actual_Value : 16|32@1+ (1,0) [0|4294970000] "" Vector__XXX
  SG_ Status_Word : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 BO_ 1157 MAXON_PDO_4: 8 Vector__XXX
  SG_ PWM_DutyCicle_Actual : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ Velocicty_Actual : 16|32@1+ (1,0) [0|4.29497e+009] "" Vector__XXX
+ SG_ Velocicty_Actual : 16|32@1+ (1,0) [0|4294970000] "" Vector__XXX
  SG_ STATUS_WORD : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 BO_ 1029 MAXON_PDO_3_RX: 8 Vector__XXX
- SG_ Target_Position : 16|32@1+ (1,0) [0|4.29497e+009] "" Vector__XXX
+ SG_ Target_Position : 16|32@1+ (1,0) [0|4294970000] "" Vector__XXX
  SG_ Control_Word : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 BO_ 643 ACU_PDO_TX_2: 8 Vector__XXX
  SG_ Status : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Hydra_Front_Brake : 0|32@1+ (1,0) [0|4.29497e+009] "" Vector__XXX
+ SG_ Hydra_Front_Brake : 0|32@1+ (1,0) [0|4294970000] "" Vector__XXX
 
 
 
- VAL_ 2147488852 Actual_FaultCode 10 "ANALOG_INPUT_ERROR_–_Redundant_output_out_of_range" 9 "CAN_COMMAND_ERROR_-_CAN_message_received_contains_parameter_out_of_boundaries" 8 "SENSOR_GENERAL_FAULT_-_An_error_occurred_while_processing_the_sensor_signals" 7 "SENSOR_WIRE_FAULT_-_Something_went_wrong_with_the_sensor_differential_signals" 6 "MOTOR_OVERTEMPERATURE_-_The_motor_temperature_is_higher_than_the_set_maximum" 5 "CONTROLLER_OVERTEMPERATURE_-_The_controller_temperature_is_higher_than_the_set_maximum" 4 "ABSOLUTE_MAX_OVERCURRENT_-_The_AC_current_is_higher_than_the_set_absolute_maximum_current" 3 "DRV_ERROR_-_Transistor_or_transistor_drive_error" 2 "UNDERVOLTAGE_-_The_input_voltage_is_lower_than_the_set_minimum" 1 "OVERVOLTAGE_-_The_input_voltage_is_higher_than_the_set_maximum" 0 "NO_FAULT" ;
- VAL_ 2147488916 Power_limit 1 "Power_limit_active" 0 "Power_limit_inactive" ;
- VAL_ 2147488916 RPM_max_limit 1 "RPM_maximum_limit_active" 0 "RPM_maximum_limit_inactive" ;
- VAL_ 2147488916 RPM_min_limit 1 "RPM_minimum_limit_active" 0 "RPM_minimum_limit_inactive" ;
- VAL_ 2147488916 Motor_temp_limit 1 "Motor_temperature_limit_active" 0 "Motor_temperature_limit_inactive" ;
- VAL_ 2147488916 Motor_accel_limit 1 "Motor_acceleration_temperature_limit_active" 0 "Motor_acceleration_temperature_limit_inactive" ;
- VAL_ 2147488916 Input_voltage_limit 1 "Input_voltage_limit_active" 0 "Input_voltage_limit_inactive" ;
- VAL_ 2147488916 IGBT_temp_limit 1 "IGBT_temperature_limit_active" 0 "IGBT_temperature_limit_inactive" ;
- VAL_ 2147488916 IGBT_accel_limit 1 "IGBT_acceleration_temperature_limit_inactive" 0 "IGBT_acceleration_temperature_limit_inactive" ;
- VAL_ 2147488916 Drive_enable_limit 1 "Drive_enable_limit_active" 0 "Drive_enable_limit_inactive" ;
- VAL_ 2147488916 DC_current_limit 1 "DC_current_limit_inactive" 0 "DC_current_limit_active" ;
- VAL_ 2147488916 Capacitor_temp_limit 1 "Capacitor_temperature_limit_active" 0 "Capacitor_temperature_limit_inactive" ;
- VAL_ 2147488916 Drive_enable 1 "Drive_enabled" 0 "Drive_disabled" ;
- VAL_ 2147488916 Digital_output_4 1 "Output_4_enabled" 0 "Output_4_disabled" ;
- VAL_ 2147488916 Digital_output_3 1 "Output_3_enabled" 0 "Output_3_disabled" ;
- VAL_ 2147488916 Digital_output_2 1 "Output_2_enabled" 0 "Output_2_disabled" ;
- VAL_ 2147488916 Digital_output_1 1 "Output_1_enabled" 0 "Output_1_disabled" ;
- VAL_ 2147488916 Digital_input_4 1 "Input_4_enabled" 0 "Input_4_disabled" ;
- VAL_ 2147488916 Digital_input_3 1 "Input_3_enabled" 0 "Input_3_disabled" ;
- VAL_ 2147488916 Digital_input_2 1 "Input_2_enabled" 0 "Input_2_enabled" ;
- VAL_ 2147488916 Digital_input_1 1 "Input_1_enabled" 0 "Input_1_disabled" ;
- VAL_ 2147489940 CMD_DriveEnable 0 "Drive_not_allowed" 1 "Drive allowed" ;
+VAL_ 2147488852 Actual_FaultCode 10 "ANALOG_INPUT_ERROR_–_Redundant_output_out_of_range" 9 "CAN_COMMAND_ERROR_-_CAN_message_received_contains_parameter_out_of_boundaries" 8 "SENSOR_GENERAL_FAULT_-_An_error_occurred_while_processing_the_sensor_signals" 7 "SENSOR_WIRE_FAULT_-_Something_went_wrong_with_the_sensor_differential_signals" 6 "MOTOR_OVERTEMPERATURE_-_The_motor_temperature_is_higher_than_the_set_maximum" 5 "CONTROLLER_OVERTEMPERATURE_-_The_controller_temperature_is_higher_than_the_set_maximum" 4 "ABSOLUTE_MAX_OVERCURRENT_-_The_AC_current_is_higher_than_the_set_absolute_maximum_current" 3 "DRV_ERROR_-_Transistor_or_transistor_drive_error" 2 "UNDERVOLTAGE_-_The_input_voltage_is_lower_than_the_set_minimum" 1 "OVERVOLTAGE_-_The_input_voltage_is_higher_than_the_set_maximum" 0 "NO_FAULT" ;
+VAL_ 2147488916 Power_limit 1 "Power_limit_active" 0 "Power_limit_inactive" ;
+VAL_ 2147488916 RPM_max_limit 1 "RPM_maximum_limit_active" 0 "RPM_maximum_limit_inactive" ;
+VAL_ 2147488916 RPM_min_limit 1 "RPM_minimum_limit_active" 0 "RPM_minimum_limit_inactive" ;
+VAL_ 2147488916 Motor_temp_limit 1 "Motor_temperature_limit_active" 0 "Motor_temperature_limit_inactive" ;
+VAL_ 2147488916 Motor_accel_limit 1 "Motor_acceleration_temperature_limit_active" 0 "Motor_acceleration_temperature_limit_inactive" ;
+VAL_ 2147488916 Input_voltage_limit 1 "Input_voltage_limit_active" 0 "Input_voltage_limit_inactive" ;
+VAL_ 2147488916 IGBT_temp_limit 1 "IGBT_temperature_limit_active" 0 "IGBT_temperature_limit_inactive" ;
+VAL_ 2147488916 IGBT_accel_limit 1 "IGBT_acceleration_temperature_limit_inactive" 0 "IGBT_acceleration_temperature_limit_inactive" ;
+VAL_ 2147488916 Drive_enable_limit 1 "Drive_enable_limit_active" 0 "Drive_enable_limit_inactive" ;
+VAL_ 2147488916 DC_current_limit 1 "DC_current_limit_inactive" 0 "DC_current_limit_active" ;
+VAL_ 2147488916 Capacitor_temp_limit 1 "Capacitor_temperature_limit_active" 0 "Capacitor_temperature_limit_inactive" ;
+VAL_ 2147488916 Drive_enable 1 "Drive_enabled" 0 "Drive_disabled" ;
+VAL_ 2147488916 Digital_output_4 1 "Output_4_enabled" 0 "Output_4_disabled" ;
+VAL_ 2147488916 Digital_output_3 1 "Output_3_enabled" 0 "Output_3_disabled" ;
+VAL_ 2147488916 Digital_output_2 1 "Output_2_enabled" 0 "Output_2_disabled" ;
+VAL_ 2147488916 Digital_output_1 1 "Output_1_enabled" 0 "Output_1_disabled" ;
+VAL_ 2147488916 Digital_input_4 1 "Input_4_enabled" 0 "Input_4_disabled" ;
+VAL_ 2147488916 Digital_input_3 1 "Input_3_enabled" 0 "Input_3_disabled" ;
+VAL_ 2147488916 Digital_input_2 1 "Input_2_enabled" 0 "Input_2_enabled" ;
+VAL_ 2147488916 Digital_input_1 1 "Input_1_enabled" 0 "Input_1_disabled" ;
+VAL_ 2147489940 CMD_DriveEnable 0 "Drive_not_allowed" 1 "Drive allowed" ;
 
