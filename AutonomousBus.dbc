@@ -33,187 +33,187 @@ NS_ :
 
 BS_:
 
-BU_:
+BU_: ACU VCU JETSON FSG_DATA_LOGGER RES Dynamics NewNode_0007 MAXON
 
 
 BO_ 1280 AS_DynamicsDL_1: 8 Vector__XXX
- SG_ Motor_Moment_Target : 56|8@1- (1,0) [-128|127] "%" Vector__XXX
- SG_ Motor_Moment_Actual : 48|8@1- (1,0) [-128|127] "%" Vector__XXX
- SG_ Brake_Hydraulic_Target : 40|8@1+ (1,0) [0|255] " " Vector__XXX
- SG_ Brake_Hydraulic_Actual : 32|8@1+ (1,0) [0|255] " " Vector__XXX
- SG_ Steering_Angle_Target : 24|8@1- (0.5,0) [-64|63.5] " " Vector__XXX
- SG_ Steering_Angle_Actual : 16|8@1- (0.5,0) [-64|63.5] " " Vector__XXX
- SG_ Speed_Target : 8|8@1+ (1,0) [0|255] "km/h" Vector__XXX
- SG_ Speed_Actual : 0|8@1+ (1,0) [0|255] "km/h" Vector__XXX
+ SG_ Motor_Moment_Target : 56|8@1- (1,0) [-128|127] "%"  ACU
+ SG_ Motor_Moment_Actual : 48|8@1- (1,0) [-128|127] "%"  ACU
+ SG_ Brake_Hydraulic_Target : 40|8@1+ (1,0) [0|255] " "  ACU
+ SG_ Brake_Hydraulic_Actual : 32|8@1+ (1,0) [0|255] " "  ACU
+ SG_ Steering_Angle_Target : 24|8@1- (0.5,0) [-64|63.5] " "  ACU
+ SG_ Steering_Angle_Actual : 16|8@1- (0.5,0) [-64|63.5] " "  ACU
+ SG_ Speed_Target : 8|8@1+ (1,0) [0|255] "km/h"  ACU
+ SG_ Speed_Actual : 0|8@1+ (1,0) [0|255] "km/h"  ACU
 
 BO_ 1281 AS_DynamicsDL_2: 6 Vector__XXX
- SG_ Yaw_Rate : 32|16@1- (0.007813,0) [-256.016|256.009] " /s" Vector__XXX
- SG_ Accelaration_Lateral : 16|16@1- (0.001953,0) [-63.9959|63.994] "m/s^2" Vector__XXX
- SG_ Accelaration_Longitudinal : 0|16@1- (0.001953,0) [-63.9959|63.994] "m/s^2" Vector__XXX
+ SG_ Yaw_Rate : 32|16@1- (0.007813,0) [-256.016|256.009] " /s"  JETSON
+ SG_ Accelaration_Lateral : 16|16@1- (0.001953,0) [-63.9959|63.994] "m/s^2"  JETSON
+ SG_ Accelaration_Longitudinal : 0|16@1- (0.001953,0) [-63.9959|63.994] "m/s^2"  JETSON
 
 BO_ 2147488788 VCU_HV500_ERPM_DUTY_VOLTAGE: 8 Vector__XXX
- SG_ Actual_InputVoltage : 55|16@0- (1,0) [-32768|32767] "V" Vector__XXX
- SG_ Actual_Duty : 39|16@0- (0.1,0) [-3276|3276] "%" Vector__XXX
- SG_ Actual_ERPM : 7|32@0- (1,0) [-214748000|214748000] "ERPM" Vector__XXX
+ SG_ Actual_InputVoltage : 55|16@0- (1,0) [-32768|32767] "V"  VCU
+ SG_ Actual_Duty : 39|16@0- (0.1,0) [-3276|3276] "%"  VCU
+ SG_ Actual_ERPM : 7|32@0- (1,0) [-214748000|214748000] "ERPM"  VCU
 
 BO_ 2147488820 VCU_HV500_AC_DC_current: 8 Vector__XXX
- SG_ Actual_DCCurrent : 23|16@0- (0.1,0) [-3276|3276] "A" Vector__XXX
- SG_ Actual_ACCurrent : 7|16@0- (0.1,0) [-3276|3276] "Apk" Vector__XXX
+ SG_ Actual_DCCurrent : 23|16@0- (0.1,0) [-3276|3276] "A"  VCU
+ SG_ Actual_ACCurrent : 7|16@0- (0.1,0) [-3276|3276] "Apk"  VCU
 
 BO_ 2147488852 VCU_HV500_Temperatures: 8 Vector__XXX
- SG_ Actual_FaultCode : 39|8@0+ (1,0) [0|255] "" Vector__XXX
- SG_ Actual_TempMotor : 23|16@0- (0.1,0) [-3276|3276] "C" Vector__XXX
- SG_ Actual_TempController : 7|16@0- (0.1,0) [-3276|3276] "C" Vector__XXX
+ SG_ Actual_FaultCode : 39|8@0+ (1,0) [0|255] ""  VCU
+ SG_ Actual_TempMotor : 23|16@0- (0.1,0) [-3276|3276] "C"  VCU
+ SG_ Actual_TempController : 7|16@0- (0.1,0) [-3276|3276] "C"  VCU
 
 BO_ 2147488884 VCU_HV500_FOC: 8 Vector__XXX
- SG_ Actual_FOC_iq : 39|32@0- (0.01,0) [-3600|3600] "Apk" Vector__XXX
- SG_ Actual_FOC_id : 7|32@0- (0.01,0) [-3600|3600] "Apk" Vector__XXX
+ SG_ Actual_FOC_iq : 39|32@0- (0.01,0) [-3600|3600] "Apk"  VCU
+ SG_ Actual_FOC_id : 7|32@0- (0.01,0) [-3600|3600] "Apk"  VCU
 
 BO_ 2147488916 VCU_HV500_MISC: 8 Vector__XXX
- SG_ CAN_map_version : 63|8@0+ (0.1,0) [0|25.5] "Version" Vector__XXX
- SG_ Power_limit : 42|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ RPM_max_limit : 41|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ RPM_min_limit : 40|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Motor_temp_limit : 39|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Motor_accel_limit : 38|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Input_voltage_limit : 37|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ IGBT_temp_limit : 36|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ IGBT_accel_limit : 35|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Drive_enable_limit : 34|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ DC_current_limit : 33|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Capacitor_temp_limit : 32|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Drive_enable : 31|8@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Digital_output_4 : 23|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Digital_output_3 : 22|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Digital_output_2 : 21|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Digital_output_1 : 20|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Digital_input_4 : 19|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Digital_input_3 : 18|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Digital_input_2 : 17|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Digital_input_1 : 16|1@0- (1,0) [0|1] "" Vector__XXX
- SG_ Actual_Brake : 15|8@0- (1,0) [-128|127] "%" Vector__XXX
- SG_ Actual_Throttle : 7|8@0- (1,0) [-128|127] "%" Vector__XXX
+ SG_ CAN_map_version : 63|8@0+ (0.1,0) [0|25.5] "Version"  VCU
+ SG_ Power_limit : 42|1@0- (1,0) [0|1] ""  VCU
+ SG_ RPM_max_limit : 41|1@0- (1,0) [0|1] ""  VCU
+ SG_ RPM_min_limit : 40|1@0- (1,0) [0|1] ""  VCU
+ SG_ Motor_temp_limit : 39|1@0- (1,0) [0|1] ""  VCU
+ SG_ Motor_accel_limit : 38|1@0- (1,0) [0|1] ""  VCU
+ SG_ Input_voltage_limit : 37|1@0- (1,0) [0|1] ""  VCU
+ SG_ IGBT_temp_limit : 36|1@0- (1,0) [0|1] ""  VCU
+ SG_ IGBT_accel_limit : 35|1@0- (1,0) [0|1] ""  VCU
+ SG_ Drive_enable_limit : 34|1@0- (1,0) [0|1] ""  VCU
+ SG_ DC_current_limit : 33|1@0- (1,0) [0|1] ""  VCU
+ SG_ Capacitor_temp_limit : 32|1@0- (1,0) [0|1] ""  VCU
+ SG_ Drive_enable : 31|8@0+ (1,0) [0|1] ""  VCU
+ SG_ Digital_output_4 : 23|1@0- (1,0) [0|1] ""  VCU
+ SG_ Digital_output_3 : 22|1@0- (1,0) [0|1] ""  VCU
+ SG_ Digital_output_2 : 21|1@0- (1,0) [0|1] ""  VCU
+ SG_ Digital_output_1 : 20|1@0- (1,0) [0|1] ""  VCU
+ SG_ Digital_input_4 : 19|1@0- (1,0) [0|1] ""  VCU
+ SG_ Digital_input_3 : 18|1@0- (1,0) [0|1] ""  VCU
+ SG_ Digital_input_2 : 17|1@0- (1,0) [0|1] ""  VCU
+ SG_ Digital_input_1 : 16|1@0- (1,0) [0|1] ""  VCU
+ SG_ Actual_Brake : 15|8@0- (1,0) [-128|127] "%"  VCU
+ SG_ Actual_Throttle : 7|8@0- (1,0) [-128|127] "%"  VCU
 
 BO_ 2147489940 VCU_HV500_SetDriveEnable: 2 Vector__XXX
- SG_ CMD_DriveEnable : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_DriveEnable : 7|8@0+ (1,0) [0|1] ""  VCU
 
 BO_ 2147489620 VCU_HV500_SetAcCurrent: 8 Vector__XXX
- SG_ CMD_TargetAcCurrent : 7|16@0- (0.1,0) [-1000|1000] "A" Vector__XXX
+ SG_ CMD_TargetAcCurrent : 7|16@0- (0.1,0) [-1000|1000] "A"  VCU
 
 BO_ 2147489652 VCU_HV500_SetBrakeCurrent: 8 Vector__XXX
- SG_ CMD_TargetBrakeCurrent : 7|16@0- (0.1,0) [0|1000] "A" Vector__XXX
+ SG_ CMD_TargetBrakeCurrent : 7|16@0- (0.1,0) [0|1000] "A"  VCU
 
 BO_ 2147489684 VCU_HV500_SetERPM: 4 Vector__XXX
- SG_ CMD_TargetSpeed : 7|32@0- (1,0) [-2147480000|2147480000] "ERPM" Vector__XXX
+ SG_ CMD_TargetSpeed : 7|32@0- (1,0) [-2147480000|2147480000] "ERPM"  VCU
 
 BO_ 2147489716 VCU_HV500_SetPosition: 2 Vector__XXX
- SG_ CMD_TargetPosition : 7|16@0- (0.1,0) [0|360] "degree" Vector__XXX
+ SG_ CMD_TargetPosition : 7|16@0- (0.1,0) [0|360] "degree"  VCU
 
 BO_ 2147489748 VCU_HV500_SetRelCurrent: 2 Vector__XXX
- SG_ CMD_TargetRelativeCurrent : 7|16@0- (0.1,0) [-100|100] "%" Vector__XXX
+ SG_ CMD_TargetRelativeCurrent : 7|16@0- (0.1,0) [-100|100] "%"  VCU
 
 BO_ 2147489780 VCU_HV500_SetRelBrakeCurrent: 2 Vector__XXX
- SG_ CMD_TargeRelativeBrakeCurrent : 7|16@0- (0.1,0) [0|100] "%" Vector__XXX
+ SG_ CMD_TargeRelativeBrakeCurrent : 7|16@0- (0.1,0) [0|100] "%"  VCU
 
 BO_ 2147489812 VCU_HV500_SetMaxAcCurrent: 2 Vector__XXX
- SG_ CMD_MaxAcCurrent : 7|16@0- (0.1,0) [0|500] "A" Vector__XXX
+ SG_ CMD_MaxAcCurrent : 7|16@0- (0.1,0) [0|500] "A"  VCU
 
 BO_ 2147489844 VCU_HV500_SetMaxAcBrakeCurrent: 2 Vector__XXX
- SG_ CMD_MaxAcBrakeCurrent : 7|16@0- (0.1,0) [0|500] "A" Vector__XXX
+ SG_ CMD_MaxAcBrakeCurrent : 7|16@0- (0.1,0) [0|500] "A"  VCU
 
 BO_ 2147489876 VCU_HV500_SetMaxDcCurrent: 2 Vector__XXX
- SG_ CMD_MaxDcCurrent : 7|16@0- (0.1,0) [0|350] "A" Vector__XXX
+ SG_ CMD_MaxDcCurrent : 7|16@0- (0.1,0) [0|350] "A"  VCU
 
 BO_ 2147489908 VCU_HV500_SetMaxDcBrakeCurrent: 2 Vector__XXX
- SG_ CMD_MaxDcBrakeCurrent : 7|16@0- (0.1,0) [0|350] "A" Vector__XXX
+ SG_ CMD_MaxDcBrakeCurrent : 7|16@0- (0.1,0) [0|350] "A"  VCU
 
 BO_ 1282 AS_System_Status: 5 Vector__XXX
- SG_ Cones_Count_All : 24|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Cones_Count_Actual : 16|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Lap_Counter : 11|4@1+ (1,0) [0|15] "" Vector__XXX
- SG_ Service_Brake_State : 9|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ Stearing_State : 8|1@1- (1,0) [0|1] "" Vector__XXX
- SG_ AMI_State : 5|3@1+ (1,0) [0|7] "" Vector__XXX
- SG_ EBS_State : 3|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ AS_State : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Cones_Count_All : 24|8@1+ (1,0) [0|255] ""  ACU
+ SG_ Cones_Count_Actual : 16|8@1+ (1,0) [0|255] ""  ACU
+ SG_ Lap_Counter : 11|4@1+ (1,0) [0|15] ""  ACU
+ SG_ Service_Brake_State : 9|2@1+ (1,0) [0|3] ""  ACU
+ SG_ Stearing_State : 8|1@1- (1,0) [0|1] ""  ACU
+ SG_ AMI_State : 5|3@1+ (1,0) [0|7] ""  ACU
+ SG_ EBS_State : 3|2@1+ (1,0) [0|3] ""  ACU
+ SG_ AS_State : 0|3@1+ (1,0) [0|7] ""  ACU
 
 BO_ 1795 ACU_HEARTBEAT: 1 Vector__XXX
- SG_ STATE : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ STATE : 0|8@1+ (1,0) [0|255] ""  ACU
 
 BO_ 1297 ASF_SIGNALS: 8 Vector__XXX
- SG_ Pneumatic_Braking_BRAKE_BACK : 48|16@1+ (10,0) [0|655350] "Bar" Vector__XXX
- SG_ Pneumatic_Braking_EBS_BACK : 32|16@1+ (10,0) [0|655350] "Bar" Vector__XXX
- SG_ Pneumatic_Braking_BRAKE_FRONT : 16|16@1+ (10,0) [0|655350] "Bar" Vector__XXX
- SG_ Pneumatic_Braking_EBS_FRONT : 0|16@1+ (10,0) [0|655350] "Bar" Vector__XXX
+ SG_ Pneumatic_Braking_BRAKE_BACK : 48|16@1+ (10,0) [0|655350] "Bar"  ACU
+ SG_ Pneumatic_Braking_EBS_BACK : 32|16@1+ (10,0) [0|655350] "Bar"  ACU
+ SG_ Pneumatic_Braking_BRAKE_FRONT : 16|16@1+ (10,0) [0|655350] "Bar"  ACU
+ SG_ Pneumatic_Braking_EBS_FRONT : 0|16@1+ (10,0) [0|655350] "Bar"  ACU
 
 BO_ 0 NMT: 2 Vector__XXX
- SG_ Target_Node : 8|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ State : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Target_Node : 8|8@1+ (1,0) [0|255] ""  JETSON
+ SG_ State : 0|8@1+ (1,0) [0|255] ""  JETSON
 
 BO_ 401 RES_PDO: 8 Vector__XXX
- SG_ Button_State : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Button_State : 0|3@1+ (1,0) [0|7] ""  RES
 
 BO_ 2147491840 VCU_Heartbeats: 8 Vector__XXX
 
 BO_ 2147488865 VCU_TCU_Contactors: 8 Vector__XXX
- SG_ TCU_State : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Pre_Charge : 24|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Autonomous_Ignition : 16|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Contactors_Error : 8|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Contactors_State : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TCU_State : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Pre_Charge : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Autonomous_Ignition : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Contactors_Error : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Contactors_State : 0|8@1+ (1,0) [0|255] ""  VCU
 
 BO_ 640 Dynamics_REAR: 8 Vector__XXX
- SG_ Dynamics_State : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Suspensio_Position_RR : 24|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Suspensio_Position_RL : 16|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Wheel_Speed_RR : 8|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Wheel_Speed_RL : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dynamics_State : 32|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Suspensio_Position_RR : 24|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Suspensio_Position_RL : 16|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Wheel_Speed_RR : 8|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Wheel_Speed_RL : 0|8@1+ (1,0) [0|255] ""  Dynamics
 
 BO_ 672 Dynamics_FRONT: 8 Vector__XXX
- SG_ Dynamics_State : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Suspensio_Position_FR : 24|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Suspensio_Position_FL : 16|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Wheel_Speed_FR : 8|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Wheel_Speed_FL : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dynamics_State : 32|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Suspensio_Position_FR : 24|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Suspensio_Position_FL : 16|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Wheel_Speed_FR : 8|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Wheel_Speed_FL : 0|8@1+ (1,0) [0|255] ""  Dynamics
 
 BO_ 145 RES_EM: 8 Vector__XXX
- SG_ ERROR_State : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ERROR_State : 0|8@1+ (1,0) [0|255] ""  RES
 
 BO_ 133 MAXON_Error: 8 Vector__XXX
- SG_ ERROR_State : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ERROR_State : 0|8@1+ (1,0) [0|255] ""  MAXON
 
 BO_ 131 ACU_ERROR: 8 Vector__XXX
- SG_ ERROR_State : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ERROR_State : 0|8@1+ (1,0) [0|255] ""  ACU
 
 BO_ 128 SYNC: 8 Vector__XXX
- SG_ Counter : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Counter : 0|8@1+ (1,0) [0|255] ""  VCU
 
 BO_ 1079 BrakeLight: 8 Vector__XXX
- SG_ BrakeLight_State : 16|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Rear_Brake_Pressure : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BrakeLight_State : 16|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Rear_Brake_Pressure : 0|16@1+ (1,0) [0|65535] ""  Dynamics
 
 BO_ 389 MAXON_PDO_0: 8 Vector__XXX
- SG_ Current_Actual : 32|32@1+ (1,0) [0|4294970000] "" Vector__XXX
- SG_ Control_Word : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ Status_Word : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Current_Actual : 32|32@1+ (1,0) [0|4294970000] ""  MAXON
+ SG_ Control_Word : 16|16@1+ (1,0) [0|65535] ""  MAXON
+ SG_ Status_Word : 0|16@1+ (1,0) [0|65535] ""  MAXON
 
 BO_ 901 MAXON_PDO_3: 8 Vector__XXX
- SG_ Torque_Actual_Value : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ Position_Actual_Value : 16|32@1+ (1,0) [0|4294970000] "" Vector__XXX
- SG_ Status_Word : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Torque_Actual_Value : 48|16@1+ (1,0) [0|65535] ""  MAXON
+ SG_ Position_Actual_Value : 16|32@1+ (1,0) [0|4294970000] ""  MAXON
+ SG_ Status_Word : 0|16@1+ (1,0) [0|65535] ""  MAXON
 
 BO_ 1157 MAXON_PDO_4: 8 Vector__XXX
- SG_ PWM_DutyCicle_Actual : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ Velocicty_Actual : 16|32@1+ (1,0) [0|4294970000] "" Vector__XXX
- SG_ STATUS_WORD : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ PWM_DutyCicle_Actual : 48|16@1+ (1,0) [0|65535] ""  MAXON
+ SG_ Velocicty_Actual : 16|32@1+ (1,0) [0|4294970000] ""  MAXON
+ SG_ STATUS_WORD : 0|16@1+ (1,0) [0|65535] ""  MAXON
 
 BO_ 1029 MAXON_PDO_3_RX: 8 Vector__XXX
- SG_ Target_Position : 16|32@1+ (1,0) [0|4294970000] "" Vector__XXX
- SG_ Control_Word : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Target_Position : 16|32@1+ (1,0) [0|4294970000] ""  JETSON
+ SG_ Control_Word : 0|16@1+ (1,0) [0|65535] ""  JETSON
 
 BO_ 643 ACU_PDO_TX_2: 8 Vector__XXX
- SG_ Status : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Hydra_Front_Brake : 0|32@1+ (1,0) [0|4294970000] "" Vector__XXX
+ SG_ Status : 32|8@1+ (1,0) [0|255] ""  Dynamics
+ SG_ Hydra_Front_Brake : 0|32@1+ (1,0) [0|4294970000] ""  Dynamics
 
 
 
