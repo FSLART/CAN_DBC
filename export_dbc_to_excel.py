@@ -26,7 +26,6 @@ def auto_adjust_column_width(ws):
         ws.column_dimensions[column].width = max_length + 2
 
 def write_message_table(ws, message, start_row):
-    # Table header
     headers = [
         "Signal Name", "Start Bit", "Length (bits)", "Byte Order", "Signed",
         "Factor", "Offset", "Min", "Max", "Unit", "Choices"
@@ -37,26 +36,33 @@ def write_message_table(ws, message, start_row):
         cell.fill = header_fill
         cell.border = thin_border
 
-    # Table rows
     for row_index, sig in enumerate(message.signals, start=start_row + 1):
-        row_data = [
-            sig.name,
-            sig.start,
-            sig.length,
-            "Intel" if sig.byte_order == "little_endian" else "Motorola",
-            sig.is_signed,
-            sig.scale,
-            sig.offset,
-            sig.minimum,
-            sig.maximum,
-            sig.unit,
-            ", ".join(f"{k}={v}" for k, v in sig.choices.items()) if sig.choices else ""
-        ]
-        for col_index, value in enumerate(row_data, start=1):
-            cell = ws.cell(row=row_index, column=col_index, value=value)
-            cell.border = thin_border
+        try:
+            unit = sig.unit.encode("utf-8", errors="replace").decode("utf-8") if sig.unit else ""
+            choices = ", ".join(f"{k}={v}" for k, v in sig.choices.items()) if sig.choices else ""
 
-    return row_index + 2  # leave a blank row between tables
+            row_data = [
+                sig.name,
+                sig.start,
+                sig.length,
+                "Intel" if sig.byte_order == "little_endian" else "Motorola",
+                sig.is_signed,
+                sig.scale,
+                sig.offset,
+                sig.minimum,
+                sig.maximum,
+                unit,
+                choices
+            ]
+
+            for col_index, value in enumerate(row_data, start=1):
+                cell = ws.cell(row=row_index, column=col_index, value=value)
+                cell.border = thin_border
+
+        except Exception as e:
+            print(f"⚠️ Skipped signal '{getattr(sig, 'name', 'UNKNOWN')}' in message '{message.name}' due to error: {e}")
+
+    return row_index + 2
 
 def export_dbc_to_excel(dbc_files, output_filename="dbc_signals.xlsx"):
     wb = Workbook()
@@ -66,7 +72,7 @@ def export_dbc_to_excel(dbc_files, output_filename="dbc_signals.xlsx"):
         try:
             db = cantools.database.load_file(dbc_file)
         except Exception as e:
-            print(f"Error loading {dbc_file}: {e}")
+            print(f"❌ Error loading {dbc_file}: {e}")
             continue
 
         sheet_name = os.path.splitext(os.path.basename(dbc_file))[0][:31]
