@@ -75,23 +75,23 @@ BO_ 129 VCU_HV: 3 VCU
 BO_ 401 RES: 8 RES
  SG_ SIGNAL : 0|8@1+ (1,0) [0|0] ""  JETSON,ACU
 
-BO_ 446 DYN_F_SIG1: 6 DYN_F
- SG_ ST_ANGLE : 0|16@1- (10,0) [0|0] "º" Vector__XXX
- SG_ SUSP_R : 16|16@1+ (10,0) [0|0] "mm" Vector__XXX
- SG_ SUSP_L : 32|16@1+ (10,0) [0|0] "mm" Vector__XXX
+BO_ 1094 DYN_F_SIG1: 6 DYN_F
+ SG_ ST_ANGLE : 0|16@1- (0.1,0) [0|0] "º" Vector__XXX
+ SG_ SUSP_R : 16|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
+ SG_ SUSP_L : 32|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
 
-BO_ 456 DYN_F_SIG2: 4 DYN_F
- SG_ SPD_LEFT : 0|16@1+ (10,0) [0|0] "km/h" Vector__XXX
- SG_ SPD_RIGHT : 16|16@1+ (10,0) [0|0] "km/h" Vector__XXX
+BO_ 1110 DYN_F_SIG2: 4 DYN_F
+ SG_ SPD_LEFT : 0|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
+ SG_ SPD_RIGHT : 16|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
 
-BO_ 546 DYN_R_SIG1: 6 DYN_R
- SG_ BRK_PRESS : 0|16@1+ (10,0) [0|0] "bar" Vector__XXX
- SG_ SUSP_R : 16|16@1+ (10,0) [0|0] "mm" Vector__XXX
- SG_ SUSP_L : 32|16@1+ (10,0) [0|0] "mm" Vector__XXX
+BO_ 1350 DYN_R_SIG1: 6 DYN_R
+ SG_ BRK_PRESS : 0|16@1+ (0.1,0) [0|0] "bar" Vector__XXX
+ SG_ SUSP_R : 16|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
+ SG_ SUSP_L : 32|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
 
-BO_ 556 DYN_R_SIG2: 4 DYN_R
- SG_ SPD_LEFT : 0|16@1+ (10,0) [0|0] "km/h" Vector__XXX
- SG_ SPD_RIGHT : 16|16@1+ (10,0) [0|0] "km/h" Vector__XXX
+BO_ 1366 DYN_R_SIG2: 4 DYN_R
+ SG_ SPD_LEFT : 0|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
+ SG_ SPD_RIGHT : 16|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
 
 BO_ 1297 ASF_SIGNALS: 4 ACU
  SG_ EBS_Pressure_Tank_Front : 0|8@1+ (10,0) [0|0] "bar" Vector__XXX
