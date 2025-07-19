@@ -52,10 +52,10 @@ BO_ 32 VCU_: 8 VCU
  SG_ CNSM_Power : 40|24@1+ (1,0) [0|85000] "W" Vector__XXX
 
 BO_ 33 VCU_1: 8 VCU
- SG_ INV_Temperature : 0|16@1+ (10,40) [0|300] "�C" Vector__XXX
- SG_ Motor_Temperature : 16|16@1+ (10,40) [0|100] "�C" Vector__XXX
+ SG_ INV_Temperature : 0|16@1+ (1,40) [0|300] "�C" Vector__XXX
+ SG_ Motor_Temperature : 16|16@1+ (1,40) [0|100] "�C" Vector__XXX
  SG_ BMS_Voltage : 40|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ SOC_HV : 56|8@1+ (10,0) [0|0] "" Vector__XXX
+ SG_ SOC_HV : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 34 VCU_2: 8 VCU
  SG_ INV_Faults : 0|16@1+ (1,0) [0|255] "" Vector__XXX
