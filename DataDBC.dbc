@@ -115,6 +115,9 @@ BO_ 384 DataLogger: 8 DataLogger
 BO_ 105 PDM: 8 Vector__XXX
  SG_ LV_Voltage : 0|2@1+ (0.1,0) [0|30] "V" Vector__XXX
 
+BO_ 37 VCU_5: 1 Vector__XXX
+ SG_ brake_pressure_front : 0|8@1+ (0,0) [0|0] "Bar" Vector__XXX
+
 
 
 CM_ SG_ 32 APPS "Accelerator_Pedal_Position_Sense";
@@ -158,5 +161,6 @@ CM_ SG_ 160 SusPos_FR "SusPos FR";
 CM_ SG_ 160 FR_PC "FR_Pulse_Count";
 CM_ SG_ 160 FL_PC "FL_Pulse_Count";
 CM_ SG_ 160 DY_ST "DY ST";
-CM_ SG_ 105 LV_Voltage "Perdu é gay";
+CM_ SG_ 105 LV_Voltage "Perdu ï¿½ gay";
+
 
