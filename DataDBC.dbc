@@ -45,19 +45,19 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0031 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0052 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 32 VCU_: 8 VCU
+BO_ 256 VCU_: 8 VCU
  SG_ APPS : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ BPS : 8|8@1+ (1,0) [0|0] "BAR" Vector__XXX
  SG_ TRGT_Power : 16|24@1+ (1,0) [0|85000] "W" Vector__XXX
  SG_ CNSM_Power : 40|24@1+ (1,0) [0|85000] "W" Vector__XXX
 
-BO_ 33 VCU_1: 8 VCU
+BO_ 257 VCU_1: 8 VCU
  SG_ INV_Temperature : 0|16@1+ (1,40) [0|300] "�C" Vector__XXX
  SG_ Motor_Temperature : 16|16@1+ (1,40) [0|100] "�C" Vector__XXX
  SG_ BMS_Voltage : 40|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ SOC_HV : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 34 VCU_2: 8 VCU
+BO_ 258 VCU_2: 8 VCU
  SG_ INV_Faults : 0|16@1+ (1,0) [0|255] "" Vector__XXX
  SG_ LMT1 : 16|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ LMT2 : 24|8@1+ (1,0) [0|1] "" Vector__XXX
@@ -65,13 +65,13 @@ BO_ 34 VCU_2: 8 VCU
  SG_ APPS_Error : 40|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Power_Plan : 48|8@1+ (1,0) [0|5] "" Vector__XXX
 
-BO_ 35 VCU_3: 8 VCU
+BO_ 259 VCU_3: 8 VCU
  SG_ INV_Voltage : 0|16@1+ (1,0) [0|620] "V" Vector__XXX
  SG_ RPM : 16|16@1+ (1,0) [0|7000] "RPM" Vector__XXX
  SG_ IGN : 32|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ R2D : 40|8@1+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 36 VCU_4: 8 VCU
+BO_ 260 VCU_4: 8 VCU
  SG_ TCU_State : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ACU_State : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ALC_State : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -112,33 +112,33 @@ BO_ 384 DataLogger: 8 DataLogger
  SG_ DL_state : 0|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Recording_State : 8|8@1+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 105 PDM: 8 Vector__XXX
+BO_ 105 PDM: 8 PDM
  SG_ LV_Voltage : 0|16@1+ (0.1,0) [0|30] "V" Vector__XXX
 
-BO_ 37 VCU_5: 1 Vector__XXX
+BO_ 261 VCU_5: 1 VCU
  SG_ brake_pressure_front : 0|8@1+ (0,0) [0|0] "Bar" Vector__XXX
 
 
 
-CM_ SG_ 32 APPS "Accelerator_Pedal_Position_Sense";
-CM_ SG_ 32 BPS "Brake_Pressure";
-CM_ SG_ 32 TRGT_Power "Target_Power";
-CM_ SG_ 32 CNSM_Power "Current Consumed Power";
-CM_ SG_ 33 INV_Temperature "Inverter_Temperature";
-CM_ SG_ 33 Motor_Temperature "Motor_Temperature";
-CM_ SG_ 33 BMS_Voltage "bms_voltage";
-CM_ SG_ 33 SOC_HV "SOC_HV";
-CM_ SG_ 34 INV_Faults "INVERSOR_ERROR";
-CM_ SG_ 34 LMT1 "RPM_Power_Limit";
-CM_ SG_ 34 LMT2 "Current_Limit_Motor_Temp";
-CM_ SG_ 34 VCU_State "VCU_State";
-CM_ SG_ 34 APPS_Error "APPS_Error";
-CM_ SG_ 34 Power_Plan "Power_Plan_Switch_Volante";
-CM_ SG_ 35 INV_Voltage "DC_Link_Inverter_Voltage";
-CM_ SG_ 35 RPM "RPM";
-CM_ SG_ 35 IGN "Ignition";
-CM_ SG_ 35 R2D "Ready to drive";
-CM_ SG_ 36 TCU_State "";
+CM_ SG_ 256 APPS "Accelerator_Pedal_Position_Sense";
+CM_ SG_ 256 BPS "Brake_Pressure";
+CM_ SG_ 256 TRGT_Power "Target_Power";
+CM_ SG_ 256 CNSM_Power "Current Consumed Power";
+CM_ SG_ 257 INV_Temperature "Inverter_Temperature";
+CM_ SG_ 257 Motor_Temperature "Motor_Temperature";
+CM_ SG_ 257 BMS_Voltage "bms_voltage";
+CM_ SG_ 257 SOC_HV "SOC_HV";
+CM_ SG_ 258 INV_Faults "INVERSOR_ERROR";
+CM_ SG_ 258 LMT1 "RPM_Power_Limit";
+CM_ SG_ 258 LMT2 "Current_Limit_Motor_Temp";
+CM_ SG_ 258 VCU_State "VCU_State";
+CM_ SG_ 258 APPS_Error "APPS_Error";
+CM_ SG_ 258 Power_Plan "Power_Plan_Switch_Volante";
+CM_ SG_ 259 INV_Voltage "DC_Link_Inverter_Voltage";
+CM_ SG_ 259 RPM "RPM";
+CM_ SG_ 259 IGN "Ignition";
+CM_ SG_ 259 R2D "Ready to drive";
+CM_ SG_ 260 TCU_State "";
 CM_ SG_ 96 AccelX_int "X Acceleration Integer  (/100 para int,dec)";
 CM_ SG_ 96 AccelY_dec "Y Acceleration Integer  (/100 para int,dec)";
 CM_ SG_ 96 AccelZ_int "Z Acceleration Integer (/100 para int,dec)";
@@ -162,5 +162,4 @@ CM_ SG_ 160 FR_PC "FR_Pulse_Count";
 CM_ SG_ 160 FL_PC "FL_Pulse_Count";
 CM_ SG_ 160 DY_ST "DY ST";
 CM_ SG_ 105 LV_Voltage "Perdu � gay";
-
 
