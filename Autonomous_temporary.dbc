@@ -99,6 +99,12 @@ BO_ 1297 ASF_SIGNALS: 4 ACU
  SG_ Brake_Pressure_Front : 16|8@1+ (10,0) [0|0] "bar" Vector__XXX
  SG_ Brake_Pressure_Rear : 24|8@1+ (10,0) [0|0] "bar" Vector__XXX
 
+BO_ 1536 VCU_IGN_R2D: 8 Vector__XXX
+ SG_ ignition_manual : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ r2d_manual : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ignition_auto : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ r2d_auto : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ SG_ 3221225472 EBS_Pressure_Rear "(null)";
