@@ -40,6 +40,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ EBS_Pressure_Rear : 32|8@1+ (10,0) [0|150] "bar" Vector__XXX
  SG_ EBS_Pressure_Front : 24|8@1+ (10,0) [0|150] "bar" Vector__XXX
  SG_ NewSignal_0005 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0015 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 81 ACU_MS: 1 ACU
  SG_ Mission_Select : 0|8@1+ (1,0) [0|0] ""  JETSON
@@ -99,11 +100,14 @@ BO_ 1297 ASF_SIGNALS: 4 ACU
  SG_ Brake_Pressure_Front : 16|8@1+ (10,0) [0|0] "bar" Vector__XXX
  SG_ Brake_Pressure_Rear : 24|8@1+ (10,0) [0|0] "bar" Vector__XXX
 
-BO_ 1536 VCU_IGN_R2D: 8 Vector__XXX
+BO_ 1536 VCU_IGN_R2D: 8 VCU
  SG_ ignition_manual : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ r2d_manual : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ignition_auto : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ r2d_auto : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 5 ACU_status: 8 Vector__XXX
+ SG_ ACU_State : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -119,4 +123,5 @@ VAL_ 1298 RD 0 "OFF" 1 "ON" ;
 VAL_ 1282 STATE 1 "OFF" 2 "Ready" 3 "Driving" 4 "Emergency" 5 "Finish" ;
 VAL_ 129 HV 0 "hv off" 9 "hv on" 10 "contactor error" ;
 VAL_ 401 SIGNAL 5 "GO_SIGNAL" 7 "GO_SIGNAL_2" 0 "EMERGENCY" ;
+VAL_ 5 ACU_State 0 "INIT" 1 "MS" 2 "INIT_SEQ" 3 "READY" 4 "DRIVING" 5 "EBS_ERROR" 6 "EMERGENCY" 7 "FINISHED" 8 "MANUAL" ;
 
