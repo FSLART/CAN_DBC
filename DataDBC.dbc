@@ -113,7 +113,7 @@ BO_ 384 DataLogger: 8 DataLogger
  SG_ Recording_State : 8|8@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 105 PDM: 8 PDM
- SG_ LV_Voltage : 7|16@0+ (0.1,0) [0|30] "V" Vector__XXX
+ SG_ LV_Voltage : 7|16@0+ (0.001,0) [0|30] "V" Vector__XXX
 
 BO_ 261 VCU_5: 1 VCU
  SG_ brake_pressure_front : 0|8@1+ (0,0) [0|0] "Bar" Vector__XXX
