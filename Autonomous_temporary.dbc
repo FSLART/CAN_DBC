@@ -105,8 +105,9 @@ BO_ 1536 VCU_IGN_R2D: 8 VCU
  SG_ r2d_manual : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ignition_auto : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ r2d_auto : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ shutdown_signal : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1792 ACU_status: 8 Vector__XXX
+BO_ 1792 ACU_status: 8 ACU
  SG_ ACU_State : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 
@@ -123,5 +124,5 @@ VAL_ 1298 RD 0 "OFF" 1 "ON" ;
 VAL_ 1282 STATE 1 "OFF" 2 "Ready" 3 "Driving" 4 "Emergency" 5 "Finish" ;
 VAL_ 129 HV 0 "hv off" 9 "hv on" 10 "contactor error" ;
 VAL_ 401 SIGNAL 5 "GO_SIGNAL" 7 "GO_SIGNAL_2" 0 "EMERGENCY" ;
-VAL_ 1792 ACU_State 0 "INIT" 1 "MS" 2 "INIT_SEQ" 3 "READY" 4 "DRIVING" 5 "EBS_ERROR" 6 "EMERGENCY" 7 "FINISHED" 8 "MANUAL" ;
+VAL_ 1792 ACU_State 0 "INIT" 1 "MS" 2 "JETSON_WAITING" 3 "IBIT_SEQ" 4 "READY" 5 "DRIVING" 6 "EBS_EROR" 7 "EMERGENCY" 8 "FINISHED" 9 "MANUAL" ;
 
