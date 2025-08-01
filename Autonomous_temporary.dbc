@@ -110,6 +110,7 @@ BO_ 1536 VCU_IGN_R2D: 8 VCU
 
 BO_ 1792 ACU_status: 8 ACU
  SG_ ACU_State : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ assi_state : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
