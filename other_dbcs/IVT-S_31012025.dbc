@@ -34,6 +34,8 @@ NS_ :
 BS_:
 
 BU_: Host IVT_Mod
+
+
 VAL_TABLE_ _B9_Voltage_Channels 3 "3 Channels" 0 "0 Channels" ;
 VAL_TABLE_ _B9_Supply_Voltage 1 "12 / 24 V nominal supply voltage" ;
 VAL_TABLE_ _B9_Current 2500 "2500 A" 1000 "1000 A" 500 "500 A" 300 "300 A" 100 "100 A" ;
@@ -46,6 +48,7 @@ VAL_TABLE_ VtID_Cmd 54 "Set_THRESHOLD_neg" 53 "Set_THRESHOLD_pos" 32 "Set_MODE_R
 VAL_TABLE_ VtTriggerMode 2 "CYCLIC" 1 "TRIGGERED" 0 "DISABLED" ;
 VAL_TABLE_ VtRunMode 1 "START" 0 "STOP" ;
 VAL_TABLE_ VtID_Response 149 "ARTICLE_NUMBER" 148 "SERIAL NUMBER" 147 "SW_VERSION" 146 "DEVICE_ID" 145 "STATUS" 143 "CAN_ID" 142 "STORE_to_default" 134 "START_OC_TEST" 133 "Description for the value '0x85'" 132 "THRESHOLD" 131 "CONFIG" 130 "MODE" 129 "STORE" 128 "TRIGGER" ;
+
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -109,9 +112,9 @@ BO_ 1297 IVT_Msg_Response: 8 IVT_Mod
  SG_ _81_Resp_SystemError_Item m129 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
  SG_ _81_Resp_SystemError_Count_Mask m129 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ _82_Resp_AllLogData_Item m130 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
- SG_ _82_Resp_AllLogData_Counter m130 : 23|48@0- (1,0) [-140737488355328|140737488355327] "" Vector__XXX
+ SG_ _82_Resp_AllLogData_Counter m130 : 23|48@0- (1,0) [-1.4073748836E+14|1.4073748836E+14] "" Vector__XXX
  SG_ _83_Resp_LogData_Item m131 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
- SG_ _83_Resp_LogData_Counter m131 : 23|48@0- (1,0) [-140737488355328|140737488355327] "" Vector__XXX
+ SG_ _83_Resp_LogData_Counter m131 : 23|48@0- (1,0) [-1.4073748836E+14|1.4073748836E+14] "" Vector__XXX
  SG_ _90_Resp_Can_ID_SN_I m144 : 31|32@0+ (1,0) [0|0] "" Vector__XXX
  SG_ _90_Resp_Can_ID_val_I m144 : 15|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ _91_Resp_Can_ID_SN_U1 m145 : 31|32@0+ (1,0) [0|0] "" Vector__XXX
@@ -354,7 +357,7 @@ BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 10;
 BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","Cyclic","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
 BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
 BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
-BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 100000000000;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 1215752192;
 BA_DEF_DEF_  "Manufacturer" "Isabellenhuette";
 BA_DEF_DEF_  "ILUsed" "Yes";
 BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
@@ -373,54 +376,54 @@ BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
 BA_DEF_DEF_  "GenSigInactiveValue" 0;
 BA_DEF_DEF_  "GenSigSendType" "OnWrite";
 BA_DEF_DEF_  "GenSigStartValue" 0;
-BA_ "Manufacturer" BU_ IVT_Mod "Isabellenhuette";
-BA_ "NmNode" BU_ IVT_Mod 1;
-BA_ "ILUsed" BU_ IVT_Mod 1;
 BA_ "GenMsgSendType" BO_ 1320 1;
-BA_ "GenMsgSendType" BO_ 1319 1;
-BA_ "GenMsgSendType" BO_ 1318 1;
-BA_ "GenMsgSendType" BO_ 1297 1;
-BA_ "GenMsgSendType" BO_ 1317 1;
-BA_ "GenMsgSendType" BO_ 1316 1;
-BA_ "GenMsgSendType" BO_ 1315 1;
-BA_ "GenMsgSendType" BO_ 1314 1;
-BA_ "GenMsgSendType" BO_ 1313 1;
-BA_ "NmMessage" BO_ 1041 1;
-BA_ "GenMsgSendType" BO_ 1041 7;
 BA_ "GenSigStartValue" SG_ 1320 IVT_Result_Wh 0;
 BA_ "GenSigSendType" SG_ 1320 IVT_Result_Wh 7;
 BA_ "GenSigStartValue" SG_ 1320 IVT_ID_Result_Wh 7;
 BA_ "GenSigSendType" SG_ 1320 IVT_ID_Result_Wh 7;
+BA_ "GenMsgSendType" BO_ 1319 1;
 BA_ "GenSigStartValue" SG_ 1319 IVT_Result_As 0;
 BA_ "GenSigStartValue" SG_ 1319 IVT_ID_Result_As 6;
 BA_ "GenSigSendType" SG_ 1319 IVT_ID_Result_As 7;
+BA_ "GenMsgSendType" BO_ 1318 1;
 BA_ "GenSigStartValue" SG_ 1318 IVT_Result_W 0;
 BA_ "GenSigStartValue" SG_ 1318 IVT_ID_Result_W 5;
 BA_ "GenSigSendType" SG_ 1318 IVT_ID_Result_W 7;
+BA_ "GenMsgSendType" BO_ 1297 1;
 BA_ "GenSigStartValue" SG_ 1297 _A0_Resp_TriggerMode_I 2;
 BA_ "GenSigStartValue" SG_ 1297 _A4_Resp_TriggerMode_T 2;
 BA_ "GenSigStartValue" SG_ 1297 _A5_Resp_TriggerMode_W 2;
 BA_ "GenSigStartValue" SG_ 1297 _A6_Resp_TriggerMode_As 2;
 BA_ "GenSigStartValue" SG_ 1297 _A7_Resp_TriggerMode_WH 2;
+BA_ "GenMsgSendType" BO_ 1317 1;
 BA_ "GenSigStartValue" SG_ 1317 IVT_ID_Result_T 4;
 BA_ "GenSigSendType" SG_ 1317 IVT_ID_Result_T 7;
 BA_ "GenSigStartValue" SG_ 1317 IVT_Result_T 0;
+BA_ "GenMsgSendType" BO_ 1316 1;
 BA_ "GenSigStartValue" SG_ 1316 IVT_ID_Result_U3 3;
 BA_ "GenSigSendType" SG_ 1316 IVT_ID_Result_U3 7;
+BA_ "GenMsgSendType" BO_ 1315 1;
 BA_ "GenSigStartValue" SG_ 1315 IVT_ID_Result_U2 2;
 BA_ "GenSigSendType" SG_ 1315 IVT_ID_Result_U2 7;
+BA_ "GenMsgSendType" BO_ 1314 1;
 BA_ "GenSigStartValue" SG_ 1314 IVT_ID_Result_U1 1;
 BA_ "GenSigSendType" SG_ 1314 IVT_ID_Result_U1 7;
 BA_ "GenSigSendType" SG_ 1314 IVT_Result_U1 7;
+BA_ "GenMsgSendType" BO_ 1313 1;
 BA_ "GenSigStartValue" SG_ 1313 IVT_ID_Result_I 0;
 BA_ "GenSigSendType" SG_ 1313 IVT_ID_Result_I 7;
 BA_ "GenSigStartValue" SG_ 1313 IVT_Result_I 0;
 BA_ "GenSigSendType" SG_ 1313 IVT_Result_I 7;
+BA_ "NmMessage" BO_ 1041 1;
+BA_ "GenMsgSendType" BO_ 1041 7;
 BA_ "GenSigStartValue" SG_ 1041 _20_Conf_TriggerMode_I 2;
 BA_ "GenSigStartValue" SG_ 1041 _24_Conf_TriggerMode_T 2;
 BA_ "GenSigStartValue" SG_ 1041 _25_Conf_TriggerMode_W 2;
 BA_ "GenSigStartValue" SG_ 1041 _26_Conf_TriggerMode_As 2;
 BA_ "GenSigStartValue" SG_ 1041 _27_Conf_TriggerMode_WH 2;
+BA_ "Manufacturer" BU_ IVT_Mod "Isabellenhuette";
+BA_ "NmNode" BU_ IVT_Mod 1;
+BA_ "ILUsed" BU_ IVT_Mod 1;
 VAL_ 1320 IVT_ID_Result_Wh 7 "Vt_Result_Wh" ;
 VAL_ 1319 IVT_ID_Result_As 6 "Vt_Result_As" ;
 VAL_ 1318 IVT_ID_Result_W 5 "Vt_Result_W" ;

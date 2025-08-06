@@ -122,6 +122,7 @@ BO_ 1552 VCU_APPS_RAW: 8 VCU
  SG_ cpu_temp : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ flag_digital_bspd : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ apps_error_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ apps_1000 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
