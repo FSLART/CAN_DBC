@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: JETSON VCU ACU RES DYN_F DYN_R FSG_DATA_LOGGER
+BU_: JETSON VCU ACU RES DYN_F DYN_R FSG_DATA_LOGGER MAXON
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -142,6 +142,37 @@ BO_ 1555 JETSON_DATA_1: 8 JETSON
  SG_ current_cone_count : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ total_cone_count : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 517 Maxon_mode_rx: 2 MAXON
+ SG_ Control_word : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1029 Maxon_position_rx: 6 MAXON
+ SG_ control_word : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ target_position : 16|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 773 Maxon_profile_rx: 8 MAXON
+ SG_ profile_velocity : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ profile_acceleration : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 389 Maxon_status_tx: 8 MAXON
+ SG_ status_word : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ control_word : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ current_actual_value : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 645 Maxon_status2_tx: 8 MAXON
+ SG_ error_code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ status_word : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ current_average_value : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 901 Maxon_position_tx: 8 MAXON
+ SG_ status_word : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ actual_position : 16|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ actual_torque : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1157 Maxon_velocity_tx: 8 MAXON
+ SG_ status_word : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ actual_velocity : 16|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ pdw_duty_cicle_actual_value : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ SG_ 3221225472 EBS_Pressure_Rear "(null)";
@@ -172,4 +203,6 @@ VAL_ 129 HV 0 "hv off" 9 "hv on" 10 "contactor error" ;
 VAL_ 401 SIGNAL 5 "GO_SIGNAL" 7 "GO_SIGNAL_2" 0 "EMERGENCY" ;
 VAL_ 1536 vcu_state 1 "INIT" 2 "SHUTDOWN" 3 "STANDBY" 4 "PRECHARGE" 5 "WAIT_R2D_MANUAL" 6 "WAIT_R2D_AUTO" 7 "READY_MANUAL" 8 "READY_AUTO" 9 "EMERGENCY" ;
 VAL_ 1792 ACU_State 0 "INIT" 1 "MS" 2 "JETSON_WAITING" 3 "IBIT_SEQ" 4 "READY" 5 "DRIVING" 6 "EBS_EROR" 7 "EMERGENCY" 8 "FINISHED" 9 "MANUAL" ;
+VAL_ 517 Control_word 6 "shutdown" 15 "new_position_bit" ;
+VAL_ 1029 control_word 31 "absolute_position" 63 "absolute_position_immediatly" 127 "relative position_immediatly" 95 "relative_position" ;
 
