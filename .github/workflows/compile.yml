@@ -26,7 +26,7 @@ jobs:
       - name: Generate C code for all DBC files
         run: |
           mkdir -p generated
-          find . -type f -name "*.dbc" | while read -r dbcfile; do
+          find . -type f -name "*.dbc" -not -path "./other_dbcs/*" | while read -r dbcfile; do
             base=$(basename "$dbcfile" .dbc)
             outdir="generated/$base"
             mkdir -p "$outdir"
