@@ -41,6 +41,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ EBS_Pressure_Front : 24|8@1+ (10,0) [0|150] "bar" Vector__XXX
  SG_ NewSignal_0005 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0015 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0012 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 81 ACU_MS: 1 ACU
  SG_ Mission_Select : 0|8@1+ (1,0) [0|0] ""  JETSON
@@ -48,10 +49,10 @@ BO_ 81 ACU_MS: 1 ACU
 BO_ 97 JETSON_MS: 1 JETSON
  SG_ Mission_Select : 0|8@1+ (1,0) [0|0] ""  ACU
 
-BO_ 1296 VCU_RPM: 2 VCU
- SG_ RPM : 0|16@1- (1,0) [0|6000] "RPM"  JETSON
+BO_ 1289 VCU_RPM: 2 VCU
+ SG_ rpm_actual : 0|16@1- (1,0) [0|6000] "RPM"  JETSON
 
-BO_ 1280 Target_RPM: 8 ACU
+BO_ 1280 DL_MSG_1: 8 ACU
  SG_ Speed_actual : 0|8@1+ (0.5,0) [0|0] "Km/h"  VCU
  SG_ Speed_target : 8|8@1+ (0.5,0) [0|0] "Km/h" Vector__XXX
  SG_ Steering_angle_actual : 16|8@1- (0.5,0) [0|0] "º" Vector__XXX
@@ -62,10 +63,10 @@ BO_ 113 ACU_IGN: 5 ACU
  SG_ ASMS : 8|8@1+ (1,0) [0|1] ""  VCU
  SG_ Emergency : 16|8@1+ (1,0) [0|0] ""  VCU
 
-BO_ 1298 RD_JETSON: 1 ACU
+BO_ 1299 RD_JETSON: 1 ACU
  SG_ RD : 0|8@1+ (1,0) [0|0] ""  JETSON
 
-BO_ 1282 AS_STATE: 1 JETSON
+BO_ 1283 AS_STATE: 1 JETSON
  SG_ STATE : 0|8@1+ (1,0) [0|0] ""  VCU,ACU
 
 BO_ 129 VCU_HV: 3 VCU
@@ -76,21 +77,21 @@ BO_ 129 VCU_HV: 3 VCU
 BO_ 401 RES: 8 RES
  SG_ SIGNAL : 0|8@1+ (1,0) [0|0] ""  JETSON,ACU
 
-BO_ 1094 DYN_F_SIG1: 6 DYN_F
+BO_ 1094 DYN_FRONT_SIG1: 6 DYN_F
  SG_ ST_ANGLE : 0|16@1- (0.1,0) [0|0] "º" Vector__XXX
  SG_ SUSP_R : 16|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
  SG_ SUSP_L : 32|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
 
-BO_ 1110 DYN_F_SIG2: 4 DYN_F
+BO_ 1110 DYN_FRONT_SIG2: 4 DYN_F
  SG_ SPD_LEFT : 0|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
  SG_ SPD_RIGHT : 16|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
 
-BO_ 1350 DYN_R_SIG1: 6 DYN_R
+BO_ 1350 DYN_REAR_SIG1: 6 DYN_R
  SG_ BRK_PRESS : 0|16@1+ (0.1,0) [0|0] "bar" Vector__XXX
  SG_ SUSP_R : 16|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
  SG_ SUSP_L : 32|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
 
-BO_ 1366 DYN_R_SIG2: 4 DYN_R
+BO_ 1366 DYN_REAR_SIG2: 4 DYN_R
  SG_ SPD_LEFT : 0|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
  SG_ SPD_RIGHT : 16|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
 
@@ -124,18 +125,49 @@ BO_ 1552 VCU_APPS_RAW: 8 VCU
  SG_ apps_error_type : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ apps_1000 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 1177 RPM_TARGET: 8 JETSON
+ SG_ rpm_target : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1541 JETSON_DEBUG: 8 JETSON
+ SG_ POS_X : 0|16@1+ (0.1,0) [0|0] "m" Vector__XXX
+ SG_ POS_Y : 16|16@1+ (0.1,0) [0|0] "m" Vector__XXX
+ SG_ temperature : 32|8@1+ (1,0) [0|0] "ºC" Vector__XXX
+
+BO_ 1555 JETSON_DATA_1: 8 JETSON
+ SG_ target_angle : 0|8@1+ (0.5,0) [0|0] "º" Vector__XXX
+ SG_ target_speed : 8|8@1+ (1,0) [0|0] "km/h" Vector__XXX
+ SG_ actual_angle : 16|8@1+ (0.5,0) [0|0] "º" Vector__XXX
+ SG_ actual_speed : 24|8@1+ (1,0) [0|0] "km/h" Vector__XXX
+ SG_ lap_count : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ current_cone_count : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ total_cone_count : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ SG_ 3221225472 EBS_Pressure_Rear "(null)";
 CM_ SG_ 3221225472 EBS_Pressure_Front "Perdu gay";
-CM_ SG_ 1282 STATE "Regulations";
+CM_ SG_ 1289 rpm_actual "valor que a vcu envia para jetson como feedback
+";
+CM_ SG_ 1299 RD "Envia o estado da acu para a jetson
+";
+CM_ SG_ 1283 STATE "Regulations";
+CM_ SG_ 129 Brake_pressure_Rear "not used, dynamics rear esta a mandar
+";
+CM_ SG_ 1536 R2D_button_raw "valor do botao raw
+
+";
+CM_ SG_ 1536 Ignition_switch_raw "valor do borao raw
+";
+CM_ SG_ 1177 rpm_target "valor da jetson para a vcu";
+CM_ BO_ 1541 "bytes livres para debug
+";
 VAL_ 81 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpad" 3 "Trackdrive" 4 "Braketest" 5 "Inspection" 6 "Autocross" ;
 VAL_ 97 Mission_Select 0 "Manual" 1 "Acceleration" 2 "Skidpadd" 3 "Trackdrive" 4 "Braketest" 5 "Inspection" 6 "Autocross" ;
 VAL_ 113 IGN 0 "OFF" 1 "ON" ;
 VAL_ 113 ASMS 0 "OFF" 1 "ON" ;
 VAL_ 113 Emergency 1 "Emergency_ON" 0 "Emergency_OFF" ;
-VAL_ 1298 RD 0 "OFF" 1 "ON" ;
-VAL_ 1282 STATE 1 "OFF" 2 "Ready" 3 "Driving" 4 "Emergency" 5 "Finish" ;
+VAL_ 1299 RD 0 "OFF" 1 "ON" ;
+VAL_ 1283 STATE 1 "OFF" 2 "Ready" 3 "Driving" 4 "Emergency" 5 "Finish" ;
 VAL_ 129 HV 0 "hv off" 9 "hv on" 10 "contactor error" ;
 VAL_ 401 SIGNAL 5 "GO_SIGNAL" 7 "GO_SIGNAL_2" 0 "EMERGENCY" ;
 VAL_ 1536 vcu_state 1 "INIT" 2 "SHUTDOWN" 3 "STANDBY" 4 "PRECHARGE" 5 "WAIT_R2D_MANUAL" 6 "WAIT_R2D_AUTO" 7 "READY_MANUAL" 8 "READY_AUTO" 9 "EMERGENCY" ;
