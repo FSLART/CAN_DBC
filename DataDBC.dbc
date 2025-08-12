@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: VCU IMU Dynamic Volante DataLogger PDM
+BU_: VCU IMU DYN_F Volante DataLogger PDM DYN_R
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -44,6 +44,20 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0014 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0031 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0052 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DY_ST : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RL_PC : 40|8@1+ (1,0) [0|30] "" Vector__XXX
+ SG_ RR_PC : 32|8@1+ (1,0) [0|30] "" Vector__XXX
+ SG_ SusPos_RR : 24|8@1+ (1,0) [0|50] "mm" Vector__XXX
+ SG_ SusPos_RL : 16|8@1+ (1,0) [0|50] "mm" Vector__XXX
+ SG_ Wheel_Speed_RR : 8|8@1+ (1,0) [0|255] "km/h" Vector__XXX
+ SG_ Wheel_Speed_RL : 0|8@1+ (1,0) [0|255] "km/h" Vector__XXX
+ SG_ DY_ST : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FL_PC : 40|8@1+ (1,0) [0|30] "" Vector__XXX
+ SG_ FR_PC : 32|8@1+ (1,0) [0|30] "" Vector__XXX
+ SG_ SusPos_FR : 24|8@1+ (1,0) [0|50] "mm" Vector__XXX
+ SG_ SusPos_FL : 16|8@1+ (1,0) [0|50] "mm" Vector__XXX
+ SG_ Wheel_Speed_FR : 8|8@1+ (1,0) [0|255] "km/h" Vector__XXX
+ SG_ Wheel_Speed_FL : 0|8@1+ (1,0) [0|255] "km/h" Vector__XXX
 
 BO_ 256 VCU_: 8 VCU
  SG_ APPS : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
@@ -88,35 +102,47 @@ BO_ 97 IMU_1: 8 IMU
  SG_ yaw_int : 32|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Heartbit : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 128 Dynamic_R: 8 Dynamic
- SG_ Wheel_Speed_RL : 0|8@1+ (1,0) [0|255] "km/h" Vector__XXX
- SG_ Wheel_Speed_RR : 8|8@1+ (1,0) [0|255] "km/h" Vector__XXX
- SG_ SusPos_RL : 16|8@1+ (1,0) [0|50] "mm" Vector__XXX
- SG_ SusPos_RR : 24|8@1+ (1,0) [0|50] "mm" Vector__XXX
- SG_ RR_PC : 32|8@1+ (1,0) [0|30] "" Vector__XXX
- SG_ RL_PC : 40|8@1+ (1,0) [0|30] "" Vector__XXX
- SG_ DY_ST : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 1094 DYN_FRONT_SIG1: 6 DYN_F
+ SG_ ST_ANGLE : 0|16@1- (0.1,0) [0|0] "º" Vector__XXX
+ SG_ SUSP_R : 16|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
+ SG_ SUSP_L : 32|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
 
-BO_ 160 Dynamic_F: 8 Dynamic
- SG_ Wheel_Speed_FL : 0|8@1+ (1,0) [0|255] "km/h" Vector__XXX
- SG_ Wheel_Speed_FR : 8|8@1+ (1,0) [0|255] "km/h" Vector__XXX
- SG_ SusPos_FL : 16|8@1+ (1,0) [0|50] "mm" Vector__XXX
- SG_ SusPos_FR : 24|8@1+ (1,0) [0|50] "mm" Vector__XXX
- SG_ FR_PC : 32|8@1+ (1,0) [0|30] "" Vector__XXX
- SG_ FL_PC : 40|8@1+ (1,0) [0|30] "" Vector__XXX
- SG_ DY_ST : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 1110 DYN_FRONT_SIG2: 4 DYN_F
+ SG_ SPD_LEFT : 0|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
+ SG_ SPD_RIGHT : 16|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
 
 BO_ 384 DataLogger: 8 DataLogger
  SG_ DL_state : 0|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Recording_State : 8|8@1+ (1,0) [0|1] "" Vector__XXX
 
-
-
 BO_ 261 VCU_5: 1 VCU
  SG_ brake_pressure_front : 0|8@1+ (0,0) [0|0] "Bar" Vector__XXX
 
+BO_ 1350 DYN_REAR_SIG1: 6 DYN_R
+ SG_ BRK_PRESS : 0|16@1+ (0.1,0) [0|0] "bar" Vector__XXX
+ SG_ SUSP_R : 16|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
+ SG_ SUSP_L : 32|16@1+ (0.1,0) [0|0] "mm" Vector__XXX
+
+BO_ 1366 DYN_REAR_SIG2: 4 DYN_R
+ SG_ SPD_LEFT : 0|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
+ SG_ SPD_RIGHT : 16|16@1+ (0.1,0) [0|0] "km/h" Vector__XXX
 
 
+
+CM_ SG_ 3221225472 DY_ST "DY ST";
+CM_ SG_ 3221225472 RL_PC "RL_Pulse_Count";
+CM_ SG_ 3221225472 RR_PC "RR_Pulse_Count";
+CM_ SG_ 3221225472 SusPos_RR "SusPos RR";
+CM_ SG_ 3221225472 SusPos_RL "SusPos RL";
+CM_ SG_ 3221225472 Wheel_Speed_RR "Wheel Speed RR";
+CM_ SG_ 3221225472 Wheel_Speed_RL "Wheel Speed RL";
+CM_ SG_ 3221225472 DY_ST "DY ST";
+CM_ SG_ 3221225472 FL_PC "FL_Pulse_Count";
+CM_ SG_ 3221225472 FR_PC "FR_Pulse_Count";
+CM_ SG_ 3221225472 SusPos_FR "SusPos FR";
+CM_ SG_ 3221225472 SusPos_FL "SusPos FL";
+CM_ SG_ 3221225472 Wheel_Speed_FR "Wheel Speed FR";
+CM_ SG_ 3221225472 Wheel_Speed_FL "Wheel Speed FL";
 CM_ SG_ 256 APPS "Accelerator_Pedal_Position_Sense";
 CM_ SG_ 256 BPS "Brake_Pressure";
 CM_ SG_ 256 TRGT_Power "Target_Power";
@@ -144,18 +170,4 @@ CM_ SG_ 97 roll_int "roll integer  (/100 para int,dec)";
 CM_ SG_ 97 pitch_dec "pitch integer (/100 para int,dec)";
 CM_ SG_ 97 yaw_int "yaw integer (/100 para int,dec)";
 CM_ SG_ 97 Heartbit "Heartbit (/100 para int,dec)";
-CM_ SG_ 128 Wheel_Speed_RL "Wheel Speed RL";
-CM_ SG_ 128 Wheel_Speed_RR "Wheel Speed RR";
-CM_ SG_ 128 SusPos_RL "SusPos RL";
-CM_ SG_ 128 SusPos_RR "SusPos RR";
-CM_ SG_ 128 RR_PC "RR_Pulse_Count";
-CM_ SG_ 128 RL_PC "RL_Pulse_Count";
-CM_ SG_ 128 DY_ST "DY ST";
-CM_ SG_ 160 Wheel_Speed_FL "Wheel Speed FL";
-CM_ SG_ 160 Wheel_Speed_FR "Wheel Speed FR";
-CM_ SG_ 160 SusPos_FL "SusPos FL";
-CM_ SG_ 160 SusPos_FR "SusPos FR";
-CM_ SG_ 160 FR_PC "FR_Pulse_Count";
-CM_ SG_ 160 FL_PC "FL_Pulse_Count";
-CM_ SG_ 160 DY_ST "DY ST";
 
