@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: AMS
+BU_: AMS VCU
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -614,6 +614,9 @@ BO_ 439 Slave_12_MSC_ID_2: 8 AMS
  SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 131 Start_PreCharge: 1 VCU
+ SG_ Precharge_Request : 7|8@0+ (1,0) [0|0] "ON/OFF" Vector__XXX
 
 
 
