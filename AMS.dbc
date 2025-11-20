@@ -1,0 +1,622 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: AMS
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ NewSignal_0003 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 256 Slave_01_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_3 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_4 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 257 Slave_01_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_5 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_6 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_7 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_8 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 258 Slave_01_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_9 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_10 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_11 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_12 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 259 Slave_01_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_3 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_4 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 260 Slave_01_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_5 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_6 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_7 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_8 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 261 Slave_01_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_9 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_10 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_11 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_12 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 262 Slave_01_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 263 Slave_01_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 272 Slave_02_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_13 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_14 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_15 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_16 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 273 Slave_02_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_17 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_18 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_19 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_20 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 274 Slave_02_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_21 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_22 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_23 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_24 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 275 Slave_02_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_13 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_14 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_15 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_16 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 276 Slave_02_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_17 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_18 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_19 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_20 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 277 Slave_02_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_21 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_22 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_23 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_24 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 278 Slave_02_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 279 Slave_02_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 288 Slave_03_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_25 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_26 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_27 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_28 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 289 Slave_03_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_29 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_30 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_31 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_32 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 290 Slave_03_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_33 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_34 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_35 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_36 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 291 Slave_03_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_25 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_26 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_27 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_28 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 292 Slave_03_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_29 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_30 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_31 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_32 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 293 Slave_03_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_33 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_34 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_35 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_36 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 294 Slave_03_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 295 Slave_03_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 304 Slave_04_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_37 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_38 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_39 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_40 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 305 Slave_04_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_41 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_42 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_43 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_44 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 306 Slave_04_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_45 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_46 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_47 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_48 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 307 Slave_04_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_37 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_38 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_39 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_40 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 308 Slave_04_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_41 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_42 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_43 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_44 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 309 Slave_04_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_45 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_46 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_47 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_48 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 310 Slave_04_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 311 Slave_04_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 320 Slave_05_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_49 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_50 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_51 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_52 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 321 Slave_05_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_53 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_54 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_55 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_56 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 322 Slave_05_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_57 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_58 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_59 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_60 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 323 Slave_05_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_49 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_50 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_51 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_52 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 324 Slave_05_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_53 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_54 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_55 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_56 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 325 Slave_05_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_57 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_58 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_59 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_60 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 326 Slave_05_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 327 Slave_05_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 336 Slave_06_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_61 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_62 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_63 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_64 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 337 Slave_06_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_65 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_66 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_67 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_68 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 338 Slave_06_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_69 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_70 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_71 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_72 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 339 Slave_06_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_61 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_62 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_63 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_64 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 340 Slave_06_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_65 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_66 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_67 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_68 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 341 Slave_06_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_69 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_70 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_71 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_72 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 342 Slave_06_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 343 Slave_06_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 352 Slave_07_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_73 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_74 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_75 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_76 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 353 Slave_07_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_77 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_78 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_79 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_80 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 354 Slave_07_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_81 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_82 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_83 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_84 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 355 Slave_07_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_73 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_74 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_75 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_76 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 356 Slave_07_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_77 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_78 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_79 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_80 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 357 Slave_07_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_81 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_82 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_83 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_84 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 358 Slave_07_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 359 Slave_07_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 368 Slave_08_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_85 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_86 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_87 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_88 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 369 Slave_08_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_89 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_90 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_91 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_92 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 370 Slave_08_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_93 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_94 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_95 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_96 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 371 Slave_08_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_85 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_86 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_87 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_88 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 372 Slave_08_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_89 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_90 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_91 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_92 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 373 Slave_08_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_93 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_94 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_95 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_96 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 374 Slave_08_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 375 Slave_08_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 384 Slave_09_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_97 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_98 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_99 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_100 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 385 Slave_09_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_101 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_102 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_103 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_104 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 386 Slave_09_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_105 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_106 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_107 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_108 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 387 Slave_09_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_97 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_98 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_99 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_100 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 388 Slave_09_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_101 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_102 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_103 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_104 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 389 Slave_09_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_105 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_106 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_107 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_108 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 390 Slave_09_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 391 Slave_09_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 400 Slave_10_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_109 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_110 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_111 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_112 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 401 Slave_10_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_113 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_114 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_115 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_116 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 402 Slave_10_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_117 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_118 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_119 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_120 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 403 Slave_10_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_109 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_110 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_111 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_112 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 404 Slave_10_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_113 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_114 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_115 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_116 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 405 Slave_10_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_117 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_118 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_119 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_120 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 406 Slave_10_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 407 Slave_10_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 416 Slave_11_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_121 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_122 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_123 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_124 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 417 Slave_11_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_125 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_126 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_127 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_128 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 418 Slave_11_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_129 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_130 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_131 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_132 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 419 Slave_11_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_121 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_122 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_123 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_124 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 420 Slave_11_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_125 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_126 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_127 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_128 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 421 Slave_11_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_129 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_130 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_131 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_132 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 422 Slave_11_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 423 Slave_11_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 432 Slave_12_Voltage_ID_1: 8 AMS
+ SG_ cell_voltage_133 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_134 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_135 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_136 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 433 Slave_12_Voltage_ID_2: 8 AMS
+ SG_ cell_voltage_137 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_138 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_139 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_140 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 434 Slave_12_Voltage_ID_3: 8 AMS
+ SG_ cell_voltage_141 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_142 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_143 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_144 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 435 Slave_12_Temperature_ID_1: 8 AMS
+ SG_ temperature_value_133 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_134 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_135 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_136 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 436 Slave_12_Temperature_ID_2: 8 AMS
+ SG_ temperature_value_137 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_138 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_139 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_140 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 437 Slave_12_Temperature_ID_3: 8 AMS
+ SG_ temperature_value_141 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_142 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_143 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temperature_value_144 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 438 Slave_12_MSC_ID_1: 8 AMS
+ SG_ module_voltage_sum : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_avg : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_min : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_voltage_max : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 439 Slave_12_MSC_ID_2: 8 AMS
+ SG_ module_voltage_delta : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+
