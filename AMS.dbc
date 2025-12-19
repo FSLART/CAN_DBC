@@ -40,10 +40,10 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0003 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 256 Slave_01_Voltage_ID_1: 8 AMS
- SG_ cell_voltage_1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ cell_voltage_2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ cell_voltage_3 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ cell_voltage_4 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cell_voltage_1 : 0|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ cell_voltage_2 : 16|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ cell_voltage_3 : 32|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ cell_voltage_4 : 48|16@1+ (0.001,0) [0|0] "V" Vector__XXX
 
 BO_ 257 Slave_01_Voltage_ID_2: 8 AMS
  SG_ cell_voltage_5 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
