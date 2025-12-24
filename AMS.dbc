@@ -36,6 +36,10 @@ BS_:
 BU_: AMS VCU
 
 
+VAL_TABLE_ CommandRef 1 "REFON" 10 "CTH" 11 "COMM_BK" 100 "MUTE_ST" 101 "SNAP_ST" 110 "VUV" 111 "VOV" 1000 "FC" 1001 "DCCx" 10110 "RST" ;
+
+
+
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0003 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -618,8 +622,24 @@ BO_ 439 Slave_12_MSC_ID_2: 8 AMS
 BO_ 131 Start_PreCharge: 1 VCU
  SG_ Precharge_Request : 7|8@0+ (1,0) [0|0] "ON/OFF" Vector__XXX
 
+BO_ 785 Command_Request_311: 8 Vector__XXX
+ SG_ command_reference_id : 0|16@1+ (1,0) [0|65535] ""  AMS
+ SG_ command_value : 16|16@1+ (1,0) [0|65535] ""  AMS
+ SG_ command_reserved : 32|32@1+ (1,0) [0|0] ""  AMS
+
+BO_ 786 Command_Response_312: 8 AMS
+ SG_ response_reference_id : 0|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ response_status : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ response_value : 24|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ response_reserved : 40|24@1+ (1,0) [0|0] ""  VCU
 
 
+
+CM_ BO_ 785 "Command request (0x311): carries reference id and payload for AMS configuration commands.";
+CM_ SG_ 785 command_reference_id "Reference ID (2 bytes). Mapping: 1 REFON (REFUP state), 10 CTH (C-ADC vs S-ADC threshold), 11 COMM_BK (halt isoSPI traffic), 100 MUTE_ST (mute/unmute cell discharge), 101 SNAP_ST (freeze result registers), 110 VUV (cell undervoltage threshold), 111 VOV (cell overvoltage threshold), 1000 FC (digital filtering), 1001-10101 DCCx (DCC1-DCC12 continuous discharge control), 10110 RST (reset to defaults).";
+CM_ SG_ 785 command_value "Payload per command. Ranges/defaults: REFON true|false default false; CTH 000-111 default 001; COMM_BK true|false default false; MUTE_ST true|false default false; SNAP_ST true|false default false; VUV 0x000-0xFFF default 0x800 (cell undervoltage threshold = VUV x 16 x 150 uV + 1.5 V); VOV 0x000-0xFFF default 0x7FF (cell overvoltage threshold = VOV x 16 x 150 uV + 1.5 V); FC 000-111 default 000; DCCx true|false default false; RST true|false default false.";
+CM_ BO_ 786 "Command response (0x312): echoes reference id, includes status and payload.";
+CM_ SG_ 786 response_status "Status/acknowledge for the referenced command.";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_DEF_  "BusType" "CAN";
 
