@@ -1,0 +1,1047 @@
+//******************************BUSMASTER Messages and signals Database ******************************//
+
+[DATABASE_VERSION] 1.3
+
+[PROTOCOL] CAN
+
+[BUSMASTER_VERSION] [3.2.2]
+[NUMBER_OF_MESSAGES] 10
+
+[START_MSG] IVT_Msg_Result_Wh,1320,6,7,0,S,IVT_Mod
+[START_SIGNALS] IVT_Result_Wh_System_Error,1,2,7,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_Wh_OCS,1,2,4,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_Wh_Measurement_Error,1,2,6,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_Wh_Channel_Error,1,2,5,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_Wh,32,6,0,I,2147483647,-2147483648,0,0,1,Wh,,Host
+[START_SIGNALS] IVT_MsgCount_Result_Wh,4,2,0,U,15,0,0,0,1,,,Host
+[START_SIGNALS] IVT_ID_Result_Wh,8,1,0,U,7,0,0,0,1,,,Host
+[VALUE_DESCRIPTION] "Vt_Result_Wh",7
+[END_MSG]
+
+[START_MSG] IVT_Msg_Result_As,1319,6,7,0,S,IVT_Mod
+[START_SIGNALS] IVT_Result_As_System_Error,1,2,7,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_As_OCS,1,2,4,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_As_Measurement_Error,1,2,6,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_As_Channel_Error,1,2,5,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_As,32,6,0,I,2147483647,2,0,0,1,As,,Host
+[START_SIGNALS] IVT_MsgCount_Result_As,4,2,0,U,15,0,0,0,1,,,Host
+[START_SIGNALS] IVT_ID_Result_As,8,1,0,U,6,0,0,0,1,,,Host
+[VALUE_DESCRIPTION] "Vt_Result_As",6
+[END_MSG]
+
+[START_MSG] IVT_Msg_Result_W,1318,6,7,0,S,IVT_Mod
+[START_SIGNALS] IVT_Result_W_System_Error,1,2,7,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_W_OCS,1,2,4,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_W_Measurement_Error,1,2,6,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_W_Channel_Error,1,2,5,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_W,32,6,0,I,2147483647,-2147483648,0,0,1,W,,Host
+[START_SIGNALS] IVT_MsgCount_Result_W,4,2,0,U,15,0,0,0,1,,,Host
+[START_SIGNALS] IVT_ID_Result_W,8,1,0,U,5,0,0,0,1,,,Host
+[VALUE_DESCRIPTION] "Vt_Result_W",5
+[END_MSG]
+
+[START_MSG] IVT_Msg_Response,1297,8,100,0,S,IVT_Mod
+[START_SIGNALS] _B1_Trigger_spare,8,2,0,U,255,0,0,0,1,,m177,
+[START_SIGNALS] _B1_07_Trigger_WH,1,3,7,B,1,0,0,0,1,,m177,
+[START_SIGNALS] _B1_06_Trigger_As,1,3,6,B,1,0,0,0,1,,m177,
+[START_SIGNALS] _B1_05_Trigger_W,1,3,5,B,1,0,0,0,1,,m177,
+[START_SIGNALS] _B1_04_Trigger_T,1,3,4,B,1,0,0,0,1,,m177,
+[START_SIGNALS] _B1_03_Trigger_U3,1,3,3,B,1,0,0,0,1,,m177,
+[START_SIGNALS] _B1_02_Trigger_U2,1,3,2,B,1,0,0,0,1,,m177,
+[START_SIGNALS] _B1_01_Trigger_U1,1,3,1,B,1,0,0,0,1,,m177,
+[START_SIGNALS] _B1_00_Trigger_I,1,3,0,B,1,0,0,0,1,,m177,
+[START_SIGNALS] _B2_Resp_Store_Device_SN,32,6,0,U,4294967295,0,0,0,1,,m178,
+[START_SIGNALS] _FF_Wrong_Command,8,2,0,U,255,0,0,0,1,,m255,
+[START_SIGNALS] _BF_Restart_Alive_SN,32,7,0,U,4294967295,0,0,0,1,,m191,
+[START_SIGNALS] _BF_Restart_Alive_Cmd_ID,16,3,0,U,65535,0,0,0,1,,m191,
+[START_SIGNALS] _BA_Resp_SW_Ver_Vear,8,5,0,U,255,0,0,0,1,,m186,
+[START_SIGNALS] _BA_Resp_SW_Ver_Revision,8,4,0,U,255,0,0,0,1,,m186,
+[START_SIGNALS] _BA_Resp_SW_Ver_Month,8,6,0,I,127,-128,1,0,1,,m186,
+[START_SIGNALS] _BA_Resp_SW_Ver_Minor,8,3,0,U,255,0,0,0,1,,m186,
+[START_SIGNALS] _BA_Resp_SW_Ver_Internal,8,8,0,U,255,0,0,0,1,,m186,
+[START_SIGNALS] _BA_Resp_SW_Ver_Day,8,7,0,U,255,0,0,0,1,,m186,
+[START_SIGNALS] _B9_Resp_Device_Com,8,6,0,U,255,0,0,0,1,,m185,
+[VALUE_DESCRIPTION] "CAN 2 - not terminated",2
+[VALUE_DESCRIPTION] "CAN 1 - terminated",1
+[VALUE_DESCRIPTION] "none",0
+[START_SIGNALS] _B9_Resp_Device_current,12,4,4,U,4095,0,0,0,1,A,m185,
+[VALUE_DESCRIPTION] "2500 A",2500
+[VALUE_DESCRIPTION] "1000 A",1000
+[VALUE_DESCRIPTION] "500 A",500
+[VALUE_DESCRIPTION] "300 A",300
+[VALUE_DESCRIPTION] "100 A",100
+[START_SIGNALS] _B9_Resp_Device_TOI,8,5,0,U,255,0,0,0,1,,m185,
+[VALUE_DESCRIPTION] "I",3
+[START_SIGNALS] _B9_Resp_Device_V_supply,8,7,0,U,255,0,0,0,1,V,m185,
+[VALUE_DESCRIPTION] "12 / 24 V nominal supply voltage",1
+[START_SIGNALS] _B9_Resp_Device_Voltage_chan,4,4,0,U,15,0,0,0,1,,m185,
+[VALUE_DESCRIPTION] "3 Channels",3
+[VALUE_DESCRIPTION] "0 Channels",0
+[START_SIGNALS] _80_Resp_MeasError_Item,8,2,0,U,255,0,0,0,1,,m128,
+[VALUE_DESCRIPTION] "Resp error calibration data",15
+[VALUE_DESCRIPTION] "Resp error ntc-I OpenCirc",14
+[VALUE_DESCRIPTION] "Resp error ntc-h OpenCirc",13
+[VALUE_DESCRIPTION] "Resp error meas U3 OpenCirc",12
+[VALUE_DESCRIPTION] "Resp error meas U2 OpenCirc",11
+[VALUE_DESCRIPTION] "Resp error meas U1 OpenCirc",10
+[VALUE_DESCRIPTION] "Resp error meas I1 OpenCirc",9
+[VALUE_DESCRIPTION] "Resp  error therm EMF correction",8
+[VALUE_DESCRIPTION] "Resp error cur meas implausible",7
+[VALUE_DESCRIPTION] "Resp error Vref",6
+[VALUE_DESCRIPTION] "Resp error Underflow ADC ch 2",5
+[VALUE_DESCRIPTION] "Resp error Overflow ADC ch 2",4
+[VALUE_DESCRIPTION] "Resp error Underflow ADC ch 1",3
+[VALUE_DESCRIPTION] "Reso error Overflow ADC ch 1",2
+[VALUE_DESCRIPTION] "Resp error ADC interrupt",1
+[VALUE_DESCRIPTION] "Resonse all meas errors",0
+[START_SIGNALS] _80_Resp_MeasError_Count_Mask,16,3,0,U,65535,0,1,0,1,,m128,
+[START_SIGNALS] _81_Resp_SystemError_Item,8,2,0,U,255,0,0,0,1,,m129,
+[VALUE_DESCRIPTION] "Resp error Reset EMC",16
+[VALUE_DESCRIPTION] "Resp error Reset Watchdog",15
+[VALUE_DESCRIPTION] "Resp error Reset illegal opcode",14
+[VALUE_DESCRIPTION] "Resp error ADC Clock",13
+[VALUE_DESCRIPTION] "Resp error eeprom r/w",12
+[VALUE_DESCRIPTION] "Resp error Overcurrent detection",11
+[VALUE_DESCRIPTION] "Resp error Configuration",10
+[VALUE_DESCRIPTION] "Resp error System Init",9
+[VALUE_DESCRIPTION] "Resp error System Clock",8
+[VALUE_DESCRIPTION] "Resp error Power failure",7
+[VALUE_DESCRIPTION] "Resp error Undertemp",6
+[VALUE_DESCRIPTION] "Resp error Overtemp",5
+[VALUE_DESCRIPTION] "Resp error CAN bus transmit Data",4
+[VALUE_DESCRIPTION] "Resp error CAN bus receive Data",3
+[VALUE_DESCRIPTION] "Resp error Parameter CRC",2
+[VALUE_DESCRIPTION] "Resp error code CRC",1
+[VALUE_DESCRIPTION] "Resonse all SystemErrors",0
+[START_SIGNALS] _81_Resp_SystemError_Count_Mask,16,3,0,U,65535,0,1,0,1,,m129,
+[START_SIGNALS] _82_Resp_AllLogData_Item,8,2,0,U,255,0,0,0,1,,m130,
+[VALUE_DESCRIPTION] "Resp temp minimum",42
+[VALUE_DESCRIPTION] "Resp temp maxmimum",41
+[VALUE_DESCRIPTION] "Resp U3 minimum",40
+[VALUE_DESCRIPTION] "Resp U3 maximum",39
+[VALUE_DESCRIPTION] "Resp U2 minimum",38
+[VALUE_DESCRIPTION] "Resp U2 maxmimum",37
+[VALUE_DESCRIPTION] "Resp U1 minimum",36
+[VALUE_DESCRIPTION] "Resp U1 maximum",35
+[VALUE_DESCRIPTION] "Resp current minimum",34
+[VALUE_DESCRIPTION] "Resp current maximum",33
+[VALUE_DESCRIPTION] "Resp oc negative activated",28
+[VALUE_DESCRIPTION] "Resp oc positive activated",27
+[VALUE_DESCRIPTION] "Resp run temp out spec limits",26
+[VALUE_DESCRIPTION] "Resp run temp in spec limits",25
+[VALUE_DESCRIPTION] "Resp run volt 3 out spec limits",24
+[VALUE_DESCRIPTION] "Resp run volt 3 in spec limits",23
+[VALUE_DESCRIPTION] "Resp run volt 2 out spec limits",22
+[VALUE_DESCRIPTION] "Resp run volt 2 in spec limits",21
+[VALUE_DESCRIPTION] "Resp run volt 1 out spec limits",20
+[VALUE_DESCRIPTION] "Resp run volt 1 in spec limits",19
+[VALUE_DESCRIPTION] "Resp run cur out spec limits",18
+[VALUE_DESCRIPTION] "Resp run cur in spec limits",17
+[VALUE_DESCRIPTION] "Resp run overall",16
+[VALUE_DESCRIPTION] "Resp energy counter discharging",6
+[VALUE_DESCRIPTION] "Resp energy counter charging",5
+[VALUE_DESCRIPTION] "Resp energy counter overall",4
+[VALUE_DESCRIPTION] "Resp Ah counter discharging",3
+[VALUE_DESCRIPTION] "Resp Ah counter charging",2
+[VALUE_DESCRIPTION] "Resp Ah counter overall",1
+[VALUE_DESCRIPTION] "Response on Overall Logdata",0
+[START_SIGNALS] _82_Resp_AllLogData_Counter,48,8,0,I,140737488355327,-140737488355328,0,0,1,,m130,
+[START_SIGNALS] _83_Resp_LogData_Item,8,2,0,U,255,0,0,0,1,,m131,
+[VALUE_DESCRIPTION] "Resp temp minimum",42
+[VALUE_DESCRIPTION] "Resp temp maxmimum",41
+[VALUE_DESCRIPTION] "Resp U3 minimum",40
+[VALUE_DESCRIPTION] "Resp U3 maximum",39
+[VALUE_DESCRIPTION] "Resp U2 minimum",38
+[VALUE_DESCRIPTION] "Resp U2 maxmimum",37
+[VALUE_DESCRIPTION] "Resp U1 minimum",36
+[VALUE_DESCRIPTION] "Resp U1 maximum",35
+[VALUE_DESCRIPTION] "Resp current minimum",34
+[VALUE_DESCRIPTION] "Resp current maximum",33
+[VALUE_DESCRIPTION] "Resp oc negative activated",28
+[VALUE_DESCRIPTION] "Resp oc positive activated",27
+[VALUE_DESCRIPTION] "Resp run temp out spec limits",26
+[VALUE_DESCRIPTION] "Resp run temp in spec limits",25
+[VALUE_DESCRIPTION] "Resp run volt 3 out spec limits",24
+[VALUE_DESCRIPTION] "Resp run volt 3 in spec limits",23
+[VALUE_DESCRIPTION] "Resp run volt 2 out spec limits",22
+[VALUE_DESCRIPTION] "Resp run volt 2 in spec limits",21
+[VALUE_DESCRIPTION] "Resp run volt 1 out spec limits",20
+[VALUE_DESCRIPTION] "Resp run volt 1 in spec limits",19
+[VALUE_DESCRIPTION] "Resp run cur out spec limits",18
+[VALUE_DESCRIPTION] "Resp run cur in spec limits",17
+[VALUE_DESCRIPTION] "Resp run overall",16
+[VALUE_DESCRIPTION] "Resp energy counter discharging",6
+[VALUE_DESCRIPTION] "Resp energy counter charging",5
+[VALUE_DESCRIPTION] "Resp energy counter overall",4
+[VALUE_DESCRIPTION] "Resp Ah counter discharging",3
+[VALUE_DESCRIPTION] "Resp Ah counter charging",2
+[VALUE_DESCRIPTION] "Resp Ah counter overall",1
+[VALUE_DESCRIPTION] "Response all Logdata SinceReset",0
+[START_SIGNALS] _83_Resp_LogData_Counter,48,8,0,I,140737488355327,-140737488355328,0,0,1,,m131,
+[START_SIGNALS] _90_Resp_Can_ID_SN_I,32,7,0,U,4294967295,0,0,0,1,,m144,
+[START_SIGNALS] _90_Resp_Can_ID_val_I,16,3,0,U,65535,0,0,0,1,,m144,
+[START_SIGNALS] _91_Resp_Can_ID_SN_U1,32,7,0,U,4294967295,0,0,0,1,,m145,
+[START_SIGNALS] _91_Resp_Can_ID_val_U1,16,3,0,U,65535,0,0,0,1,,m145,
+[START_SIGNALS] _92_Resp_Can_ID_SN_U2,32,7,0,U,4294967295,0,0,0,1,,m146,
+[START_SIGNALS] _92_Resp_Can_ID_val_U2,16,3,0,U,65535,0,0,0,1,,m146,
+[START_SIGNALS] _93_Resp_Can_ID_SN_U3,32,7,0,U,4294967295,0,0,0,1,,m147,
+[START_SIGNALS] _93_Resp_Can_ID_val_U3,16,3,0,U,65535,0,0,0,1,,m147,
+[START_SIGNALS] _94_Resp_Can_ID_SN_T,32,7,0,U,4294967295,0,0,0,1,,m148,
+[START_SIGNALS] _94_Resp_Can_ID_val_T,16,3,0,U,65535,0,0,0,1,,m148,
+[START_SIGNALS] _95_Resp_Can_ID_SN_W,32,7,0,U,4294967295,0,0,0,1,,m149,
+[START_SIGNALS] _95_Resp_Can_ID_val_W,16,3,0,U,65535,0,0,0,1,,m149,
+[START_SIGNALS] _96_Resp_Can_ID_SN_As,32,7,0,U,4294967295,0,0,0,1,,m150,
+[START_SIGNALS] _96_Resp_Can_ID_val_As,16,3,0,U,65535,0,0,0,1,,m150,
+[START_SIGNALS] _97_Resp_Can_ID_SN_Wh,32,7,0,U,4294967295,0,0,0,1,,m151,
+[START_SIGNALS] _97_Resp_Can_ID_val_Wh,16,3,0,U,65535,0,0,0,1,,m151,
+[START_SIGNALS] _9D_Resp_Can_ID_SN_Command,32,7,0,U,4294967295,0,0,0,1,,m157,
+[START_SIGNALS] _9D_Resp_Can_ID_val_Command,16,3,0,U,65535,0,0,0,1,,m157,
+[START_SIGNALS] _9F_Resp_Can_ID_SN_Response,32,7,0,U,4294967295,0,0,0,1,,m159,
+[START_SIGNALS] _9F_Resp_Can_ID_val_Response,16,3,0,U,65535,0,0,0,1,,m159,
+[START_SIGNALS] _A0_Resp_CycleTime_I,16,4,0,U,65535,0,0,0,1,ms,m160,
+[START_SIGNALS] _A0_Resp_Endianess_I,1,2,6,B,1,0,0,0,1,,m160,
+[START_SIGNALS] _A0_Resp_Sign_I,1,2,7,B,1,0,0,0,1,,m160,
+[START_SIGNALS] _A0_Resp_TriggerMode_I,2,2,0,U,2,0,0,0,1,,m160,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _A1_Resp_CycleTime_U1,16,4,0,U,65535,0,0,0,1,ms,m161,
+[START_SIGNALS] _A1_Resp_Endianess_U1,1,2,6,B,1,0,0,0,1,,m161,
+[START_SIGNALS] _A1_Resp_Sign_U1,1,2,7,B,1,0,0,0,1,,m161,
+[START_SIGNALS] _A1_Resp_TriggerMode_U1,2,2,0,U,2,0,0,0,1,,m161,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _A2_Resp_CycleTime_U2,16,4,0,U,65535,0,0,0,1,ms,m162,
+[START_SIGNALS] _A2_Resp_Endianess_U2,1,2,6,B,1,0,0,0,1,,m162,
+[START_SIGNALS] _A2_Resp_Sign_U2,1,2,7,B,1,0,0,0,1,,m162,
+[START_SIGNALS] _A2_Resp_TriggerMode_U2,2,2,0,U,2,0,0,0,1,,m162,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _A3_Resp_CycleTime_U3,16,4,0,U,65535,0,0,0,1,ms,m163,
+[START_SIGNALS] _A3_Resp_Endianess_U3,1,2,6,B,1,0,0,0,1,,m163,
+[START_SIGNALS] _A3_Resp_Sign_U3,1,2,7,B,1,0,0,0,1,,m163,
+[START_SIGNALS] _A3_Resp_TriggerMode_U3,2,2,0,U,2,0,0,0,1,,m163,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _A4_Resp_CycleTime_T,16,4,0,U,65535,0,0,0,1,ms,m164,
+[START_SIGNALS] _A4_Resp_Endianess_T,1,2,6,B,1,0,0,0,1,,m164,
+[START_SIGNALS] _A4_Resp_Sign_T,1,2,7,B,1,0,0,0,1,,m164,
+[START_SIGNALS] _A4_Resp_TriggerMode_T,2,2,0,U,2,0,0,0,1,,m164,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _A5_Resp_CycleTime_W,16,4,0,U,65535,0,0,0,1,ms,m165,
+[START_SIGNALS] _A5_Resp_Endianess_W,1,2,6,B,1,0,0,0,1,,m165,
+[START_SIGNALS] _A5_Resp_Sign_W,1,2,7,B,1,0,0,0,1,,m165,
+[START_SIGNALS] _A5_Resp_TriggerMode_W,2,2,0,U,2,0,0,0,1,,m165,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _A6_Resp_CycleTime_As,16,4,0,U,65535,0,0,0,1,ms,m166,
+[START_SIGNALS] _A6_Resp_Endianess_As,1,2,6,B,1,0,0,0,1,,m166,
+[START_SIGNALS] _A6_Resp_Sign_As,1,2,7,B,1,0,0,0,1,,m166,
+[START_SIGNALS] _A6_Resp_TriggerMode_As,2,2,0,U,2,0,0,0,1,,m166,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _A7_Resp_CycleTime_WH,16,4,0,U,65535,0,0,0,1,ms,m167,
+[START_SIGNALS] _A7_Resp_Endianess_WH,1,2,6,B,1,0,0,0,1,,m167,
+[START_SIGNALS] _A7_Resp_Sign_WH,1,2,7,B,1,0,0,0,1,,m167,
+[START_SIGNALS] _A7_Resp_TriggerMode_WH,2,2,0,U,2,0,0,0,1,,m167,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _B0_Resp_Reset_Item,16,3,0,U,65535,0,0,0,1,,m176,
+[VALUE_DESCRIPTION] "Reset temp minimum",554
+[VALUE_DESCRIPTION] "Reset temp maximum",553
+[VALUE_DESCRIPTION] "Reset U3 minimum",552
+[VALUE_DESCRIPTION] "Reset U3 maximum",551
+[VALUE_DESCRIPTION] "Reset U2 minimum",550
+[VALUE_DESCRIPTION] "Reset U2 maximum",549
+[VALUE_DESCRIPTION] "Reset U1 minimum",548
+[VALUE_DESCRIPTION] "Reset U1 maximum",547
+[VALUE_DESCRIPTION] "Reset Current minimum",546
+[VALUE_DESCRIPTION] "Reset Current maximum",545
+[VALUE_DESCRIPTION] "Reset Run overcur neg activated",540
+[VALUE_DESCRIPTION] "Reset Run overcur pos activated",539
+[VALUE_DESCRIPTION] "Reset Run temp out spec limits",538
+[VALUE_DESCRIPTION] "Reset Run temp in spec limits",537
+[VALUE_DESCRIPTION] "Reset Run volt 3 out spec limits",536
+[VALUE_DESCRIPTION] "Reset Run volt 3 in spec limits",535
+[VALUE_DESCRIPTION] "Reset Run volt 2 out spec limits",534
+[VALUE_DESCRIPTION] "Reset Run volt 2 in spec limits",533
+[VALUE_DESCRIPTION] "Reset Run volt 1 out spec limits",532
+[VALUE_DESCRIPTION] "Reset Run volt 1 in spec limits",531
+[VALUE_DESCRIPTION] "Reset Run cur out spec limits",530
+[VALUE_DESCRIPTION] "Reset Run cur in spec limits",529
+[VALUE_DESCRIPTION] "Reset Runtime overall",528
+[VALUE_DESCRIPTION] "Reset Energy counter discharging",518
+[VALUE_DESCRIPTION] "Reset Energy counter charging",517
+[VALUE_DESCRIPTION] "Reset Energy counter overall",516
+[VALUE_DESCRIPTION] "Reset Ah counter discharging",515
+[VALUE_DESCRIPTION] "Reset Ah counter charging",514
+[VALUE_DESCRIPTION] "Reset Ah counter overall",513
+[VALUE_DESCRIPTION] "Reset all Logdata Since Reset",512
+[VALUE_DESCRIPTION] "Reset Reset EMC",272
+[VALUE_DESCRIPTION] "Reset Reset Watchdog",271
+[VALUE_DESCRIPTION] "Reset illegal opcode",270
+[VALUE_DESCRIPTION] "Reset ADC Clock",269
+[VALUE_DESCRIPTION] "Reset eeprom r/w",268
+[VALUE_DESCRIPTION] "Reset overcurrent detection",267
+[VALUE_DESCRIPTION] "Reset configuration",266
+[VALUE_DESCRIPTION] "Reset system init",265
+[VALUE_DESCRIPTION] "Reset system clock",264
+[VALUE_DESCRIPTION] "Reset power failure",263
+[VALUE_DESCRIPTION] "Reset undertemp",262
+[VALUE_DESCRIPTION] "Reset overtemp",261
+[VALUE_DESCRIPTION] "Reset CAN bus transmit Data",260
+[VALUE_DESCRIPTION] "Reset CAN bus receive Data",259
+[VALUE_DESCRIPTION] "Reset Parameter CRC",258
+[VALUE_DESCRIPTION] "Reset Code CRC",257
+[VALUE_DESCRIPTION] "Reset all System errors",256
+[VALUE_DESCRIPTION] "Reset calibration data ",15
+[VALUE_DESCRIPTION] "Reset ntc-I OpenCircuit",14
+[VALUE_DESCRIPTION] "Reset ntc-h OpenCircuit",13
+[VALUE_DESCRIPTION] "Reset voltage measU3 OpenCircuit",12
+[VALUE_DESCRIPTION] "Reset voltage measU2 OpenCircuit",11
+[VALUE_DESCRIPTION] "Reset voltage measU1 OpenCircuit",10
+[VALUE_DESCRIPTION] "Reset current measI1 OpenCircuit",9
+[VALUE_DESCRIPTION] "Reset thermal EMF correction",8
+[VALUE_DESCRIPTION] "Reset error current implausible",7
+[VALUE_DESCRIPTION] "Reset error Vref",6
+[VALUE_DESCRIPTION] "Reset error Underflow ADC ch2",5
+[VALUE_DESCRIPTION] "Reset error Overflow ADC ch2",4
+[VALUE_DESCRIPTION] "Reset error Underflow ADC ch1",3
+[VALUE_DESCRIPTION] "Reset error Overflow ADC ch1",2
+[VALUE_DESCRIPTION] "Reset error ADC interrupt",1
+[VALUE_DESCRIPTION] "Reset all measurement errors",0
+[START_SIGNALS] _B0_Resp_Reset_Device_SN,32,7,0,U,4294967295,0,0,0,1,,m176,
+[START_SIGNALS] _B2_Resp_Store_dummy,8,2,0,U,255,0,0,0,1,,m178,
+[START_SIGNALS] _B3_Resp_Oc_Test_Time,16,3,0,U,65535,0,0,0,1,ms,m179,
+[START_SIGNALS] _B4_Resp_Actual_Mode,1,2,0,B,1,0,0,0,1,,m180,
+[VALUE_DESCRIPTION] "RUN",1
+[VALUE_DESCRIPTION] "STOP",0
+[START_SIGNALS] _B4_Resp_Code_Level,16,5,0,U,65535,0,0,0,1,,m180,
+[START_SIGNALS] _B4_Resp_Startup_Mode,1,3,0,B,1,0,0,0,1,,m180,
+[VALUE_DESCRIPTION] "Run",1
+[VALUE_DESCRIPTION] "Stop",0
+[START_SIGNALS] _B5_Resp_OC_Pos_Reset_Threshold,16,5,0,I,32767,-32768,0,0,1,,m181,
+[START_SIGNALS] _B5_Resp_OC_Pos_Set_Threshold,16,3,0,I,32767,-32768,0,0,1,,m181,
+[START_SIGNALS] _B6_Resp_OC_Neg_Reset_Threshold,16,5,0,I,32767,-32768,0,0,1,,m182,
+[START_SIGNALS] _B6_Resp_OC_Neg_Set_Threshold,16,3,0,I,32767,-32768,0,0,1,,m182,
+[START_SIGNALS] _B9_Resp_Device_type,8,2,0,U,255,0,0,0,1,,m185,
+[VALUE_DESCRIPTION] "IVT-S",2
+[VALUE_DESCRIPTION] "IVT-Mod",1
+[START_SIGNALS] _BA_Resp_SW_Ver_Major_HW,8,2,0,U,255,0,0,0,1,,m186,
+[START_SIGNALS] _BB_Resp_Serien_Nr,32,5,0,U,4294967295,0,0,0,1,,m187,
+[START_SIGNALS] _BC_Resp_Art_N,56,8,0,U,36028797018963967,0,0,0,1,,m188,
+[START_SIGNALS] IVT_ID_Response,8,1,0,U,255,0,0,0,1,,M,Host
+[VALUE_DESCRIPTION] "Resp_Cmd_Wrong_Command",255
+[VALUE_DESCRIPTION] "Resp_Get_Set_ALIVE",191
+[VALUE_DESCRIPTION] "Resp_Get_Set_ArtNr",188
+[VALUE_DESCRIPTION] "Resp_Get_Set_Serialnumber",187
+[VALUE_DESCRIPTION] "Resp_Get_Set_SW_VERSION",186
+[VALUE_DESCRIPTION] "Resp_Get_Set_DEVICE_ID",185
+[VALUE_DESCRIPTION] "Resp_Get_Set_THRESHOLD_NEG",182
+[VALUE_DESCRIPTION] "Resp_Get_Set_THRESHOLD_POS",181
+[VALUE_DESCRIPTION] "Resp_Get_Set_MODE",180
+[VALUE_DESCRIPTION] "Resp_Get_Set_OC_TEST_TIME",179
+[VALUE_DESCRIPTION] "Resp_Get_Set_STORE",178
+[VALUE_DESCRIPTION] "Resp_Get_Set_TRIGGER",177
+[VALUE_DESCRIPTION] "Resp_Get_Set_Reset_Error_Logdata",176
+[VALUE_DESCRIPTION] "Resp_Config_Result_Wh",167
+[VALUE_DESCRIPTION] "Resp_Config_Result_As",166
+[VALUE_DESCRIPTION] "Resp_Config_Result_W",165
+[VALUE_DESCRIPTION] "Resp_Config_Result_T",164
+[VALUE_DESCRIPTION] "Resp_Config_Result_U3",163
+[VALUE_DESCRIPTION] "Resp_Config_Result_U2",162
+[VALUE_DESCRIPTION] "Resp_Config_Result_U1",161
+[VALUE_DESCRIPTION] "Resp_Config_Result_I",160
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Response",159
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Command",157
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Res_Wh",151
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Res_As",150
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Res_W",149
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Res_I",144
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Res_T",148
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Res_U3",147
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Res_U2",146
+[VALUE_DESCRIPTION] "Resp_CAN_ID_Res_U1",145
+[VALUE_DESCRIPTION] "Resp_Error_Log_Logdata_Since_Res",131
+[VALUE_DESCRIPTION] "Resp_Error_Log_Overall_Logdata",130
+[VALUE_DESCRIPTION] "Resp_Error_Log_System_Error",129
+[VALUE_DESCRIPTION] "Resp_Error_Log_Measurement_Error",128
+[END_MSG]
+
+[START_MSG] IVT_Msg_Result_T,1317,6,7,0,S,IVT_Mod
+[START_SIGNALS] IVT_Result_T_System_Error,1,2,7,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_T_OCS,1,2,4,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_T_Measurement_Error,1,2,6,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_T_Channel_Error,1,2,5,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_ID_Result_T,8,1,0,U,4,0,0,0,1,,,Host
+[VALUE_DESCRIPTION] "Vt_Result_T",4
+[START_SIGNALS] IVT_Result_T,32,6,0,I,-330,320,0,0,0.1,°C,,Host
+[START_SIGNALS] IVT_MsgCount_Result_T,4,2,0,U,15,0,0,0,1,,,Host
+[END_MSG]
+
+[START_MSG] IVT_Msg_Result_U3,1316,6,7,0,S,IVT_Mod
+[START_SIGNALS] IVT_Result_U3_System_Error,1,2,7,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U3_OCS,1,2,4,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U3_Measurement_Error,1,2,6,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U3_Channel_Error,1,2,5,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_ID_Result_U3,8,1,0,U,3,0,0,0,1,,,Host
+[VALUE_DESCRIPTION] "Vt_Result_U3",3
+[START_SIGNALS] IVT_Result_U3,32,6,0,I,2147483647,-2147483648,0,0,1,mV,,Host
+[START_SIGNALS] IVT_MsgCount_Result_U3,4,2,0,U,15,0,0,0,1,,,Host
+[END_MSG]
+
+[START_MSG] IVT_Msg_Result_U2,1315,6,7,0,S,IVT_Mod
+[START_SIGNALS] IVT_Result_U2_System_Error,1,2,7,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U2_OCS,1,2,4,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U2_Measurement_Error,1,2,6,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U2_Channel_Error,1,2,5,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_ID_Result_U2,8,1,0,U,2,0,0,0,1,,,Host
+[VALUE_DESCRIPTION] "Vt_Result_U2",2
+[START_SIGNALS] IVT_MsgCount_Result_U2,4,2,0,U,15,0,0,0,1,,,Host
+[START_SIGNALS] IVT_Result_U2,32,6,0,I,2147483647,-2147483648,0,0,1,mV,,Host
+[END_MSG]
+
+[START_MSG] IVT_Msg_Result_U1,1314,6,7,0,S,IVT_Mod
+[START_SIGNALS] IVT_Result_U1_System_Error,1,2,7,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U1_Measurement_Error,1,2,6,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U1_Channel_Error,1,2,5,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_U1_OCS,1,2,4,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_ID_Result_U1,8,1,0,U,1,0,0,0,1,,,Host
+[VALUE_DESCRIPTION] "Vt_Result_U1",1
+[START_SIGNALS] IVT_Result_U1,32,6,0,I,2147483647,-2147483648,0,0,1,mV,,Host
+[START_SIGNALS] IVT_MsgCount_Result_U1,4,2,0,U,15,0,0,0,1,,,Host
+[END_MSG]
+
+[START_MSG] IVT_Msg_Result_I,1313,6,7,0,S,IVT_Mod
+[START_SIGNALS] IVT_Result_I_System_Error,1,2,7,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_I_OCS,1,2,4,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_I_Measurement_Error,1,2,6,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_Result_I_Channel_Error,1,2,5,B,1,0,0,0,1,,,
+[START_SIGNALS] IVT_ID_Result_I,8,1,0,U,255,0,0,0,1,,,Host
+[VALUE_DESCRIPTION] "Vt_Result_I",0
+[START_SIGNALS] IVT_MsgCount_Result_I,4,2,0,U,15,0,0,0,1,,,Host
+[START_SIGNALS] IVT_Result_I,32,6,0,I,2147483647,-2147483648,0,0,1,mA,,Host
+[END_MSG]
+
+[START_MSG] IVT_Msg_Cmd,1041,8,106,0,S,Host
+[START_SIGNALS] _31_01_Trigger_U1,1,3,1,B,1,0,0,0,1,,m49,
+[START_SIGNALS] _31_07_Trigger_WH,1,3,7,B,1,0,0,0,1,,m49,
+[START_SIGNALS] _31_06_Trigger_As,1,3,6,B,1,0,0,0,1,,m49,
+[START_SIGNALS] _31_05_Trigger_W,1,3,5,B,1,0,0,0,1,,m49,
+[START_SIGNALS] _31_04_Trigger_T,1,3,4,B,1,0,0,0,1,,m49,
+[START_SIGNALS] _31_03_Trigger_U3,1,3,3,B,1,0,0,0,1,,m49,
+[START_SIGNALS] _31_Trigger_spare,8,2,0,U,255,0,0,0,1,,m49,
+[START_SIGNALS] _31_02_Trigger_U2,1,3,2,B,1,0,0,0,1,,m49,
+[START_SIGNALS] _10_Set_Can_ID_SN_I,32,7,0,U,4294967295,0,0,0,1,,m16,
+[START_SIGNALS] _10_Set_Can_ID_val_I,16,3,0,U,2047,0,0,0,1,,m16,IVT_Mod
+[START_SIGNALS] _11_Set_Can_ID_SN_U1,32,7,0,U,4294967295,0,0,0,1,,m17,
+[START_SIGNALS] _11_Set_Can_ID_val_U1,16,3,0,U,2047,0,0,0,1,,m17,
+[START_SIGNALS] _12_Set_Can_ID_SN_U2,32,7,0,U,4294967295,0,0,0,1,,m18,
+[START_SIGNALS] _12_Set_Can_ID_val_U2,16,3,0,U,2047,0,0,0,1,,m18,
+[START_SIGNALS] _13_Set_Can_ID_SN_U3,32,7,0,U,4294967295,0,0,0,1,,m19,
+[START_SIGNALS] _13_Set_Can_ID_val_U3,16,3,0,U,2047,0,0,0,1,,m19,
+[START_SIGNALS] _14_Set_Can_ID_SN_T,32,7,0,U,4294967295,0,0,0,1,,m20,
+[START_SIGNALS] _14_Set_Can_ID_val_T,16,3,0,U,2047,0,0,0,1,,m20,
+[START_SIGNALS] _15_Set_Can_ID_SN_W,32,7,0,U,4294967295,0,0,0,1,,m21,
+[START_SIGNALS] _15_Set_Can_ID_val_W,16,3,0,U,2047,0,0,0,1,,m21,
+[START_SIGNALS] _16_Set_Can_ID_SN_As,32,7,0,U,4294967295,0,0,0,1,,m22,
+[START_SIGNALS] _16_Set_Can_ID_val_As,16,3,0,U,2047,0,0,0,1,,m22,
+[START_SIGNALS] _17_Set_Can_ID_SN_Wh,32,7,0,U,4294967295,0,0,0,1,,m23,
+[START_SIGNALS] _17_Set_Can_ID_val_Wh,16,3,0,U,2047,0,0,0,1,,m23,
+[START_SIGNALS] _1D_Set_Can_ID_SN_Command,32,7,0,U,4294967295,0,0,0,1,,m29,
+[START_SIGNALS] _1D_Set_Can_ID_val_Command,16,3,0,U,2047,0,0,0,1,,m29,
+[START_SIGNALS] _1F_Set_Can_ID_SN_Response,32,7,0,U,4294967295,0,0,0,1,,m31,
+[START_SIGNALS] _1F_Set_Can_ID_val_Response,16,3,0,U,2047,0,0,0,1,,m31,
+[START_SIGNALS] _20_Conf_CycleTime_I,16,4,0,U,65535,0,0,0,1,ms,m32,
+[START_SIGNALS] _20_Conf_Endianess_I,1,2,6,B,1,0,0,0,1,,m32,
+[START_SIGNALS] _20_Conf_Sign_I,1,2,7,B,1,0,0,0,1,,m32,
+[START_SIGNALS] _20_Conf_TriggerMode_I,2,2,0,U,2,0,0,0,1,,m32,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _21_Conf_CycleTime_U1,16,4,0,U,65535,0,0,0,1,ms,m33,
+[START_SIGNALS] _21_Conf_Endianess_U1,1,2,6,B,1,0,0,0,1,,m33,
+[START_SIGNALS] _21_Conf_Sign_U1,1,2,7,B,1,0,0,0,1,,m33,
+[START_SIGNALS] _21_Conf_TriggerMode_U1,2,2,0,U,2,0,0,0,1,,m33,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _22_Conf_CycleTime_U2,16,4,0,U,65535,0,0,0,1,ms,m34,
+[START_SIGNALS] _22_Conf_Endianess_U2,1,2,6,B,1,0,0,0,1,,m34,
+[START_SIGNALS] _22_Conf_Sign_U2,1,2,7,B,1,0,0,0,1,,m34,
+[START_SIGNALS] _22_Conf_TriggerMode_U2,2,2,0,U,2,0,0,0,1,,m34,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _23_Conf_CycleTime_U3,16,4,0,U,65535,0,0,0,1,ms,m35,
+[START_SIGNALS] _23_Conf_Endianess_U3,1,2,6,B,1,0,0,0,1,,m35,
+[START_SIGNALS] _23_Conf_Sign_U3,1,2,7,B,1,0,0,0,1,,m35,
+[START_SIGNALS] _23_Conf_TriggerMode_U3,2,2,0,U,2,0,0,0,1,,m35,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _24_Conf_CycleTime_T,16,4,0,U,65535,0,0,0,1,ms,m36,
+[START_SIGNALS] _24_Conf_Endianess_T,1,2,6,B,1,0,0,0,1,,m36,
+[START_SIGNALS] _24_Conf_Sign_T,1,2,7,B,1,0,0,0,1,,m36,
+[START_SIGNALS] _24_Conf_TriggerMode_T,2,2,0,U,2,0,0,0,1,,m36,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _25_Conf_CycleTime_W,16,4,0,U,65535,0,0,0,1,ms,m37,
+[START_SIGNALS] _25_Conf_Endianess_W,1,2,6,B,1,0,0,0,1,,m37,
+[START_SIGNALS] _25_Conf_Sign_W,1,2,7,B,1,0,0,0,1,,m37,
+[START_SIGNALS] _25_Conf_TriggerMode_W,2,2,0,U,2,0,0,0,1,,m37,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _26_Conf_CycleTime_As,16,4,0,U,65535,0,0,0,1,ms,m38,
+[START_SIGNALS] _26_Conf_Endianess_As,1,2,6,B,1,0,0,0,1,,m38,
+[START_SIGNALS] _26_Conf_Sign_As,1,2,7,B,1,0,0,0,1,,m38,
+[START_SIGNALS] _26_Conf_TriggerMode_As,2,2,0,U,2,0,0,0,1,,m38,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _27_Conf_CycleTime_WH,16,4,0,U,65535,0,0,0,1,ms,m39,
+[START_SIGNALS] _27_Conf_Endianess_WH,1,2,6,B,1,0,0,0,1,,m39,
+[START_SIGNALS] _27_Conf_Sign_WH,1,2,7,B,1,0,0,0,1,,m39,
+[START_SIGNALS] _27_Conf_TriggerMode_WH,2,2,0,U,2,0,0,0,1,,m39,
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[START_SIGNALS] _30_Reset_Item,16,3,0,U,65535,0,0,0,1,,m48,
+[VALUE_DESCRIPTION] "Reset temp minimum",554
+[VALUE_DESCRIPTION] "Reset temp maximum",553
+[VALUE_DESCRIPTION] "Reset U3 minimum",552
+[VALUE_DESCRIPTION] "Reset U3 maximum",551
+[VALUE_DESCRIPTION] "Reset U2 minimum",550
+[VALUE_DESCRIPTION] "Reset U2 maximum",549
+[VALUE_DESCRIPTION] "Reset U1 minimum",548
+[VALUE_DESCRIPTION] "Reset U1 maximum",547
+[VALUE_DESCRIPTION] "Reset Current minimum",546
+[VALUE_DESCRIPTION] "Reset Current maximum",545
+[VALUE_DESCRIPTION] "Reset Run overcur neg activated",540
+[VALUE_DESCRIPTION] "Reset Run overcur pos activated",539
+[VALUE_DESCRIPTION] "Reset Run temp out spec limits",538
+[VALUE_DESCRIPTION] "Reset Run temp in spec limits",537
+[VALUE_DESCRIPTION] "Reset Run volt 3 out spec limits",536
+[VALUE_DESCRIPTION] "Reset Run volt 3 in spec limits",535
+[VALUE_DESCRIPTION] "Reset Run volt 2 out spec limits",534
+[VALUE_DESCRIPTION] "Reset Run volt 2 in spec limits",533
+[VALUE_DESCRIPTION] "Reset Run volt 1 out spec limits",532
+[VALUE_DESCRIPTION] "Reset Run volt 1 in spec limits",531
+[VALUE_DESCRIPTION] "Reset Run cur out spec limits",530
+[VALUE_DESCRIPTION] "Reset Run cur in spec limits",529
+[VALUE_DESCRIPTION] "Reset Runtime overall",528
+[VALUE_DESCRIPTION] "Reset Energy counter discharging",518
+[VALUE_DESCRIPTION] "Reset Energy counter charging",517
+[VALUE_DESCRIPTION] "Reset Energy counter overall",516
+[VALUE_DESCRIPTION] "Reset Ah counter discharging",515
+[VALUE_DESCRIPTION] "Reset Ah counter charging",514
+[VALUE_DESCRIPTION] "Reset Ah counter overall",513
+[VALUE_DESCRIPTION] "Reset all Logdata Since Reset",512
+[VALUE_DESCRIPTION] "Reset Reset EMC",272
+[VALUE_DESCRIPTION] "Reset Reset Watchdog",271
+[VALUE_DESCRIPTION] "Reset illegal opcode",270
+[VALUE_DESCRIPTION] "Reset ADC Clock",269
+[VALUE_DESCRIPTION] "Reset eeprom r/w",268
+[VALUE_DESCRIPTION] "Reset overcurrent detection",267
+[VALUE_DESCRIPTION] "Reset configuration",266
+[VALUE_DESCRIPTION] "Reset system init",265
+[VALUE_DESCRIPTION] "Reset system clock",264
+[VALUE_DESCRIPTION] "Reset power failure",263
+[VALUE_DESCRIPTION] "Reset undertemp",262
+[VALUE_DESCRIPTION] "Reset overtemp",261
+[VALUE_DESCRIPTION] "Reset CAN bus transmit Data",260
+[VALUE_DESCRIPTION] "Reset CAN bus receive Data",259
+[VALUE_DESCRIPTION] "Reset Parameter CRC",258
+[VALUE_DESCRIPTION] "Reset Code CRC",257
+[VALUE_DESCRIPTION] "Reset all System errors",256
+[VALUE_DESCRIPTION] "Reset calibration data ",15
+[VALUE_DESCRIPTION] "Reset ntc-I OpenCircuit",14
+[VALUE_DESCRIPTION] "Reset ntc-h OpenCircuit",13
+[VALUE_DESCRIPTION] "Reset voltage measU3 OpenCircuit",12
+[VALUE_DESCRIPTION] "Reset voltage measU2 OpenCircuit",11
+[VALUE_DESCRIPTION] "Reset voltage measU1 OpenCircuit",10
+[VALUE_DESCRIPTION] "Reset current measI1 OpenCircuit",9
+[VALUE_DESCRIPTION] "Reset thermal EMF correction",8
+[VALUE_DESCRIPTION] "Reset error current implausible",7
+[VALUE_DESCRIPTION] "Reset error Vref",6
+[VALUE_DESCRIPTION] "Reset error Underflow ADC ch2",5
+[VALUE_DESCRIPTION] "Reset error Overflow ADC ch2",4
+[VALUE_DESCRIPTION] "Reset error Underflow ADC ch1",3
+[VALUE_DESCRIPTION] "Reset error Overflow ADC ch1",2
+[VALUE_DESCRIPTION] "Reset error ADC interrupt",1
+[VALUE_DESCRIPTION] "Reset all measurement errors",0
+[START_SIGNALS] _30_Reset_Device_SN,32,7,0,U,4294967295,0,0,0,1,,m48,
+[START_SIGNALS] _31_00_Trigger_I,1,3,0,B,1,0,0,0,1,,m49,
+[START_SIGNALS] _32_Store_dummy,8,2,0,U,255,0,0,0,1,,m50,
+[START_SIGNALS] _33_Oc_Test_Time,16,3,0,U,65535,0,0,0,1,ms,m51,
+[START_SIGNALS] _34_Actual_Mode,1,2,0,B,1,0,0,0,1,,m52,
+[VALUE_DESCRIPTION] "START",1
+[VALUE_DESCRIPTION] "STOP",0
+[START_SIGNALS] _34_Code_Level,16,5,0,U,65535,0,0,0,1,,m52,
+[START_SIGNALS] _34_Startup_Mode,1,3,0,B,1,0,0,0,1,,m52,
+[VALUE_DESCRIPTION] "START",1
+[VALUE_DESCRIPTION] "STOP",0
+[START_SIGNALS] _35_OC_Pos_Reset_Threshold,16,5,0,I,32767,-32768,0,0,1,A,m53,
+[START_SIGNALS] _35_OC_Pos_Set_Threshold,16,3,0,I,32767,-32768,0,0,1,A,m53,
+[START_SIGNALS] _36_OC_Neg_Reset_Threshold,16,5,0,I,32767,-32768,0,0,1,A,m54,
+[START_SIGNALS] _36_OC_Neg_Set_Threshold,16,3,0,I,32767,-32768,0,0,1,A,m54,
+[START_SIGNALS] _3A_RESTART_to_Bitrate,8,2,0,U,255,0,0,0,1,,m58,
+[VALUE_DESCRIPTION] "250k",8
+[VALUE_DESCRIPTION] "500k",4
+[VALUE_DESCRIPTION] "1000k",2
+[START_SIGNALS] _3D_Restart_Default_Dummy,8,2,0,U,255,0,0,0,1,,m61,
+[START_SIGNALS] _3F_Restart_Dummy,8,2,0,U,255,0,0,0,1,,m63,
+[START_SIGNALS] _40_Get_MeasError_Item,8,2,0,U,255,0,0,0,1,,m64,
+[VALUE_DESCRIPTION] "Get error calibration data",15
+[VALUE_DESCRIPTION] "Get error ntc-I OpenCirc.",14
+[VALUE_DESCRIPTION] "Get error ntc-h OpenCirc.",13
+[VALUE_DESCRIPTION] "Get error volt meas U3 OpenCirc.",12
+[VALUE_DESCRIPTION] "Get error volt meas U2 OpenCirc.",11
+[VALUE_DESCRIPTION] "Get error volt meas U1 OpenCirc.",10
+[VALUE_DESCRIPTION] "Get error cur meas I1 OpenCirc.",9
+[VALUE_DESCRIPTION] "Get error thermal EMF correction",8
+[VALUE_DESCRIPTION] "Get error cur meas implausible",7
+[VALUE_DESCRIPTION] "Get error Vref",6
+[VALUE_DESCRIPTION] "Get error Underflow ADC ch 2",5
+[VALUE_DESCRIPTION] "Get error Overflow ADC ch 2",4
+[VALUE_DESCRIPTION] "Get error Underflow ADC ch 1",3
+[VALUE_DESCRIPTION] "Get error Overflow ADC ch 1",2
+[VALUE_DESCRIPTION] "Get error ADC interrupt",1
+[VALUE_DESCRIPTION] "Get all meas Errors",0
+[START_SIGNALS] _41_Get_SystemError_Item,8,2,0,U,255,0,0,0,1,,m65,
+[VALUE_DESCRIPTION] "Get error reset EMC",16
+[VALUE_DESCRIPTION] "Get error reset Watchdog",15
+[VALUE_DESCRIPTION] "Get error reset illegal opcode",14
+[VALUE_DESCRIPTION] "Get error ADC clock",13
+[VALUE_DESCRIPTION] "Get error eeprom r/w",12
+[VALUE_DESCRIPTION] "Get error overcurrent detection",11
+[VALUE_DESCRIPTION] "Get error configuration",10
+[VALUE_DESCRIPTION] "Get error system init",9
+[VALUE_DESCRIPTION] "Get error system clock",8
+[VALUE_DESCRIPTION] "Get error power failure",7
+[VALUE_DESCRIPTION] "Get error undertemp",6
+[VALUE_DESCRIPTION] "Get error overtemp",5
+[VALUE_DESCRIPTION] "Get error CAN bus transmit Data",4
+[VALUE_DESCRIPTION] "Get error CAN  bus receive Data",3
+[VALUE_DESCRIPTION] "Get error Code Parameter CRC",2
+[VALUE_DESCRIPTION] "Get error Code CRC",1
+[VALUE_DESCRIPTION] "Get all System errors",0
+[START_SIGNALS] _42_Get_AllLogData_Item,8,2,0,U,255,0,0,0,1,,m66,
+[VALUE_DESCRIPTION] "Get Temperature minimum",42
+[VALUE_DESCRIPTION] "Get Temperature maximum",41
+[VALUE_DESCRIPTION] "Get U3 minimum",40
+[VALUE_DESCRIPTION] "Get U3 maxmimum ",39
+[VALUE_DESCRIPTION] "Get U2 minimum",38
+[VALUE_DESCRIPTION] "Get U2 maximum",37
+[VALUE_DESCRIPTION] "Get U1 minimum",36
+[VALUE_DESCRIPTION] "Get U1 maxmimum",35
+[VALUE_DESCRIPTION] "Get current minimum",34
+[VALUE_DESCRIPTION] "Get current maximum",33
+[VALUE_DESCRIPTION] "Get run overcur neg activated",28
+[VALUE_DESCRIPTION] "Get run overcur pos activated",27
+[VALUE_DESCRIPTION] "Get run temp out spec limits",26
+[VALUE_DESCRIPTION] "Get run temp in spec limits",25
+[VALUE_DESCRIPTION] "Get run volt2 out spec limits",24
+[VALUE_DESCRIPTION] "Get run volt3 in spec limits",23
+[VALUE_DESCRIPTION] "Get run volt2 out spec limits",22
+[VALUE_DESCRIPTION] "Get run volt2 in spec limits",21
+[VALUE_DESCRIPTION] "Get run volt1 out spec limits",20
+[VALUE_DESCRIPTION] "Get run volt1 in spec limits",19
+[VALUE_DESCRIPTION] "Get run cur out spec limits",18
+[VALUE_DESCRIPTION] "Get Run cur in spec limits",17
+[VALUE_DESCRIPTION] "Get Runtime overall",16
+[VALUE_DESCRIPTION] "Get Energy counter discharging",6
+[VALUE_DESCRIPTION] "Get Energy counter charging",5
+[VALUE_DESCRIPTION] "Get Energy counter overall",4
+[VALUE_DESCRIPTION] "Get Ah counter discharging",3
+[VALUE_DESCRIPTION] "Get Ah counter charging",2
+[VALUE_DESCRIPTION] "Get Ah counter overall",1
+[VALUE_DESCRIPTION] "Get Overall Logdata",0
+[START_SIGNALS] _43_Get_LogData_Item,8,2,0,U,255,0,0,0,1,,m67,
+[VALUE_DESCRIPTION] "Get Temperature minimum",42
+[VALUE_DESCRIPTION] "Get Temperature maximum",41
+[VALUE_DESCRIPTION] "Get U3 minimum",40
+[VALUE_DESCRIPTION] "Get U3 maxmimum ",39
+[VALUE_DESCRIPTION] "Get U2 minimum",38
+[VALUE_DESCRIPTION] "Get U2 maximum",37
+[VALUE_DESCRIPTION] "Get U1 minimum",36
+[VALUE_DESCRIPTION] "Get U1 maxmimum",35
+[VALUE_DESCRIPTION] "Get current minimum",34
+[VALUE_DESCRIPTION] "Get current maximum",33
+[VALUE_DESCRIPTION] "Get run overcur neg activated",28
+[VALUE_DESCRIPTION] "Get run overcur pos activated",27
+[VALUE_DESCRIPTION] "Get run temp out spec limits",26
+[VALUE_DESCRIPTION] "Get run temp in spec limits",25
+[VALUE_DESCRIPTION] "Get run volt2 out spec limits",24
+[VALUE_DESCRIPTION] "Get run volt3 in spec limits",23
+[VALUE_DESCRIPTION] "Get run volt2 out spec limits",22
+[VALUE_DESCRIPTION] "Get run volt2 in spec limits",21
+[VALUE_DESCRIPTION] "Get run volt1 out spec limits",20
+[VALUE_DESCRIPTION] "Get run volt1 in spec limits",19
+[VALUE_DESCRIPTION] "Get run cur out spec limits",18
+[VALUE_DESCRIPTION] "Get Run cur in spec limits",17
+[VALUE_DESCRIPTION] "Get Runtime overall",16
+[VALUE_DESCRIPTION] "Get Energy counter discharging",6
+[VALUE_DESCRIPTION] "Get Energy counter charging",5
+[VALUE_DESCRIPTION] "Get Energy counter overall",4
+[VALUE_DESCRIPTION] "Get Ah counter discharging",3
+[VALUE_DESCRIPTION] "Get Ah counter charging",2
+[VALUE_DESCRIPTION] "Get Ah counter overall",1
+[VALUE_DESCRIPTION] "Get Overall Logdata",0
+[START_SIGNALS] _50_Get_Can_ID_SN_I,32,7,0,U,4294967295,0,0,0,1,,m80,
+[START_SIGNALS] _51_Get_Can_ID_SN_U1,32,7,0,U,4294967295,0,0,0,1,,m81,
+[START_SIGNALS] _52_Get_Can_ID_SN_U2,32,7,0,U,4294967295,0,0,0,1,,m82,
+[START_SIGNALS] _53_Get_Can_ID_SN_U3,32,7,0,U,4294967295,0,0,0,1,,m83,
+[START_SIGNALS] _54_Get_Can_ID_SN_T,32,7,0,U,4294967295,0,0,0,1,,m84,
+[START_SIGNALS] _55_Get_Can_ID_SN_W,32,7,0,U,4294967295,0,0,0,1,,m85,
+[START_SIGNALS] _56_Get_Can_ID_SN_As,32,7,0,U,4294967295,0,0,0,1,,m86,
+[START_SIGNALS] _57_Get_Can_ID_SN_Wh,32,7,0,U,4294967295,0,0,0,1,,m87,
+[START_SIGNALS] _5D_Get_Can_ID_SN_Command,32,7,0,U,4294967295,0,0,0,1,,m93,
+[START_SIGNALS] _5F_Get_Can_ID_SN_Response,32,7,0,U,4294967295,0,0,0,1,,m95,
+[START_SIGNALS] _60_Get_Result_dummy_I,8,2,0,U,255,0,0,0,1,,m96,
+[START_SIGNALS] _61_Get_Result_dummy_U1,8,2,0,U,255,0,0,0,1,,m97,
+[START_SIGNALS] _62_Get_Result_dummy_U2,8,2,0,U,255,0,0,0,1,,m98,
+[START_SIGNALS] _63_Get_Result_dummy_U3,8,2,0,U,255,0,0,0,1,,m99,
+[START_SIGNALS] _64_Get_Result_dummy_T,8,2,0,U,255,0,0,0,1,,m100,
+[START_SIGNALS] _65_Get_Result_dummy_W,8,2,0,U,255,0,0,0,1,,m101,
+[START_SIGNALS] _66_Get_Result_dummy_As,8,2,0,U,255,0,0,0,1,,m102,
+[START_SIGNALS] _67_Get_Result_dummy_Wh,8,2,0,U,255,0,0,0,1,,m103,
+[START_SIGNALS] _73_Get_OC_Test_dummy,8,2,0,U,255,0,0,0,1,,m115,
+[START_SIGNALS] _74_Get_Mode_dummy,8,2,0,U,255,0,0,0,1,,m116,
+[START_SIGNALS] _75_Get_OC_Pos_dummy,8,2,0,U,255,0,0,0,1,,m117,
+[START_SIGNALS] _76_Get_OC_Neg_dummy,8,2,0,U,255,0,0,0,1,,m118,
+[START_SIGNALS] _79_Get_Device_Id_dummy,8,2,0,U,255,0,0,0,1,,m121,
+[START_SIGNALS] _7A_Get_SW_Version_dummy,8,2,0,U,255,0,0,0,1,,m122,
+[START_SIGNALS] _7B_Get_Serien_Nr_dummy,8,2,0,U,255,0,0,0,1,,m123,
+[START_SIGNALS] _7C_Get_Art_Nr_dummy,8,2,0,U,255,0,0,0,1,,m124,
+[START_SIGNALS] IVT_ID_Cmd,8,1,0,U,255,0,0,0,1,,M,IVT_Mod
+[VALUE_DESCRIPTION] "Get_cmd_and_info_ArtNr",124
+[VALUE_DESCRIPTION] "Get_cmd_and_info_SN",123
+[VALUE_DESCRIPTION] "Get_cmd_and_info_SW_Version",122
+[VALUE_DESCRIPTION] "Get_cmd_and_info_DEVICE_ID",121
+[VALUE_DESCRIPTION] "Get_cmd_and_info_THRESHOLD_NEG",118
+[VALUE_DESCRIPTION] "Get_cmd_and_info_THRESHOLD_POS",117
+[VALUE_DESCRIPTION] "Get_cmd_and_info_MODE",116
+[VALUE_DESCRIPTION] "Get_cmd_and_info_OC_TEST_TIME",115
+[VALUE_DESCRIPTION] "Get_Config_Res_Wh",103
+[VALUE_DESCRIPTION] "Get_Config_Res_As",102
+[VALUE_DESCRIPTION] "Get_Config_Res_W",101
+[VALUE_DESCRIPTION] "Get_Config_Res_T",100
+[VALUE_DESCRIPTION] "Get_Config_Res_U3",99
+[VALUE_DESCRIPTION] "Get_Config_Res_U2",98
+[VALUE_DESCRIPTION] "Get_Config_Res_U1",97
+[VALUE_DESCRIPTION] "Get_Config_Res_I",96
+[VALUE_DESCRIPTION] "Get_CAN_ID_Response",95
+[VALUE_DESCRIPTION] "Get_CAN_ID_Command",93
+[VALUE_DESCRIPTION] "Get_CAN_ID_Res_Wh",87
+[VALUE_DESCRIPTION] "Get_CAN_ID_Res_As",86
+[VALUE_DESCRIPTION] "Get_CAN_ID_Res_W",85
+[VALUE_DESCRIPTION] "Get_CAN_ID_Res_T",84
+[VALUE_DESCRIPTION] "Get_CAN_ID_Res_U3",83
+[VALUE_DESCRIPTION] "Get_CAN_ID_Res_U2",82
+[VALUE_DESCRIPTION] "Get_CAN_ID_Res_U1",81
+[VALUE_DESCRIPTION] "Get_CAN_ID_Res_I",80
+[VALUE_DESCRIPTION] "Get_Logdata_Since_Reset",67
+[VALUE_DESCRIPTION] "Get_Overall_Logdata",66
+[VALUE_DESCRIPTION] "Get_System_Errors",65
+[VALUE_DESCRIPTION] "Get_Measurement_Errors",64
+[VALUE_DESCRIPTION] "Set_RESTART",63
+[VALUE_DESCRIPTION] "Set_RESTART_to_default",61
+[VALUE_DESCRIPTION] "RESTART_to_Bitrate",58
+[VALUE_DESCRIPTION] "Set_THRESHOLD_neg",54
+[VALUE_DESCRIPTION] "Set_THRESHOLD_pos",53
+[VALUE_DESCRIPTION] "Set_MODE_Result_I",32
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_I",16
+[VALUE_DESCRIPTION] "Set_MODE",52
+[VALUE_DESCRIPTION] "START_OC_TEST",51
+[VALUE_DESCRIPTION] "STORE",50
+[VALUE_DESCRIPTION] "TRIGGER",49
+[VALUE_DESCRIPTION] "Reset_Err_Log",48
+[VALUE_DESCRIPTION] "Set_MODE_Result_Wh",39
+[VALUE_DESCRIPTION] "Set_MODE_Result_As",38
+[VALUE_DESCRIPTION] "Set_MODE_Result_W",37
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_Wh",23
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_As",22
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_W",21
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_T",20
+[VALUE_DESCRIPTION] "Set_MODE_Result_U3",35
+[VALUE_DESCRIPTION] "Set_CAN_ID_Response",31
+[VALUE_DESCRIPTION] "Set_CAN_ID_Cmd",29
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_U3",19
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_U2",18
+[VALUE_DESCRIPTION] "Set_MODE_Result_T",36
+[VALUE_DESCRIPTION] "Set_MODE_Result_U2",34
+[VALUE_DESCRIPTION] "Set_MODE_Result_U1",33
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_U1",17
+[END_MSG]
+
+[START_SIG_LIST]
+[START_SIGNALS] _B1_Resp_Trigger_Mask,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] _B9_Resp_Device_spare,8,1,0,U,255,0,0,0,1,,,
+[END_SIG_LIST]
+
+[START_VALUE_TABLE]
+[START_TABLE] _B9_Voltage_Channels
+[VALUE_DESCRIPTION] "3 Channels",3
+[VALUE_DESCRIPTION] "0 Channels",0
+[END_TABLE]
+[START_TABLE] _B9_Supply_Voltage
+[VALUE_DESCRIPTION] "12 / 24 V nominal supply voltage",1
+[END_TABLE]
+[START_TABLE] _B9_Current
+[VALUE_DESCRIPTION] "2500 A",2500
+[VALUE_DESCRIPTION] "1000 A",1000
+[VALUE_DESCRIPTION] "500 A",500
+[VALUE_DESCRIPTION] "300 A",300
+[VALUE_DESCRIPTION] "100 A",100
+[END_TABLE]
+[START_TABLE] _B9_Device_Type
+[VALUE_DESCRIPTION] "IVT-S",2
+[VALUE_DESCRIPTION] "IVT-Mod",1
+[END_TABLE]
+[START_TABLE] VtDevice_Com
+[VALUE_DESCRIPTION] "CAN 2 - not terminated",2
+[VALUE_DESCRIPTION] "CAN 1 - terminated",1
+[VALUE_DESCRIPTION] "none",0
+[END_TABLE]
+[START_TABLE] VtDevice_TOI
+[VALUE_DESCRIPTION] "I",3
+[END_TABLE]
+[START_TABLE] VtResetErrorLogdata
+[VALUE_DESCRIPTION] "Reset error current implausible",7
+[VALUE_DESCRIPTION] "Reset error Vref",6
+[VALUE_DESCRIPTION] "Reset error Underflow ADC ch2",5
+[VALUE_DESCRIPTION] "Reset error Overflow ADC ch2",4
+[VALUE_DESCRIPTION] "Reset error Underflow ADC ch1",3
+[VALUE_DESCRIPTION] "Reset error Overflow ADC ch1",2
+[VALUE_DESCRIPTION] "Reset error ADC interrupt",1
+[VALUE_DESCRIPTION] "Reset all measurement errors",0
+[END_TABLE]
+[START_TABLE] VtID_Result
+[VALUE_DESCRIPTION] "Vt_Result_inaktive",0
+[VALUE_DESCRIPTION] "Vt_Result_Wh",8
+[VALUE_DESCRIPTION] "Vt_Result_Ah",7
+[VALUE_DESCRIPTION] "Vt_Result_W",6
+[VALUE_DESCRIPTION] "Vt_Result_T",5
+[VALUE_DESCRIPTION] "Vt_Result_U3",4
+[VALUE_DESCRIPTION] "Vt_Result_U2",3
+[VALUE_DESCRIPTION] "Vt_Result_U1",2
+[VALUE_DESCRIPTION] "Vt_Result_I",1
+[END_TABLE]
+[START_TABLE] VtID_Cmd
+[VALUE_DESCRIPTION] "Set_THRESHOLD_neg",54
+[VALUE_DESCRIPTION] "Set_THRESHOLD_pos",53
+[VALUE_DESCRIPTION] "Set_MODE_Result_I",32
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_I",16
+[VALUE_DESCRIPTION] "Set_MODE",52
+[VALUE_DESCRIPTION] "START_OC_TEST",51
+[VALUE_DESCRIPTION] "STORE",50
+[VALUE_DESCRIPTION] "TRIGGER",49
+[VALUE_DESCRIPTION] "Reset_Err_Log",48
+[VALUE_DESCRIPTION] "Set_MODE_Result_Wh",39
+[VALUE_DESCRIPTION] "Set_MODE_Result_Ah",38
+[VALUE_DESCRIPTION] "Set_MODE_Result_W",37
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_Wh",23
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_Ah",22
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_W",21
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_T",20
+[VALUE_DESCRIPTION] "Set_MODE_Result_U3",35
+[VALUE_DESCRIPTION] "Set_CAN_ID_Cmd",31
+[VALUE_DESCRIPTION] "Set_CAN_ID_Response",29
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_U3",19
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_U2",18
+[VALUE_DESCRIPTION] "Set_MODE_Result_T",36
+[VALUE_DESCRIPTION] "Set_MODE_Result_U2",34
+[VALUE_DESCRIPTION] "Set_MODE_Result_U1",33
+[VALUE_DESCRIPTION] "Set_CAN_ID_Result_U1",17
+[END_TABLE]
+[START_TABLE] VtTriggerMode
+[VALUE_DESCRIPTION] "CYCLIC",2
+[VALUE_DESCRIPTION] "TRIGGERED",1
+[VALUE_DESCRIPTION] "DISABLED",0
+[END_TABLE]
+[START_TABLE] VtRunMode
+[VALUE_DESCRIPTION] "START",1
+[VALUE_DESCRIPTION] "STOP",0
+[END_TABLE]
+[START_TABLE] VtID_Response
+[VALUE_DESCRIPTION] "ARTICLE_NUMBER",149
+[VALUE_DESCRIPTION] "SERIAL NUMBER",148
+[VALUE_DESCRIPTION] "SW_VERSION",147
+[VALUE_DESCRIPTION] "DEVICE_ID",146
+[VALUE_DESCRIPTION] "STATUS",145
+[VALUE_DESCRIPTION] "CAN_ID",143
+[VALUE_DESCRIPTION] "STORE_to_default",142
+[VALUE_DESCRIPTION] "START_OC_TEST",134
+[VALUE_DESCRIPTION] "Description for the value '0x85'",133
+[VALUE_DESCRIPTION] "THRESHOLD",132
+[VALUE_DESCRIPTION] "CONFIG",131
+[VALUE_DESCRIPTION] "MODE",130
+[VALUE_DESCRIPTION] "STORE",129
+[VALUE_DESCRIPTION] "TRIGGER",128
+[END_TABLE]
+[END_VALUE_TABLE]
+
+[NODE] Host,IVT_Mod
+
+[START_DESC]
+[START_DESC_NET]
+[END_DESC_NET]
+
+[START_DESC_NODE]
+[END_DESC_NODE]
+
+[START_DESC_MSG]
+1073741824 X "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+[END_DESC_MSG]
+
+[START_DESC_SIG]
+[END_DESC_SIG]
+[END_DESC]
+
+[START_PARAM]
+[START_PARAM_NET]
+"NmBaseAddress",HEX,1024,1024,1087
+"BusType",STRING,"CAN"
+[END_PARAM_NET]
+
+[START_PARAM_NODE]
+"Manufacturer",STRING,"Isabellenhuette"
+"ILUsed",ENUM,"Yes","No","Yes"
+"NmNode",ENUM,"no","no","yes"
+"NmStationAddress",INT,0,0,63
+[END_PARAM_NODE]
+
+[START_PARAM_MSG]
+"GenMsgStartDelayTime",INT,0,0,1000
+"NmMessage",ENUM,"no","no","yes"
+"GenMsgILSupport",ENUM,"Yes","No","Yes"
+"GenMsgCycleTimeFast",INT,0,0,1000
+"GenMsgCycleTime",INT,0,0,1000
+"GenMsgDelayTime",INT,0,0,1000
+"GenMsgNrOfRepetition",INT,0,0,10
+"GenMsgSendType",ENUM,"NoMsgSendType","Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","Cyclic","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring"
+[END_PARAM_MSG]
+
+[START_PARAM_SIG]
+"NWM_WakeupAllowed",ENUM,"no","no","yes"
+"GenSigInactiveValue",INT,0,0,100000
+"GenSigSendType",ENUM,"OnWrite","Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed"
+"GenSigStartValue",FLOAT,1.17549e-038,1.17549e-038,1.21575e+009
+[END_PARAM_SIG]
+
+[START_PARAM_NODE_RX_SIG]
+[END_PARAM_NODE_RX_SIG]
+
+[START_PARAM_NODE_TX_MSG]
+[END_PARAM_NODE_TX_MSG]
+[END_PARAM]
+
+[START_PARAM_VAL]
+[START_PARAM_NET_VAL]
+[END_PARAM_NET_VAL]
+
+[START_PARAM_NODE_VAL]
+IVT_Mod,"Manufacturer","Isabellenhuette"
+IVT_Mod,"ILUsed","1"
+IVT_Mod,"NmNode","1"
+[END_PARAM_NODE_VAL]
+
+[START_PARAM_MSG_VAL]
+1041,S,"NmMessage","1"
+1320,S,"GenMsgSendType","1"
+1319,S,"GenMsgSendType","1"
+1318,S,"GenMsgSendType","1"
+1297,S,"GenMsgSendType","1"
+1317,S,"GenMsgSendType","1"
+1316,S,"GenMsgSendType","1"
+1315,S,"GenMsgSendType","1"
+1314,S,"GenMsgSendType","1"
+1313,S,"GenMsgSendType","1"
+1041,S,"GenMsgSendType","7"
+[END_PARAM_MSG_VAL]
+
+[START_PARAM_SIG_VAL]
+1320,S,IVT_Result_Wh,"GenSigSendType","7"
+1320,S,IVT_ID_Result_Wh,"GenSigSendType","7"
+1319,S,IVT_ID_Result_As,"GenSigSendType","7"
+1318,S,IVT_ID_Result_W,"GenSigSendType","7"
+1317,S,IVT_ID_Result_T,"GenSigSendType","7"
+1316,S,IVT_ID_Result_U3,"GenSigSendType","7"
+1315,S,IVT_ID_Result_U2,"GenSigSendType","7"
+1314,S,IVT_ID_Result_U1,"GenSigSendType","7"
+1314,S,IVT_Result_U1,"GenSigSendType","7"
+1313,S,IVT_ID_Result_I,"GenSigSendType","7"
+1313,S,IVT_Result_I,"GenSigSendType","7"
+1320,S,IVT_Result_Wh,"GenSigStartValue",0
+1320,S,IVT_ID_Result_Wh,"GenSigStartValue",7
+1319,S,IVT_Result_As,"GenSigStartValue",0
+1319,S,IVT_ID_Result_As,"GenSigStartValue",6
+1318,S,IVT_Result_W,"GenSigStartValue",0
+1318,S,IVT_ID_Result_W,"GenSigStartValue",5
+1297,S,_A0_Resp_TriggerMode_I,"GenSigStartValue",2
+1297,S,_A4_Resp_TriggerMode_T,"GenSigStartValue",2
+1297,S,_A5_Resp_TriggerMode_W,"GenSigStartValue",2
+1297,S,_A6_Resp_TriggerMode_As,"GenSigStartValue",2
+1297,S,_A7_Resp_TriggerMode_WH,"GenSigStartValue",2
+1317,S,IVT_ID_Result_T,"GenSigStartValue",4
+1317,S,IVT_Result_T,"GenSigStartValue",0
+1316,S,IVT_ID_Result_U3,"GenSigStartValue",3
+1315,S,IVT_ID_Result_U2,"GenSigStartValue",2
+1314,S,IVT_ID_Result_U1,"GenSigStartValue",1
+1313,S,IVT_ID_Result_I,"GenSigStartValue",0
+1313,S,IVT_Result_I,"GenSigStartValue",0
+1041,S,_20_Conf_TriggerMode_I,"GenSigStartValue",2
+1041,S,_24_Conf_TriggerMode_T,"GenSigStartValue",2
+1041,S,_25_Conf_TriggerMode_W,"GenSigStartValue",2
+1041,S,_26_Conf_TriggerMode_As,"GenSigStartValue",2
+1041,S,_27_Conf_TriggerMode_WH,"GenSigStartValue",2
+[END_PARAM_SIG_VAL]
+
+[END_PARAM_VAL]
+
+
+[START_NOT_SUPPORTED]
+[END_NOT_SUPPORTED]
+
+[START_NOT_PROCESSED]
+	PZ_
+	ON_QRS_
+	ON_
+	INY_
+	PNG_QRS_
+	PNG_
+	SVYGRE
+	ON_QRS_QRS_
+	RI_QNGN_
+	RAIINE_QNGN_
+	FTGLCR_
+	FTGLCR_INY_
+	ON_QRS_FTGLCR_
+	ON_FTGLCR_
+	FVT_GLCR_ERS_
+	INY_GNOYR_
+	FVT_TEBHC_
+	FVT_INYGLCR_
+	FVTGLCR_INYGLCR_
+	OB_GK_OH_
+	ON_QRS_ERY_
+	ON_ERY_
+	ON_QRS_QRS_ERY_
+	OH_FT_ERY_
+	OH_RI_ERY_
+	OH_OB_ERY_
+	FT_ZHY_INY_
+OF_:
+
+[END_NOT_PROCESSED]
