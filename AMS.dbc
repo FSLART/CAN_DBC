@@ -546,6 +546,11 @@ BO_ 386 Slave_12_MSC_ID_2: 8 AMS
  SG_ module_open_wire : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ module_ic_temperature : 40|16@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 1793 Master_MSC_ID_1: 8 AMS
+ SG_ mcu_vref : 0|8@1+ (0.01,0) [0|0] "V" Vector__XXX
+ SG_ mcu_temperature : 8|8@1+ (1,0) [0|0] "ºC" Vector__XXX
+ SG_ ams_current_draw : 16|16@1+ (0.001,0) [0|65535] "A" Vector__XXX
+
 
 
 BA_DEF_  "BusType" STRING ;
