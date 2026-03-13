@@ -5,7 +5,7 @@
 [PROTOCOL] CAN
 
 [BUSMASTER_VERSION] [3.2.2]
-[NUMBER_OF_MESSAGES] 85
+[NUMBER_OF_MESSAGES] 86
 
 [START_MSG] Start_PreCharge,131,1,1,0,S,VCU
 [START_SIGNALS] Precharge_Request,1,1,0,B,1,0,0,0,1,ON/OFF,,
@@ -597,6 +597,12 @@
 [START_SIGNALS] module_ic_voltage,16,3,0,U,65535,0,1,0,1,,,
 [START_SIGNALS] module_open_wire,8,5,0,U,255,0,1,0,1,,,
 [START_SIGNALS] module_ic_temperature,16,6,0,U,65535,0,1,0,1,,,
+[END_MSG]
+
+[START_MSG] Master_MSC_ID_1,1793,8,3,1,S,AMS
+[START_SIGNALS] mcu_vref,8,1,0,U,255,0,1,0,0.01,V,,
+[START_SIGNALS] mcu_temperature,8,2,0,U,255,0,1,0,1,ºC,,
+[START_SIGNALS] ams_current_draw,16,3,0,U,65535,0,1,0,0.001,A,,
 [END_MSG]
 
 [START_SIG_LIST]
