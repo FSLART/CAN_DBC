@@ -553,6 +553,7 @@ BO_ 1793 Master_MSC_ID_1: 8 AMS
  SG_ ams_current_draw : 16|16@1+ (0.001,0) [0|65535] "A" Vector__XXX
  SG_ master_firmware_version : 32|6@1+ (1,0) [0|0] "" Vector__XXX
  SG_ master_fan_pwm : 40|8@1+ (0.392,0) [0|100] "PWM" Vector__XXX
+ SG_ master_state : 48|6@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1794 Master_PreCharge_ID_1: 8 AMS
  SG_ precharge_ctc_air_pos_state : 0|1@1+ (1,0) [0|0] "ON/OFF" Vector__XXX
@@ -575,6 +576,8 @@ CM_ SG_ 318 module_open_wire "";
 CM_ SG_ 325 module_open_wire "";
 CM_ SG_ 332 module_open_wire "";
 CM_ SG_ 339 module_open_wire "";
+CM_ SG_ 1793 master_state "Master State Machine
+";
 CM_ SG_ 1794 precharge_state "Pecharge State Machine";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_DEF_  "BusType" "CAN";
@@ -591,5 +594,6 @@ VAL_ 325 module_open_wire 0 "No fault detected" 1 "Cell/open-wire/voltage diagno
 VAL_ 332 module_open_wire 0 "No fault detected" 1 "Cell/open-wire/voltage diagnostic fault" ;
 VAL_ 339 module_open_wire 0 "No fault detected" 1 "Cell/open-wire/voltage diagnostic fault" ;
 VAL_ 1793 master_firmware_version 0 "Unknown Firmware" 1 "alpha" 3 "beta" 5 "alpha-v1" 7 "beta-v1" 9 "alpha-v2" 13 "alpha-v3" 17 "alpha-v3.1" 11 "beta-v2" 15 "beta-v3" ;
+VAL_ 1793 master_state 0 "BALANCING" 1 "CHARGING" 2 "IDLE" 3 "ONMISSION" 4 "STARTUP" 5 "DISCHARGE_TEST" 6 "RESET_ISA" 7 "FAULT" ;
 VAL_ 1794 precharge_state 0 "START" 1 "OPEN_ALL" 2 "SWITCH_HVNEG" 3 "DELAY1" 4 "VERIFY1" 5 "SWITCH_PRECHARGE" 6 "DELAY2" 7 "VERIFY2" 8 "VERIFY_CURRENT" 9 "VERIFY_BUS_VOLT" 10 "SWITCH_HVPOS" 11 "DELAY3" 12 "VERIFY3" 13 "TURN_OFF_PRECHARGE" 14 "DELAY4" 15 "VERIFY4" 16 "END" 17 "WRONG" 18 "KILL" 19 "RX_CAN" ;
 
